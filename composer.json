@@ -1,0 +1,21 @@
+{
+    "name": "appzcoder/30-seconds-of-php-code",
+    "description": "A curated collection of useful PHP snippets that you can understand in 30 seconds or less.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sohel Amin",
+            "email": "sohelamincse@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "autoload-dev": {
+        "files": ["src/helpers.php"]
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
