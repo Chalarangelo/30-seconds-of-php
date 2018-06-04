@@ -46,30 +46,6 @@
 
 </details>
 
-### 🎛️ Function
-
-<details>
-<summary>View contents</summary>
-
-
-</details>
-
-### 📜 String
-
-<details>
-<summary>View contents</summary>
-
-
-</details>
-
-### 🔧 Utility
-
-<details>
-<summary>View contents</summary>
-
-
-</details>
-
 ---
  ## 📚 Array
 
@@ -741,18 +717,6 @@ median([1, 2, 3, 6, 7, 9]); // 4.5
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
-
-
----
- ## 🎛️ Function
-
-
----
- ## 📜 String
-
-
----
- ## 🔧 Utility
 
 #### Related
 

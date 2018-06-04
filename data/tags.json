@@ -6,17 +6,5 @@
     {
         "name": "Math",
         "icon": "➗"
-    },
-    {
-        "name": "Function",
-        "icon": "🎛️"
-    },
-    {
-        "name": "String",
-        "icon": "📜"
-    },
-    {
-        "name": "Utility",
-        "icon": "🔧"
     }
 ]

@@ -16,6 +16,7 @@
         "files": ["src/helpers.php"]
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit",
+        "build": "php scripts/build.php"
     }
 }
