@@ -49,7 +49,7 @@
  ## 📚 Array
 
 ### all
-
+Returns `true` if the provided function returns `true` for all elements of an array, `false` otherwise.
 
 ```php
 function all($items, $func)
@@ -72,7 +72,7 @@ all([2, 3, 4, 5], function ($item) {
 <br>[⬆ Back to top](#table-of-contents)
 
 ### any
-
+Returns `true` if the provided function returns `true` for at least one element of an array, `false` otherwise.
 
 ```php
 function any($items, $func)
@@ -95,7 +95,7 @@ any([1, 2, 3, 4], function ($item) {
 <br>[⬆ Back to top](#table-of-contents)
 
 ### chunk
-
+Chunks an array into smaller arrays of a specified size.
 
 ```php
 function chunk($items, $size)
@@ -116,7 +116,7 @@ chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]
 <br>[⬆ Back to top](#table-of-contents)
 
 ### flatten
-
+Flattens an array up to the one level depth.
 
 ```php
 function flatten($items)
@@ -146,7 +146,7 @@ flatten([1, [2], 3, 4]); // [1, 2, 3, 4]
 <br>[⬆ Back to top](#table-of-contents)
 
 ### deepFlatten
-
+Deep flattens an array.
 
 ```php
 function deepFlatten($items)
@@ -176,7 +176,7 @@ deepFlatten([1, [2], [[3], 4], 5]); // [1, 2, 3, 4, 5]
 <br>[⬆ Back to top](#table-of-contents)
 
 ### drop
-
+Returns a new array with `n` elements removed from the left.
 
 ```php
 function drop($items, $n = 1)
@@ -198,7 +198,7 @@ drop([1, 2, 3], 2); // [3]
 <br>[⬆ Back to top](#table-of-contents)
 
 ### findLast
-
+Returns the last element for which the provided function returns a truthy value.
 
 ```php
 function findLast($items, $func)
@@ -224,7 +224,7 @@ findLast([1, 2, 3, 4], function ($n) {
 <br>[⬆ Back to top](#table-of-contents)
 
 ### findLastIndex
-
+Returns the index of the last element for which the provided function returns a truthy value.
 
 ```php
 function findLastIndex($items, $func)
@@ -250,7 +250,7 @@ findLastIndex([1, 2, 3, 4], function ($n) {
 <br>[⬆ Back to top](#table-of-contents)
 
 ### head
-
+Returns the head of a list.
 
 ```php
 function head($items)
@@ -271,7 +271,7 @@ head([1, 2, 3]); // 1
 <br>[⬆ Back to top](#table-of-contents)
 
 ### tail
-
+Returns all elements in an array except for the first one.
 
 ```php
 function tail($items)
@@ -292,7 +292,7 @@ tail([1, 2, 3]); // [2, 3]
 <br>[⬆ Back to top](#table-of-contents)
 
 ### last
-
+Returns the last element in an array.
 
 ```php
 function last($items)
@@ -313,12 +313,13 @@ last([1, 2, 3]); // 3
 <br>[⬆ Back to top](#table-of-contents)
 
 ### pull
-
+Mutates the original array to filter out the values specified.
 
 ```php
 function pull($items, ...$params)
 {
-    return array_values(array_diff($items, $params));
+    $items = array_values(array_diff($items, $params));
+    return $items;
 }
 ```
 
@@ -334,7 +335,7 @@ pull(['a', 'b', 'c', 'a', 'b', 'c'], 'a', 'c'); // ['b', 'b']
 <br>[⬆ Back to top](#table-of-contents)
 
 ### pluck
-
+Retrieves all of the values for a given key:
 
 ```php
 function pluck($items, $key)
@@ -361,7 +362,7 @@ pluck([
 <br>[⬆ Back to top](#table-of-contents)
 
 ### reject
-
+Filters the collection using the given callback.
 
 ```php
 function reject($func, $items)
@@ -384,7 +385,7 @@ reject(function ($item) {
 <br>[⬆ Back to top](#table-of-contents)
 
 ### remove
-
+Removes elements from an array for which the given function returns false.
 
 ```php
 function remove($items, $func)
@@ -414,7 +415,7 @@ remove([1, 2, 3, 4], function ($n) {
 <br>[⬆ Back to top](#table-of-contents)
 
 ### take
-
+Returns an array with n elements removed from the beginning.
 
 ```php
 function take($items, $n = 1)
@@ -436,7 +437,7 @@ take([1, 2, 3, 4, 5], 2); // [1, 2]
 <br>[⬆ Back to top](#table-of-contents)
 
 ### without
-
+Filters out the elements of an array, that have one of the specified values.
 
 ```php
 function without($items, ...$params)
@@ -457,6 +458,7 @@ without([2, 1, 2, 3], 1, 2); // [3]
 <br>[⬆ Back to top](#table-of-contents)
 
 ### hasDuplicates
+Checks a flat list for duplicate values. Returns `true` if duplicate values exists and `false` if values are all unique.
 
 ```php
 function hasDuplicates($items)
@@ -477,7 +479,7 @@ hasDuplicates([1, 2, 3, 4, 5, 5]); // true
 <br>[⬆ Back to top](#table-of-contents)
 
 ### groupBy
-
+Groups the elements of an array based on the given function.
 
 ```php
 function groupBy($items, $func)
@@ -513,7 +515,7 @@ groupBy(['one', 'two', 'three'], 'strlen') // [3 => ['one', 'two'], 5 => ['three
  ## ➗ Math
 
 ### average
-
+Returns the average of two or more numbers.
 
 ```php
 function average(...$items)
@@ -534,7 +536,7 @@ average(1, 2, 3); // 2
 <br>[⬆ Back to top](#table-of-contents)
 
 ### factorial
-
+Calculates the factorial of a number.
 
 ```php
 function factorial($n)
@@ -559,7 +561,7 @@ factorial(6); // 720
 <br>[⬆ Back to top](#table-of-contents)
 
 ### fibonacci
-
+Generates an array, containing the Fibonacci sequence, up until the nth term.
 
 ```php
 function fibonacci($n)
@@ -586,7 +588,7 @@ fibonacci(6); // [0, 1, 1, 2, 3, 5]
 <br>[⬆ Back to top](#table-of-contents)
 
 ### gcd
-
+Calculates the greatest common divisor between two or more numbers.
 
 ```php
 function gcd(...$numbers)
@@ -612,8 +614,8 @@ gcd(12, 8, 32); // 4
 
 <br>[⬆ Back to top](#table-of-contents)
 
-### lcm - todo
-
+### lcm
+Returns the least common multiple of two or more numbers.
 
 ```php
 function lcm(...$numbers)
@@ -640,7 +642,7 @@ lcm(1, 3, 4, 5); // 60
 <br>[⬆ Back to top](#table-of-contents)
 
 ### isPrime
-
+Checks if the provided integer is a prime number.
 
 ```php
 function isPrime($number)
@@ -668,7 +670,7 @@ isPrime(3); // true
 <br>[⬆ Back to top](#table-of-contents)
 
 ### isEven
-
+Returns `true` if the given number is even, `false` otherwise.
 
 ```php
 function isEven($number)
@@ -689,7 +691,7 @@ isEven(4); // true
 <br>[⬆ Back to top](#table-of-contents)
 
 ### median
-
+Returns the median of an array of numbers.
 
 ```php
 function median($numbers)

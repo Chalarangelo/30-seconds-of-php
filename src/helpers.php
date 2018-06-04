@@ -79,7 +79,8 @@ function last($items)
 
 function pull($items, ...$params)
 {
-    return array_values(array_diff($items, $params));
+    $items = array_values(array_diff($items, $params));
+    return $items;
 }
 
 function pluck($items, $key)
