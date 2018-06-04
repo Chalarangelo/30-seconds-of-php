@@ -11,21 +11,22 @@
 * [`all`](#all)
 * [`any`](#any)
 * [`chunk`](#chunk)
+* [`deepFlatten`](#deepFlatten)
+* [`drop`](#drop)
+* [`findLast`](#findLast)
+* [`findLastIndex`](#findLastIndex)
 * [`flatten`](#flatten)
-* [`deepFlatten`](#deepflatten)
-* [`findLast`](#findlast)
-* [`findLastIndex`](#findlastindex)
+* [`groupBy`](#groupBy)
+* [`hasDuplicates`](#hasDuplicates)
 * [`head`](#head)
-* [`tail`](#tail)
 * [`last`](#last)
-* [`pull`](#pull)
 * [`pluck`](#pluck)
+* [`pull`](#pull)
 * [`reject`](#reject)
 * [`remove`](#remove)
+* [`tail`](#tail)
 * [`take`](#take)
 * [`without`](#without)
-* [`hasDuplicates`](#hasduplicates)
-* [`groupBy`](#groupby)
 
 </details>
 
@@ -38,10 +39,34 @@
 * [`factorial`](#factorial)
 * [`fibonacci`](#fibonacci)
 * [`gcd`](#gcd)
+* [`isEven`](#isEven)
+* [`isPrime`](#isPrime)
 * [`lcm`](#lcm)
-* [`isEven`](#iseven)
-* [`isPrime`](#isprime)
 * [`median`](#median)
+
+</details>
+
+### 🎛️ Function
+
+<details>
+<summary>View contents</summary>
+
+
+</details>
+
+### 📜 String
+
+<details>
+<summary>View contents</summary>
+
+
+</details>
+
+### 🔧 Utility
+
+<details>
+<summary>View contents</summary>
+
 
 </details>
 
@@ -109,36 +134,6 @@ function chunk($items, $size)
 
 ```php
 chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]
-```
-
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
-### flatten
-Flattens an array up to the one level depth.
-
-```php
-function flatten($items)
-{
-    $result = [];
-    foreach ($items as $item) {
-        if (!is_array($item)) {
-            $result[] = $item;
-        } else {
-            $result = array_merge($result, array_values($item));
-        }
-    }
-
-    return $result;
-}
-```
-
-<details>
-<summary>Examples</summary>
-
-```php
-flatten([1, [2], 3, 4]); // [1, 2, 3, 4]
 ```
 
 </details>
@@ -249,6 +244,90 @@ findLastIndex([1, 2, 3, 4], function ($n) {
 
 <br>[⬆ Back to top](#table-of-contents)
 
+### flatten
+Flattens an array up to the one level depth.
+
+```php
+function flatten($items)
+{
+    $result = [];
+    foreach ($items as $item) {
+        if (!is_array($item)) {
+            $result[] = $item;
+        } else {
+            $result = array_merge($result, array_values($item));
+        }
+    }
+
+    return $result;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+flatten([1, [2], 3, 4]); // [1, 2, 3, 4]
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### groupBy
+Groups the elements of an array based on the given function.
+
+```php
+function groupBy($items, $func)
+{
+    $group = [];
+    foreach ($items as $item) {
+        if ((!is_string($func) && is_callable($func)) || function_exists($func)) {
+            $key = call_user_func($func, $item);
+            $group[$key][] = $item;
+        } elseif (is_object($item)) {
+            $group[$item->{$func}][] = $item;
+        } elseif (isset($item[$func])) {
+            $group[$item[$func]][] = $item;
+        }
+    }
+
+    return $group;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+groupBy(['one', 'two', 'three'], 'strlen') // [3 => ['one', 'two'], 5 => ['three']]
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### hasDuplicates
+Checks a flat list for duplicate values. Returns `true` if duplicate values exists and `false` if values are all unique.
+
+```php
+function hasDuplicates($items)
+{
+    return count($items) !== count(array_unique($items));
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+hasDuplicates([1, 2, 3, 4, 5, 5]); // true
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 ### head
 Returns the head of a list.
 
@@ -264,27 +343,6 @@ function head($items)
 
 ```php
 head([1, 2, 3]); // 1
-```
-
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
-### tail
-Returns all elements in an array except for the first one.
-
-```php
-function tail($items)
-{
-    return count($items) > 1 ? array_slice($items, 1) : $items;
-}
-```
-
-<details>
-<summary>Examples</summary>
-
-```php
-tail([1, 2, 3]); // [2, 3]
 ```
 
 </details>
@@ -312,28 +370,6 @@ last([1, 2, 3]); // 3
 
 <br>[⬆ Back to top](#table-of-contents)
 
-### pull
-Mutates the original array to filter out the values specified.
-
-```php
-function pull($items, ...$params)
-{
-    $items = array_values(array_diff($items, $params));
-    return $items;
-}
-```
-
-<details>
-<summary>Examples</summary>
-
-```php
-pull(['a', 'b', 'c', 'a', 'b', 'c'], 'a', 'c'); // ['b', 'b']
-```
-
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
 ### pluck
 Retrieves all of the values for a given key:
 
@@ -355,6 +391,28 @@ pluck([
     ['product_id' => 'prod-200', 'name' => 'Chair'],
 ], 'name');
 // ['Desk', 'Chair']
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### pull
+Mutates the original array to filter out the values specified.
+
+```php
+function pull($items, ...$params)
+{
+    $items = array_values(array_diff($items, $params));
+    return $items;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+pull(['a', 'b', 'c', 'a', 'b', 'c'], 'a', 'c'); // ['b', 'b']
 ```
 
 </details>
@@ -414,6 +472,27 @@ remove([1, 2, 3, 4], function ($n) {
 
 <br>[⬆ Back to top](#table-of-contents)
 
+### tail
+Returns all elements in an array except for the first one.
+
+```php
+function tail($items)
+{
+    return count($items) > 1 ? array_slice($items, 1) : $items;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+tail([1, 2, 3]); // [2, 3]
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 ### take
 Returns an array with n elements removed from the beginning.
 
@@ -457,59 +536,6 @@ without([2, 1, 2, 3], 1, 2); // [3]
 
 <br>[⬆ Back to top](#table-of-contents)
 
-### hasDuplicates
-Checks a flat list for duplicate values. Returns `true` if duplicate values exists and `false` if values are all unique.
-
-```php
-function hasDuplicates($items)
-{
-    return count($items) !== count(array_unique($items));
-}
-```
-
-<details>
-<summary>Examples</summary>
-
-```php
-hasDuplicates([1, 2, 3, 4, 5, 5]); // true
-```
-
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
-### groupBy
-Groups the elements of an array based on the given function.
-
-```php
-function groupBy($items, $func)
-{
-    $group = [];
-    foreach ($items as $item) {
-        if ((!is_string($func) && is_callable($func)) || function_exists($func)) {
-            $key = call_user_func($func, $item);
-            $group[$key][] = $item;
-        } elseif (is_object($item)) {
-            $group[$item->{$func}][] = $item;
-        } elseif (isset($item[$func])) {
-            $group[$item[$func]][] = $item;
-        }
-    }
-
-    return $group;
-}
-```
-
-<details>
-<summary>Examples</summary>
-
-```php
-groupBy(['one', 'two', 'three'], 'strlen') // [3 => ['one', 'two'], 5 => ['three']]
-```
-
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
 
 ---
  ## ➗ Math
@@ -614,18 +640,13 @@ gcd(12, 8, 32); // 4
 
 <br>[⬆ Back to top](#table-of-contents)
 
-### lcm
-Returns the least common multiple of two or more numbers.
+### isEven
+Returns `true` if the given number is even, `false` otherwise.
 
 ```php
-function lcm(...$numbers)
+function isEven($number)
 {
-    $ans = $numbers[0];
-    for ($i = 1; $i < count($numbers); $i++) {
-        $ans = ((($numbers[$i] * $ans)) / (gcd($numbers[$i], $ans)));
-    }
-
-    return $ans;
+    return ($number % 2) === 0;
 }
 ```
 
@@ -633,8 +654,7 @@ function lcm(...$numbers)
 <summary>Examples</summary>
 
 ```php
-lcm(12, 7); // 84
-lcm(1, 3, 4, 5); // 60
+isEven(4); // true
 ```
 
 </details>
@@ -669,13 +689,18 @@ isPrime(3); // true
 
 <br>[⬆ Back to top](#table-of-contents)
 
-### isEven
-Returns `true` if the given number is even, `false` otherwise.
+### lcm
+Returns the least common multiple of two or more numbers.
 
 ```php
-function isEven($number)
+function lcm(...$numbers)
 {
-    return ($number % 2) === 0;
+    $ans = $numbers[0];
+    for ($i = 1; $i < count($numbers); $i++) {
+        $ans = ((($numbers[$i] * $ans)) / (gcd($numbers[$i], $ans)));
+    }
+
+    return $ans;
 }
 ```
 
@@ -683,7 +708,8 @@ function isEven($number)
 <summary>Examples</summary>
 
 ```php
-isEven(4); // true
+lcm(12, 7); // 84
+lcm(1, 3, 4, 5); // 60
 ```
 
 </details>
@@ -715,6 +741,18 @@ median([1, 2, 3, 6, 7, 9]); // 4.5
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
+
+
+---
+ ## 🎛️ Function
+
+
+---
+ ## 📜 String
+
+
+---
+ ## 🔧 Utility
 
 #### Related
 
