@@ -30,7 +30,7 @@ $snippets .= "
     $tagName = strtolower($tag->name);
     foreach ($database as $function => $functionTags) {
         if (in_array($tagName, $functionTags)) {
-            $tableOfContents .= "* [`{$function}`](#{$function})\n";
+            $tableOfContents .= "* [`{$function}`](#" . strtolower($function) . ")\n";
 
             $snippets .= file_get_contents($projectDir . 'snippets/' . $function . '.md');
             $snippets .= "\n<br>[⬆ Back to top](#table-of-contents)\n\n";
