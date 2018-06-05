@@ -1,11 +1,11 @@
-### functionName
+### snippetName
 
 Explain briefly what the snippet does.
 
 Explain briefly how the snippet works.
 
 ```php
-function functionName($argument)
+function snippetName($argument)
 {
     // Body
 }
@@ -15,7 +15,7 @@ function functionName($argument)
 <summary>Examples</summary>
 
 ```php
-functionName('sampleInput'); // 'sampleOutput'
+snippetName('sampleInput'); // 'sampleOutput'
 ```
 
 </details>

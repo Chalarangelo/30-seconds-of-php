@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 class StringTest extends TestCase
 {
     /**
-     * @endsWith test
+     * @test
      */
     public function testEndsWith()
     {
@@ -15,7 +15,7 @@ class StringTest extends TestCase
     }
 
     /**
-     * @startsWith test
+     * @test
      */
     public function testStartsWith()
     {

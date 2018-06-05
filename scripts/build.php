@@ -58,3 +58,4 @@ This project is licensed under the CC0 1.0 License - see the [License File](LICE
 ';
 
 file_put_contents($projectDir . 'README.md', $readme);
+echo "\nREADME.md file has been updated.\n";
