@@ -6,5 +6,9 @@
     {
         "name": "Math",
         "icon": "➗"
+    },
+    {
+    	"name": "String",
+    	"icon": "💢"
     }
 ]

@@ -48,6 +48,16 @@
 
 </details>
 
+### 💢 String
+
+<details>
+<summary>View contents</summary>
+
+* [`endsWith`](#endswith)
+* [`startsWith`](#startswith)
+
+</details>
+
 ---
  ## 📚 Array
 
@@ -714,6 +724,56 @@ function median($numbers)
 ```php
 median([1, 3, 3, 6, 7, 8, 9]); // 6
 median([1, 2, 3, 6, 7, 9]); // 4.5
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+
+---
+ ## 💢 String
+
+### endsWith
+
+Check if a string is ends with another string.
+
+```php
+function endsWith($haystack, $needle)
+{
+    return substr($haystack, -strlen($needle))===$needle;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+endsWith('sampleInput','t'); // true
+endsWith('sampleInput','s'); // false
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### startsWith
+
+Check if a string is starts with another string.
+
+```php
+function startsWith($haystack, $needle)
+{
+     return (substr($haystack, 0, strlen($needle)) === $needle);
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+startsWith('sampleInput','t'); // false
+startsWith('sampleInput','s'); // true
 ```
 
 </details>
