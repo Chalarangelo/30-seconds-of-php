@@ -736,7 +736,7 @@ median([1, 2, 3, 6, 7, 9]); // 4.5
 
 ### endsWith
 
-Check if a string is ends with by another string.
+Check if a string is ends with a given substring.
 
 ```php
 function endsWith($haystack, $needle)
@@ -749,8 +749,7 @@ function endsWith($haystack, $needle)
 <summary>Examples</summary>
 
 ```php
-endsWith('sampleInput', 't'); // true
-endsWith('sampleInput', 's'); // false
+endsWith('Hi, this is me', 'me'); // true
 ```
 
 </details>
@@ -759,7 +758,7 @@ endsWith('sampleInput', 's'); // false
 
 ### startsWith
 
-Check if a string is starts with by another string.
+Check if a string is starts with a given substring.
 
 ```php
 function startsWith($haystack, $needle)
@@ -772,8 +771,7 @@ function startsWith($haystack, $needle)
 <summary>Examples</summary>
 
 ```php
-startsWith('sampleInput', 't'); // false
-startsWith('sampleInput', 's'); // true
+startsWith('Hi, this is me', 'Hi'); // true
 ```
 
 </details>

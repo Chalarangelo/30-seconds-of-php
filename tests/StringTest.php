@@ -10,7 +10,7 @@ class StringTest extends TestCase
     public function testEndsWith()
     {
         $this->assertTrue(
-            endsWith('Example', 'e')
+            endsWith('Hi, this is me', 'me')
         );
     }
 
@@ -20,8 +20,8 @@ class StringTest extends TestCase
     public function testStartsWith()
     {
 
-        $this->assertFalse(
-            startsWith('Example', 'e')
+        $this->assertTrue(
+            startsWith('Hi, this is me', 'Hi')
         );
     }
 }

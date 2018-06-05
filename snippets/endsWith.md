@@ -1,6 +1,6 @@
 ### endsWith
 
-Check if a string is ends with by another string.
+Check if a string is ends with a given substring.
 
 ```php
 function endsWith($haystack, $needle)
@@ -13,8 +13,7 @@ function endsWith($haystack, $needle)
 <summary>Examples</summary>
 
 ```php
-endsWith('sampleInput', 't'); // true
-endsWith('sampleInput', 's'); // false
+endsWith('Hi, this is me', 'me'); // true
 ```
 
 </details>

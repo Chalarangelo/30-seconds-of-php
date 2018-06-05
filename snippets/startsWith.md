@@ -1,6 +1,6 @@
 ### startsWith
 
-Check if a string is starts with by another string.
+Check if a string is starts with a given substring.
 
 ```php
 function startsWith($haystack, $needle)
@@ -13,8 +13,7 @@ function startsWith($haystack, $needle)
 <summary>Examples</summary>
 
 ```php
-startsWith('sampleInput', 't'); // false
-startsWith('sampleInput', 's'); // true
+startsWith('Hi, this is me', 'Hi'); // true
 ```
 
 </details>
