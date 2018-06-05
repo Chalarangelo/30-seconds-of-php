@@ -785,4 +785,4 @@ startsWith('Hi, this is me', 'Hi'); // true
 
 ## License
 
-This project is licensed under the CC0 1.0 License - see the [License File](LICENSE) for details
+This project is licensed under the MIT License - see the [License File](LICENSE) for details
