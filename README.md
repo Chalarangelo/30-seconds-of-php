@@ -48,7 +48,7 @@
 
 </details>
 
-### 💢 String
+### 📜 String
 
 <details>
 <summary>View contents</summary>
@@ -732,16 +732,16 @@ median([1, 2, 3, 6, 7, 9]); // 4.5
 
 
 ---
- ## 💢 String
+ ## 📜 String
 
 ### endsWith
 
-Check if a string is ends with another string.
+Check if a string is ends with by another string.
 
 ```php
 function endsWith($haystack, $needle)
 {
-    return substr($haystack, -strlen($needle))===$needle;
+    return substr($haystack, -strlen($needle)) === $needle;
 }
 ```
 
@@ -749,8 +749,8 @@ function endsWith($haystack, $needle)
 <summary>Examples</summary>
 
 ```php
-endsWith('sampleInput','t'); // true
-endsWith('sampleInput','s'); // false
+endsWith('sampleInput', 't'); // true
+endsWith('sampleInput', 's'); // false
 ```
 
 </details>
@@ -759,12 +759,12 @@ endsWith('sampleInput','s'); // false
 
 ### startsWith
 
-Check if a string is starts with another string.
+Check if a string is starts with by another string.
 
 ```php
 function startsWith($haystack, $needle)
 {
-     return (substr($haystack, 0, strlen($needle)) === $needle);
+    return substr($haystack, 0, strlen($needle)) === $needle;
 }
 ```
 
@@ -772,8 +772,8 @@ function startsWith($haystack, $needle)
 <summary>Examples</summary>
 
 ```php
-startsWith('sampleInput','t'); // false
-startsWith('sampleInput','s'); // true
+startsWith('sampleInput', 't'); // false
+startsWith('sampleInput', 's'); // true
 ```
 
 </details>

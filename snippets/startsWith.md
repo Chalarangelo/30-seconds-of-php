@@ -5,7 +5,7 @@ Check if a string is starts with by another string.
 ```php
 function startsWith($haystack, $needle)
 {
-     return (substr($haystack, 0, strlen($needle)) === $needle);
+    return substr($haystack, 0, strlen($needle)) === $needle;
 }
 ```
 
@@ -13,8 +13,8 @@ function startsWith($haystack, $needle)
 <summary>Examples</summary>
 
 ```php
-startsWith('sampleInput','t'); // false
-startsWith('sampleInput','s'); // true
+startsWith('sampleInput', 't'); // false
+startsWith('sampleInput', 's'); // true
 ```
 
 </details>

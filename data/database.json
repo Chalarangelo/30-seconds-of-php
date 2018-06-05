@@ -5,6 +5,7 @@
     "chunk": ["array"],
     "deepFlatten": ["array"],
     "drop": ["array"],
+    "endsWith": ["string"],
     "factorial": ["math"],
     "fibonacci": ["math"],
     "findLast": ["array"],
@@ -23,10 +24,8 @@
     "pull": ["array"],
     "reject": ["array"],
     "remove": ["array"],
+    "startsWith": ["string"],
     "tail": ["array"],
     "take": ["array"],
-    "without": ["array"],
-    "endsWith": ["string"],
-    "startsWith": ["string"],
-    "endsWith": ["string"]
+    "without": ["array"]
 }
