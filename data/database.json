@@ -25,5 +25,8 @@
     "remove": ["array"],
     "tail": ["array"],
     "take": ["array"],
-    "without": ["array"]
+    "without": ["array"],
+    "endsWith": ["string"],
+    "startsWith": ["string"],
+    "endsWith": ["string"]
 }

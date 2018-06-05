@@ -1,3 +1,4 @@
 vendor
+composer.json
 composer.lock
 .DS_STORE

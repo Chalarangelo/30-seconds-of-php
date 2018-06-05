@@ -208,3 +208,13 @@ function median($numbers)
 
     return ($totalNumbers % 2) === 0 ? ($numbers[$mid - 1] + $numbers[$mid]) / 2 : $numbers[$mid];
 }
+
+function endsWith($haystack, $needle)
+{
+    return substr($haystack, -strlen($needle))===$needle;
+}
+
+function startsWith($haystack, $needle)
+{
+     return (substr($haystack, 0, strlen($needle)) === $needle);
+}
