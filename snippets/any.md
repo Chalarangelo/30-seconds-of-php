@@ -4,7 +4,7 @@ Returns `true` if the provided function returns `true` for at least one element 
 ```php
 function any($items, $func)
 {
-    return in_array(true, array_map($func, $items));
+    return count(array_filter($items, $func)) > 0;
 }
 ```
 

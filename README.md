@@ -67,7 +67,7 @@ Returns `true` if the provided function returns `true` for all elements of an ar
 ```php
 function all($items, $func)
 {
-    return (bool) array_product(array_map($func, $items));
+    return count(array_filter($items, $func)) === count($items);
 }
 ```
 
@@ -90,7 +90,7 @@ Returns `true` if the provided function returns `true` for at least one element 
 ```php
 function any($items, $func)
 {
-    return in_array(true, array_map($func, $items));
+    return count(array_filter($items, $func)) > 0;
 }
 ```
 
