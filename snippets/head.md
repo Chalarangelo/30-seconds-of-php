@@ -4,7 +4,7 @@ Returns the head of a list.
 ```php
 function head($items)
 {
-    return $items[0];
+    return reset($items);
 }
 ```
 

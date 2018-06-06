@@ -5,13 +5,9 @@ Deep flattens an array.
 function deepFlatten($items)
 {
     $result = [];
-    foreach ($items as $item) {
-        if (!is_array($item)) {
-            $result[] = $item;
-        } else {
-            $result = array_merge($result, deepFlatten($item));
-        }
-    }
+    array_walk_recursive($items, function ($value, $key) use (&$result) {
+        $result[] = $value;
+    });
 
     return $result;
 }
