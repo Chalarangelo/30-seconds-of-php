@@ -47,10 +47,13 @@ $tableOfContents .= '
 $readme .= $tableOfContents;
 $readme .= $snippets;
 
-$readme .= '#### Related
+$readme .= '### Related
 
 - [30 Seconds of Code](https://github.com/Chalarangelo/30-seconds-of-code)
 - [30 Seconds of Python](https://github.com/kriadmin/30-seconds-of-python-code)
+
+## Contribute
+You\'re always welcome to contribute to this project. Please read the [contribution guide](CONTRIBUTING.md).
 
 ## License
 
