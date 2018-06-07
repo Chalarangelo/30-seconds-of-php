@@ -18,6 +18,17 @@ class MathTest extends TestCase
     /**
      * @test
      */
+    public function testAverageIsSafe()
+    {
+        $this->assertEquals(
+            0,
+            average()
+        );
+    }
+
+    /**
+     * @test
+     */
     public function testFactorial()
     {
         $this->assertEquals(
