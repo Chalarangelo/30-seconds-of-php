@@ -77,7 +77,7 @@ function last($items)
     return end($items);
 }
 
-function pull($items, ...$params)
+function pull(&$items, ...$params)
 {
     $items = array_values(array_diff($items, $params));
     return $items;
