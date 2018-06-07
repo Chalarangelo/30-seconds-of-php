@@ -23,4 +23,44 @@ class StringTest extends TestCase
             startsWith('Hi, this is me', 'Hi')
         );
     }
+
+    /**
+     * @test
+     */
+    public function testIsUpperCase()
+    {
+        $this->assertTrue(
+            isUpperCase('Morning shows the day!')  
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function testIsLowerCase()
+    {
+        $this->assertTrue(
+            isLowerCase('i')
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function testIsAnagram()
+    {
+        $this->assertTrue(
+            isAnagram('act','cat')
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function testPalindrome()
+    {
+        $this->assertTrue(
+            palindrome('racecar')
+        );
+    }
 }
