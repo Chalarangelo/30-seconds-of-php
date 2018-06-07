@@ -13,13 +13,7 @@ class MathTest extends TestCase
             2,
             average(1, 2, 3)
         );
-    }
 
-    /**
-     * @test
-     */
-    public function testAverageIsSafe()
-    {
         $this->assertEquals(
             0,
             average()
