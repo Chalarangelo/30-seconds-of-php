@@ -118,7 +118,7 @@ function without($items, ...$params)
 
 function hasDuplicates($items)
 {
-    return count($items) !== count(array_unique($items));
+    return count($items) > count(array_unique($items));
 }
 
 function groupBy($items, $func)
