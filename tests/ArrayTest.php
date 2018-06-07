@@ -173,9 +173,9 @@ class ArrayTest extends TestCase
     {
         $this->assertEquals(
             ['Pear', 'Kiwi'],
-            reject(function ($item) {
+            reject(['Apple', 'Pear', 'Kiwi', 'Banana'], function ($item) {
                 return strlen($item) > 4;
-            }, ['Apple', 'Pear', 'Kiwi', 'Banana'])
+            })
         );
     }
 

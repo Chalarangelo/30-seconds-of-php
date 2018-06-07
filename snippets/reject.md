@@ -2,7 +2,7 @@
 Filters the collection using the given callback.
 
 ```php
-function reject($func, $items)
+function reject($items, $func)
 {
     return array_values(array_diff($items, array_filter($items, $func)));
 }
@@ -12,9 +12,9 @@ function reject($func, $items)
 <summary>Examples</summary>
 
 ```php
-reject(function ($item) {
+reject(['Apple', 'Pear', 'Kiwi', 'Banana'], function ($item) {
     return strlen($item) > 4;
-}, ['Apple', 'Pear', 'Kiwi', 'Banana']); // ['Pear', 'Kiwi']
+}); // ['Pear', 'Kiwi']
 ```
 
 </details>

@@ -19,7 +19,6 @@ class StringTest extends TestCase
      */
     public function testStartsWith()
     {
-
         $this->assertTrue(
             startsWith('Hi, this is me', 'Hi')
         );

@@ -135,9 +135,13 @@ Deep flattens an array.
 function deepFlatten($items)
 {
     $result = [];
-    array_walk_recursive($items, function ($value, $key) use (&$result) {
-        $result[] = $value;
-    });
+    foreach ($items as $item) {
+        if (!is_array($item)) {
+            $result[] = $item;
+        } else {
+            $result = array_merge($result, deepFlatten($item));
+        }
+    }
 
     return $result;
 }
@@ -407,7 +411,7 @@ pull(['a', 'b', 'c', 'a', 'b', 'c'], 'a', 'c'); // ['b', 'b']
 Filters the collection using the given callback.
 
 ```php
-function reject($func, $items)
+function reject($items, $func)
 {
     return array_values(array_diff($items, array_filter($items, $func)));
 }
@@ -417,9 +421,9 @@ function reject($func, $items)
 <summary>Examples</summary>
 
 ```php
-reject(function ($item) {
+reject(['Apple', 'Pear', 'Kiwi', 'Banana'], function ($item) {
     return strlen($item) > 4;
-}, ['Apple', 'Pear', 'Kiwi', 'Banana']); // ['Pear', 'Kiwi']
+}); // ['Pear', 'Kiwi']
 ```
 
 </details>

@@ -32,9 +32,13 @@ function flatten($items)
 function deepFlatten($items)
 {
     $result = [];
-    array_walk_recursive($items, function ($value, $key) use (&$result) {
-        $result[] = $value;
-    });
+    foreach ($items as $item) {
+        if (!is_array($item)) {
+            $result[] = $item;
+        } else {
+            $result = array_merge($result, deepFlatten($item));
+        }
+    }
 
     return $result;
 }
@@ -86,7 +90,7 @@ function pluck($items, $key)
     }, $items);
 }
 
-function reject($func, $items)
+function reject($items, $func)
 {
     return array_values(array_diff($items, array_filter($items, $func)));
 }
