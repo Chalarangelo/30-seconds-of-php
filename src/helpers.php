@@ -140,7 +140,7 @@ function groupBy($items, $func)
 
 function average(...$items)
 {
-    return array_sum($items) / count($items);
+    return count($items === 0) ? 0 : array_sum($items) / count($items);
 }
 
 function factorial($n)
