@@ -13,8 +13,8 @@ function pull(&$items, ...$params)
 <summary>Examples</summary>
 
 ```php
-$array = ['a', 'b', 'c', 'a', 'b', 'c'];
-pull($array, 'a', 'c'); // $array will be ['b', 'b']
+$items = ['a', 'b', 'c', 'a', 'b', 'c'];
+pull($items, 'a', 'c'); // $items will be ['b', 'b']
 ```
 
 </details>

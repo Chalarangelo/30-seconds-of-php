@@ -404,7 +404,8 @@ function pull(&$items, ...$params)
 <summary>Examples</summary>
 
 ```php
-pull(['a', 'b', 'c', 'a', 'b', 'c'], 'a', 'c'); // ['b', 'b']
+$items = ['a', 'b', 'c', 'a', 'b', 'c'];
+pull($items, 'a', 'c'); // $items will be ['b', 'b']
 ```
 
 </details>
