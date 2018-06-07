@@ -146,9 +146,11 @@ class ArrayTest extends TestCase
      */
     public function testPull()
     {
+        $array = ['a', 'b', 'c', 'a', 'b', 'c'];
+        pull($array, 'a', 'c');
         $this->assertEquals(
-            ['b', 'b'],
-            pull(['a', 'b', 'c', 'a', 'b', 'c'], 'a', 'c')
+            $array,
+            ['b', 'b']
         );
     }
 

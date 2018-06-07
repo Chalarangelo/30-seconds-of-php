@@ -2,7 +2,7 @@
 Mutates the original array to filter out the values specified.
 
 ```php
-function pull($items, ...$params)
+function pull(&$items, ...$params)
 {
     $items = array_values(array_diff($items, $params));
     return $items;
@@ -13,7 +13,8 @@ function pull($items, ...$params)
 <summary>Examples</summary>
 
 ```php
-pull(['a', 'b', 'c', 'a', 'b', 'c'], 'a', 'c'); // ['b', 'b']
+$array = ['a', 'b', 'c', 'a', 'b', 'c'];
+pull($array, 'a', 'c'); // $array will be ['b', 'b']
 ```
 
 </details>
