@@ -10,6 +10,7 @@
 - Write the test case.
 - Test the code using `composer test`
 - Make the pull request.
+Note: Do not update the README.md file.
 
 ## Coding Style
 We follows the PSR-2 coding standard.

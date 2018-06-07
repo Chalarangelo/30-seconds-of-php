@@ -3,9 +3,9 @@
 Returns `true` if the given string is a palindrome, `false` otherwise.
 
 ```php
-function palindrome($str)
+function palindrome($string)
 {
-	return strrev($str) == $str;
+    return strrev($string) === $string;
 }
 ```
 
@@ -13,7 +13,7 @@ function palindrome($str)
 <summary>Examples</summary>
 
 ```php
-palindrome('wow'); // true
+palindrome('racecar'); // true
 ```
 
 </details>

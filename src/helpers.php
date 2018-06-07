@@ -195,26 +195,9 @@ function isPrime($number)
     return $number >= 2;
 }
 
-function isAnagram($str1, $str2)
-{
-    return(count_chars($str1, 1) == count_chars($str2, 1));
-}
-
 function isEven($number)
 {
     return ($number % 2) === 0;
-}
-
-function isLowerCase($string)
-{
-    $chr = mb_substr ($string, 0, 1, "UTF-8");
-    return mb_strtolower($chr, "UTF-8") == $chr;
-}
-
-function isUpperCase($string)
-{
-    $chr = mb_substr ($string, 0, 1, "UTF-8");
-    return mb_strtolower($chr, "UTF-8") != $chr;
 }
 
 function median($numbers)
@@ -226,11 +209,6 @@ function median($numbers)
     return ($totalNumbers % 2) === 0 ? ($numbers[$mid - 1] + $numbers[$mid]) / 2 : $numbers[$mid];
 }
 
-function palindrome($str)
-{
-    return strrev($str) == $str;
-}
-
 function endsWith($haystack, $needle)
 {
     return substr($haystack, -strlen($needle)) === $needle;
@@ -239,4 +217,26 @@ function endsWith($haystack, $needle)
 function startsWith($haystack, $needle)
 {
      return substr($haystack, 0, strlen($needle)) === $needle;
+}
+
+function isLowerCase($string)
+{
+    $char = mb_substr($string, 0, 1, "UTF-8");
+    return mb_strtolower($char, "UTF-8") === $char;
+}
+
+function isUpperCase($string)
+{
+    $char = mb_substr($string, 0, 1, "UTF-8");
+    return mb_strtolower($char, "UTF-8") !== $char;
+}
+
+function isAnagram($string1, $string2)
+{
+    return count_chars($string1, 1) === count_chars($string2, 1);
+}
+
+function palindrome($string)
+{
+    return strrev($string) === $string;
 }

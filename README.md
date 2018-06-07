@@ -762,12 +762,12 @@ endsWith('Hi, this is me', 'me'); // true
 
 ### isAnagram
 
-Compare two string and return `true` if both strings are anagram, `false` otherwise.
+Compare two strings and returns `true` if both strings are anagram, `false` otherwise.
 
 ```php
-function isAnagram($str1,$str2)
+function isAnagram($string1, $string2)
 {
-	return(count_chars($str1, 1) == count_chars($str2, 1));
+    return count_chars($string1, 1) === count_chars($string2, 1);
 }
 ```
 
@@ -775,7 +775,7 @@ function isAnagram($str1,$str2)
 <summary>Examples</summary>
 
 ```php
-isAnagram('looped','poodle'); // true
+isAnagram('act', 'cat'); // true
 ```
 
 </details>
@@ -789,8 +789,8 @@ Returns `true` if the given string is lower case, `false` otherwise.
 ```php
 function isLowerCase($string)
 {
-    $chr = mb_substr ($string, 0, 1, "UTF-8");
-    return mb_strtolower($chr, "UTF-8") == $chr;
+    $char = mb_substr($string, 0, 1, "UTF-8");
+    return mb_strtolower($char, "UTF-8") === $char;
 }
 ```
 
@@ -799,7 +799,7 @@ function isLowerCase($string)
 
 ```php
 isLowerCase('Morning shows the day!'); // false
-isLowerCase('i'); // true
+isLowerCase('hello'); // true
 ```
 
 </details>
@@ -813,8 +813,8 @@ Returns `true` if the given string is upper case, false otherwise.
 ```php
 function isUpperCase($string)
 {
-    $chr = mb_substr ($string, 0, 1, "UTF-8");
-    return mb_strtolower($chr, "UTF-8") != $chr;
+    $char = mb_substr($string, 0, 1, "UTF-8");
+    return mb_strtolower($char, "UTF-8") !== $char;
 }
 ```
 
@@ -835,9 +835,9 @@ isUpperCase('qUick Fox'); // false
 Returns `true` if the given string is a palindrome, `false` otherwise.
 
 ```php
-function palindrome($str)
+function palindrome($string)
 {
-	return strrev($str) == $str;
+    return strrev($string) === $string;
 }
 ```
 
@@ -845,7 +845,7 @@ function palindrome($str)
 <summary>Examples</summary>
 
 ```php
-palindrome('wow'); // true
+palindrome('racecar'); // true
 ```
 
 </details>

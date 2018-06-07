@@ -30,7 +30,7 @@ class StringTest extends TestCase
     public function testIsUpperCase()
     {
         $this->assertTrue(
-            isUpperCase('Morning shows the day!')  
+            isUpperCase('Morning shows the day!')
         );
     }
 
@@ -40,7 +40,7 @@ class StringTest extends TestCase
     public function testIsLowerCase()
     {
         $this->assertTrue(
-            isLowerCase('i')
+            isLowerCase('hello')
         );
     }
 
@@ -50,7 +50,7 @@ class StringTest extends TestCase
     public function testIsAnagram()
     {
         $this->assertTrue(
-            isAnagram('act','cat')
+            isAnagram('act', 'cat')
         );
     }
 

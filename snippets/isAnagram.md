@@ -1,11 +1,11 @@
 ### isAnagram
 
-Compare two string and return `true` if both strings are anagram, `false` otherwise.
+Compare two strings and returns `true` if both strings are anagram, `false` otherwise.
 
 ```php
-function isAnagram($str1,$str2)
+function isAnagram($string1, $string2)
 {
-	return(count_chars($str1, 1) == count_chars($str2, 1));
+    return count_chars($string1, 1) === count_chars($string2, 1);
 }
 ```
 
@@ -13,7 +13,7 @@ function isAnagram($str1,$str2)
 <summary>Examples</summary>
 
 ```php
-isAnagram('looped','poodle'); // true
+isAnagram('act', 'cat'); // true
 ```
 
 </details>
