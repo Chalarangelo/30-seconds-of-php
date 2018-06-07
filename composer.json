@@ -10,8 +10,6 @@
         }
     ],
     "require-dev": {
-        "phpunit/phpunit": "^7.2",
-        "symfony/console": "^4.1"
     },
     "autoload-dev": {
         "files": ["src/helpers.php"]
@@ -20,5 +18,8 @@
         "test": "phpunit",
         "build": "php scripts/build.php",
         "generate": "php scripts/generate"
+    },
+    "require": {
+        "symfony/console": "^3.4"
     }
 }

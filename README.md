@@ -54,6 +54,10 @@
 <summary>View contents</summary>
 
 * [`endsWith`](#endswith)
+* [`isAnagram`](#isanagram)
+* [`isLowerCase`](#islowercase)
+* [`isUpperCase`](#isuppercase)
+* [`palindrome`](#palindrome)
 * [`startsWith`](#startswith)
 
 </details>
@@ -750,6 +754,98 @@ function endsWith($haystack, $needle)
 
 ```php
 endsWith('Hi, this is me', 'me'); // true
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### isAnagram
+
+Compare two string and return `true` if both strings are anagram, `false` otherwise.
+
+```php
+function isAnagram($str1,$str2)
+{
+	return(count_chars($str1, 1) == count_chars($str2, 1));
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+isAnagram('looped','poodle'); // true
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### isLowerCase
+
+Returns `true` if the given string is lower case, `false` otherwise.
+
+```php
+function isLowerCase($string)
+{
+    $chr = mb_substr ($string, 0, 1, "UTF-8");
+    return mb_strtolower($chr, "UTF-8") == $chr;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+isLowerCase('Morning shows the day!'); // false
+isLowerCase('i'); // true
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### isUpperCase
+
+Returns `true` if the given string is upper case, false otherwise.
+
+```php
+function isUpperCase($string)
+{
+    $chr = mb_substr ($string, 0, 1, "UTF-8");
+    return mb_strtolower($chr, "UTF-8") != $chr;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+isUpperCase('Morning Shows The Day!'); // true
+isUpperCase('qUick Fox'); // false
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### palindrome
+
+Returns `true` if the given string is a palindrome, `false` otherwise.
+
+```php
+function palindrome($str)
+{
+	return strrev($str) == $str;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+palindrome('wow'); // true
 ```
 
 </details>
