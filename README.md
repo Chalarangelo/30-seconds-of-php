@@ -305,7 +305,7 @@ Checks a flat list for duplicate values. Returns `true` if duplicate values exis
 ```php
 function hasDuplicates($items)
 {
-    return count($items) !== count(array_unique($items));
+    return count($items) > count(array_unique($items));
 }
 ```
 
