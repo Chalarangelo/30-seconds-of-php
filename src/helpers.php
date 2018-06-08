@@ -236,3 +236,16 @@ function palindrome($string)
 {
     return strrev($string) === $string;
 }
+
+function firstStringBetween(string $haystack, string $start, string $end): string
+{
+   $char = strpos($haystack, $start);
+   if (!$char) {
+       return '';
+    }
+
+    $char += strlen($start);
+    $len = strpos($haystack, $end, $char) - $char;
+
+    return substr($haystack, $char, $len);
+}

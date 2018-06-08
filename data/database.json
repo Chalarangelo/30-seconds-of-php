@@ -10,6 +10,7 @@
     "fibonacci": ["math"],
     "findLast": ["array"],
     "findLastIndex": ["array"],
+    "firstStringBetween": ["string"],
     "flatten": ["array"],
     "gcd": ["math"],
     "groupBy": ["array"],

@@ -63,4 +63,15 @@ class StringTest extends TestCase
             palindrome('racecar')
         );
     }
+
+    /**
+     * @test
+     */
+    public function testFirstStringBetween()
+    {
+        $this->assertSame(
+            'custom',
+            firstStringBetween('This is a [custom] string', '[', ']')
+        );
+    }
 }
