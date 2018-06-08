@@ -8,7 +8,11 @@
         "icon": "➗"
     },
     {
-    	"name": "String",
-    	"icon": "📜"
+        "name": "String",
+        "icon": "📜"
+    },
+    {
+        "name": "Function",
+        "icon": "🎛️"
     }
 ]

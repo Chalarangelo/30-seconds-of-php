@@ -63,6 +63,14 @@
 
 </details>
 
+### 🎛️ Function
+
+<details>
+<summary>View contents</summary>
+
+
+</details>
+
 ---
  ## 📚 Array
 
@@ -785,6 +793,7 @@ firstStringBetween('This is a [custom] string', '[', ']'); // custom
 ```
 
 </details>
+
 <br>[⬆ Back to top](#table-of-contents)
 
 ### isAnagram
@@ -900,6 +909,10 @@ startsWith('Hi, this is me', 'Hi'); // true
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
+
+
+---
+ ## 🎛️ Function
 
 ### Related
 
