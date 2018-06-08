@@ -3,7 +3,7 @@
 Returns the first string there is between the strings from the parameter start and end.
 
 ```php
-function firstStringBetween(string $haystack, string $start, string $end): string
+function firstStringBetween($haystack, $start, $end)
 {
     $char = strpos($haystack, $start);
     if (!$char) {

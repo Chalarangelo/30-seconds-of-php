@@ -237,11 +237,11 @@ function palindrome($string)
     return strrev($string) === $string;
 }
 
-function firstStringBetween(string $haystack, string $start, string $end): string
+function firstStringBetween($haystack, $start, $end)
 {
-   $char = strpos($haystack, $start);
-   if (!$char) {
-       return '';
+    $char = strpos($haystack, $start);
+    if (!$char) {
+        return '';
     }
 
     $char += strlen($start);
