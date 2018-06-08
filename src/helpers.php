@@ -97,13 +97,9 @@ function reject($items, $func)
 
 function remove($items, $func)
 {
-    $keys = array_keys(array_filter($items, $func));
+    $filtered = array_filter($items, $func);
 
-    foreach ($keys as $key) {
-        unset($items[$key]);
-    }
-
-    return $items;
+    return array_diff_key($items, $filtered);
 }
 
 function take($items, $n = 1)
