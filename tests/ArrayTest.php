@@ -4,9 +4,6 @@ use PHPUnit\Framework\TestCase;
 
 class ArrayTest extends TestCase
 {
-    /**
-     * @test
-     */
     public function testAll()
     {
         $this->assertTrue(
@@ -16,9 +13,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testAny()
     {
         $this->assertTrue(
@@ -28,9 +22,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testChunk()
     {
         $this->assertEquals(
@@ -39,9 +30,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testFlatten()
     {
         $this->assertEquals(
@@ -50,9 +38,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testDeepFlatten()
     {
         $this->assertEquals(
@@ -61,9 +46,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testDrop()
     {
         $this->assertEquals(
@@ -77,9 +59,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testFindLast()
     {
         $this->assertEquals(
@@ -90,9 +69,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testFindLastIndex()
     {
         $this->assertEquals(
@@ -103,9 +79,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testHead()
     {
         $this->assertEquals(
@@ -114,9 +87,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testTail()
     {
         $this->assertEquals(
@@ -130,9 +100,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testLast()
     {
         $this->assertEquals(
@@ -141,9 +108,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testPull()
     {
         $items = ['a', 'b', 'c', 'a', 'b', 'c'];
@@ -154,9 +118,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testPluck()
     {
         $this->assertEquals(
@@ -168,9 +129,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testReject()
     {
         $this->assertEquals(
@@ -181,9 +139,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testRemove()
     {
         $this->assertEquals(
@@ -194,9 +149,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testTake()
     {
         $this->assertEquals(
@@ -210,9 +162,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testWithout()
     {
         $this->assertEquals(
@@ -221,9 +170,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testHasDuplicates()
     {
         $this->assertTrue(
@@ -231,9 +177,25 @@ class ArrayTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
+    public function testGroupByWithObjectItem()
+    {
+        $peterClass = new \stdClass();
+        $peterClass->name = 'Peter';
+        $peterClass->age = '25';
+
+        $appzcoderClass = new \stdClass();
+        $appzcoderClass->name = 'Appzcoder';
+        $appzcoderClass->age = '25';
+
+        $this->assertEquals([
+            'Peter' => [$peterClass],
+            'Appzcoder' => [$appzcoderClass],
+        ], groupBy([
+            'person' => $peterClass,
+            'organization' => $appzcoderClass,
+        ], 'name'));
+    }
+
     public function testGroupBy()
     {
         $this->assertEquals(

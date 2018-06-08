@@ -4,9 +4,6 @@ use PHPUnit\Framework\TestCase;
 
 class MathTest extends TestCase
 {
-    /**
-     * @test
-     */
     public function testAverage()
     {
         $this->assertEquals(
@@ -20,9 +17,6 @@ class MathTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testFactorial()
     {
         $this->assertEquals(
@@ -31,9 +25,6 @@ class MathTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testFibonacci()
     {
         $this->assertEquals(
@@ -42,9 +33,6 @@ class MathTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testGCD()
     {
         $this->assertEquals(
@@ -58,9 +46,6 @@ class MathTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testLCM()
     {
         $this->assertEquals(
@@ -74,9 +59,6 @@ class MathTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testIsPrime()
     {
         $this->assertTrue(
@@ -84,9 +66,13 @@ class MathTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
+    public function testIsNotPrime()
+    {
+        $this->assertFalse(
+            isPrime(4)
+        );
+    }
+
     public function testIsEven()
     {
         $this->assertTrue(
@@ -94,9 +80,6 @@ class MathTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testMedian()
     {
         $this->assertEquals(
