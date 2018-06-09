@@ -21,7 +21,6 @@
     },
     "scripts": {
         "test": "phpunit",
-        "build": "php scripts/build.php",
-        "generate": "php scripts/generate"
+        "build": "php scripts/build.php"
     }
 }

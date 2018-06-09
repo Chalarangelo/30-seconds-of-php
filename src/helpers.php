@@ -249,3 +249,18 @@ function firstStringBetween($haystack, $start, $end)
 
     return substr($haystack, $char, $len);
 }
+
+function compose(...$functions)
+{
+    return array_reduce(
+        $functions,
+        function ($carry, $function) {
+            return function ($x) use ($carry, $function) {
+                return $function($carry($x));
+            };
+        },
+        function ($x) {
+            return $x;
+        }
+    );
+}
