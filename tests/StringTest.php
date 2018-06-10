@@ -4,9 +4,6 @@ use PHPUnit\Framework\TestCase;
 
 class StringTest extends TestCase
 {
-    /**
-     * @test
-     */
     public function testEndsWith()
     {
         $this->assertTrue(
@@ -14,9 +11,6 @@ class StringTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testStartsWith()
     {
         $this->assertTrue(
@@ -24,9 +18,6 @@ class StringTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testIsUpperCase()
     {
         $this->assertTrue(
@@ -34,9 +25,6 @@ class StringTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testIsLowerCase()
     {
         $this->assertTrue(
@@ -44,9 +32,6 @@ class StringTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testIsAnagram()
     {
         $this->assertTrue(
@@ -54,9 +39,6 @@ class StringTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testPalindrome()
     {
         $this->assertTrue(
@@ -64,14 +46,19 @@ class StringTest extends TestCase
         );
     }
 
-    /**
-     * @test
-     */
     public function testFirstStringBetween()
     {
         $this->assertSame(
             'custom',
             firstStringBetween('This is a [custom] string', '[', ']')
+        );
+    }
+
+    public function testFirstStringBetweenShouldReturnEmptyString()
+    {
+        $this->assertSame(
+            '',
+            firstStringBetween('', '[', ']')
         );
     }
 }
