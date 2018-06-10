@@ -52,10 +52,7 @@ class StringTest extends TestCase
             'custom',
             firstStringBetween('This is a [custom] string', '[', ']')
         );
-    }
 
-    public function testFirstStringBetweenShouldReturnEmptyString()
-    {
         $this->assertSame(
             '',
             firstStringBetween('', '[', ']')

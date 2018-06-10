@@ -177,25 +177,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    public function testGroupByWithObjectItem()
-    {
-        $peterClass = new \stdClass();
-        $peterClass->name = 'Peter';
-        $peterClass->age = '25';
-
-        $appzcoderClass = new \stdClass();
-        $appzcoderClass->name = 'Appzcoder';
-        $appzcoderClass->age = '25';
-
-        $this->assertEquals([
-            'Peter' => [$peterClass],
-            'Appzcoder' => [$appzcoderClass],
-        ], groupBy([
-            'person' => $peterClass,
-            'organization' => $appzcoderClass,
-        ], 'name'));
-    }
-
     public function testGroupBy()
     {
         $this->assertEquals(
@@ -233,5 +214,21 @@ class ArrayTest extends TestCase
             [3 => ['one', 'two'], 5 => ['three']],
             groupBy(['one', 'two', 'three'], 'strlen')
         );
+
+        $peterClass = new \stdClass();
+        $peterClass->name = 'Peter';
+        $peterClass->age = '25';
+
+        $appzcoderClass = new \stdClass();
+        $appzcoderClass->name = 'Appzcoder';
+        $appzcoderClass->age = '25';
+
+        $this->assertEquals([
+            'Peter' => [$peterClass],
+            'Appzcoder' => [$appzcoderClass],
+        ], groupBy([
+            'person' => $peterClass,
+            'organization' => $appzcoderClass,
+        ], 'name'));
     }
 }

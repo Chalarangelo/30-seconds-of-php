@@ -64,10 +64,7 @@ class MathTest extends TestCase
         $this->assertTrue(
             isPrime(3)
         );
-    }
 
-    public function testIsNotPrime()
-    {
         $this->assertFalse(
             isPrime(4)
         );
