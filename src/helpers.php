@@ -212,7 +212,7 @@ function endsWith($haystack, $needle)
 
 function startsWith($haystack, $needle)
 {
-     return substr($haystack, 0, strlen($needle)) === $needle;
+     return 0 === strpos($haystack, $needle);
 }
 
 function isLowerCase($string)
