@@ -1,8 +1,6 @@
 ### result2Map
 
-Explain briefly what the snippet does.
-
-Explain briefly how the snippet works.
+return a map using the given field as key
 
 ```php
 function result2Map($result, $field = 'id')
