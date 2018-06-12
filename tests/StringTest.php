@@ -21,14 +21,14 @@ class StringTest extends TestCase
     public function testIsUpperCase()
     {
         $this->assertTrue(
-            isUpperCase('Morning shows the day!')
+            isUpperCase('MORNING SHOWS THE DAY!')
         );
     }
 
     public function testIsLowerCase()
     {
         $this->assertTrue(
-            isLowerCase('hello')
+            isLowerCase('morning shows the day!')
         );
     }
 
