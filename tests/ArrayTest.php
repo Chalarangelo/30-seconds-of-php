@@ -149,6 +149,19 @@ class ArrayTest extends TestCase
         );
     }
 
+    public function testResult2Map() {
+        $this->assertEquals(
+            [
+                'jack' => ['id' => 1, 'name' => 'jack', 'age' => 18],
+                'mary' => ['id' => 2, 'name' => 'mary', 'age' => 19]
+            ],
+            result2Map([
+                ['id' => 1, 'name' => 'jack', 'age' => 18],
+                ['id' => 2, 'name' => 'mary', 'age' => 19]
+            ], 'name')
+        );
+    }
+
     public function testTake()
     {
         $this->assertEquals(
