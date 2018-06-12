@@ -1,6 +1,6 @@
 ### result2Map
 
-return a map using the given field as key
+Return a map using the given field as key.
 
 ```php
 function result2Map($result, $field = 'id')
