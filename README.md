@@ -894,7 +894,7 @@ Check if a string is starts with a given substring.
 ```php
 function startsWith($haystack, $needle)
 {
-    return 0 === strpos($haystack, $needle);
+    return substr($haystack, 0, strlen($needle)) === $needle;
 }
 ```
 
