@@ -775,7 +775,7 @@ Returns the first string there is between the strings from the parameter start a
 function firstStringBetween($haystack, $start, $end)
 {
     $char = strpos($haystack, $start);
-    if (!$char) {
+    if ($char === false) {
         return '';
     }
 
