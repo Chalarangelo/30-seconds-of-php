@@ -238,7 +238,7 @@ function palindrome($string)
 function firstStringBetween($haystack, $start, $end)
 {
     $char = strpos($haystack, $start);
-    if (!$char) {
+    if ($char === false) {
         return '';
     }
 
