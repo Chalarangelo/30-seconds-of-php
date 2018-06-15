@@ -58,4 +58,14 @@ class StringTest extends TestCase
             firstStringBetween('', '[', ']')
         );
     }
+    public function removeBeginning()
+    {   
+        $this->assertSame(
+            'eros',
+            removeBeginning("West","Westros")
+        );
+    }
+    
 }
+
+
