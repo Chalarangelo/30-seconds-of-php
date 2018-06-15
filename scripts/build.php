@@ -7,6 +7,8 @@ $readme = '![Logo](/logo.png)
 # 30 seconds of php code
 > A curated collection of useful PHP snippets that you can understand in 30 seconds or less.
 
+Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalarangelo/30-seconds-of-code), but there is no affiliation with that project.
+
 ## Table of Contents
 ';
 
@@ -47,12 +49,7 @@ $tableOfContents .= '
 $readme .= $tableOfContents;
 $readme .= $snippets;
 
-$readme .= '### Related
-
-- [30 Seconds of Code](https://github.com/Chalarangelo/30-seconds-of-code)
-- [30 Seconds of Python](https://github.com/kriadmin/30-seconds-of-python-code)
-
-## Contribute
+$readme .= '## Contribute
 You\'re always welcome to contribute to this project. Please read the [contribution guide](CONTRIBUTING.md).
 
 ## License
