@@ -248,6 +248,15 @@ function firstStringBetween($haystack, $start, $end)
     return substr($haystack, $char, $len);
 }
 
+function removeBeginning($str, $substring)
+{   
+    if(substr($str, 0, strlen($substring))==$substring){
+    $str=substr($str,strlen($substring));
+    }
+    return $str;
+}
+
+
 function compose(...$functions)
 {
     return array_reduce(
