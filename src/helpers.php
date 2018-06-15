@@ -251,8 +251,7 @@ function firstStringBetween($haystack, $start, $end)
 function removeBeginning($str, $substring)
 {   
     if(substr($str, 0, strlen($substring))==$substring){
-
-        $str=substr($str,strlen($substring));
+    $str=substr($str,strlen($substring));
     }
     return $str;
 }
