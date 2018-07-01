@@ -262,3 +262,13 @@ function compose(...$functions)
         }
     );
 }
+
+function maxN($numbers)
+{
+    $maxValue = max($numbers);
+    $maxValueArray = array_filter($numbers, function($value) use ($maxValue) {
+        return $maxValue === $value;
+    });
+
+    return count($maxValueArray);
+}

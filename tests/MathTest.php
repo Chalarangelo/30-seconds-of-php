@@ -89,4 +89,17 @@ class MathTest extends TestCase
             median([1, 2, 3, 6, 7, 9])
         );
     }
+
+    public function testMaxN()
+    {
+        $this->assertEquals(
+            1,
+            maxN([1, 2, 3, 4, 5])
+        );
+
+        $this->assertEquals(
+            2,
+            maxN([1, 2, 3, 4, 5, 5])
+        );
+    }
 }
