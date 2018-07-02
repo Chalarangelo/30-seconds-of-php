@@ -47,6 +47,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`isPrime`](#isprime)
 * [`lcm`](#lcm)
 * [`median`](#median)
+* [`maxN`](#maxn)
 
 </details>
 
@@ -737,6 +738,33 @@ function median($numbers)
 ```php
 median([1, 3, 3, 6, 7, 8, 9]); // 6
 median([1, 2, 3, 6, 7, 9]); // 4.5
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### maxN
+Returns the n maximum elements from the provided array.
+
+```php
+function maxN(...$numbers)
+{
+    $maxValue = max($numbers);
+    $maxValueArray = array_filter($numbers, function($value) use ($maxValue) {
+        return $value === $maxValue;
+    });
+
+    return count($maxValueArray);
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+maxN([1, 2, 3, 4, 5, 5]); // 2
+maxN([1, 2, 3, 4, 5]); // 1
 ```
 
 </details>
