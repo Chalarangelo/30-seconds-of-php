@@ -102,4 +102,17 @@ class MathTest extends TestCase
             maxN([1, 2, 3, 4, 5, 5])
         );
     }
+
+    public function testMinN()
+    {
+        $this->assertEquals(
+            1,
+            minN([1, 2, 3, 4, 5, 5])
+        );
+
+        $this->assertEquals(
+            2,
+            minN([1, 1, 2, 3, 4, 5, 5])
+        );
+    }
 }
