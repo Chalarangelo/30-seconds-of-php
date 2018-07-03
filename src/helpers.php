@@ -272,3 +272,13 @@ function maxN($numbers)
 
     return count($maxValueArray);
 }
+
+function minN($numbers)
+{
+    $minValue = min($numbers);
+    $minValueArray = array_filter($numbers, function ($value) use ($minValue) {
+        return $minValue === $value;
+    });
+
+    return count($minValueArray);
+}
