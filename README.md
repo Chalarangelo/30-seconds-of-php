@@ -64,6 +64,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`isUpperCase`](#isuppercase)
 * [`palindrome`](#palindrome)
 * [`startsWith`](#startswith)
+* [`countVowels`](#countvowels)
 
 </details>
 
@@ -961,6 +962,33 @@ function startsWith($haystack, $needle)
 
 ```php
 startsWith('Hi, this is me', 'Hi'); // true
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### countVowels
+
+Retuns number of vowels in provided string.
+
+Use a regular expression to count the number of vowels (A, E, I, O, U) in a string.
+
+```php
+function countVowels($string)
+{
+    preg_match_all('/[aeiou]/i', $string, $matches);
+    $matches = $matches[0];
+
+    return count($matches);
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+countVowels('sampleInput'); // 4
 ```
 
 </details>
