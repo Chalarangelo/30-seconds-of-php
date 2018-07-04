@@ -282,3 +282,11 @@ function minN($numbers)
 
     return count($minValueArray);
 }
+
+function countVowels($string)
+{
+    preg_match_all('/[aeiou]/i', $string, $matches);
+    $matches = $matches[0];
+
+    return count($matches);
+}
