@@ -290,3 +290,8 @@ function countVowels($string)
 
     return count($matches);
 }
+
+function decapitalize($string, $upperRest = false)
+{
+    return strtolower(substr($string,0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
+}

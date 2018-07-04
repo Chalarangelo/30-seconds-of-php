@@ -65,4 +65,11 @@ class StringTest extends TestCase
 
         $this->assertSame(0, countVowels(''));
     }
+
+    public function testDecapitalize()
+    {
+        $this->assertSame('fooBar', decapitalize('FooBar'));
+
+        $this->assertSame('fOOBAR', decapitalize('FooBar', true));
+    }
 }
