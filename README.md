@@ -65,6 +65,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`palindrome`](#palindrome)
 * [`startsWith`](#startswith)
 * [`countVowels`](#countvowels)
+* [`decapitalize`](#decapitalize)
 
 </details>
 
@@ -989,6 +990,30 @@ function countVowels($string)
 
 ```php
 countVowels('sampleInput'); // 4
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### decapitalize
+
+Decapitalizes the first letter of a string.
+
+Decapitalizes the fist letter of the sring and then adds it with rest of the string. Omit the ```upperRest``` parameter to keep the rest of the string intact, or set it to ```true``` to convert to uppercase.
+
+```php
+function decapitalize($string, $upperRest = false)
+{
+    return strtolower(substr($string,0, 1)) . ($upperRest ? strtoupper(substr($string, 1) : substr($string, 1));
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+decapitalize('FooBar'); // 'fooBar'
 ```
 
 </details>
