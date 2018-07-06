@@ -286,12 +286,11 @@ function minN($numbers)
 function countVowels($string)
 {
     preg_match_all('/[aeiou]/i', $string, $matches);
-    $matches = $matches[0];
 
-    return count($matches);
+    return count($matches[0]);
 }
 
 function decapitalize($string, $upperRest = false)
 {
-    return strtolower(substr($string,0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
+    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
 }
