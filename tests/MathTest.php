@@ -115,4 +115,11 @@ class MathTest extends TestCase
             minN([1, 1, 2, 3, 4, 5, 5])
         );
     }
+
+    public function testApproximatelyEqual()
+    {
+        $this->assertTrue(approximatelyEqual(10.0, 10.00001));
+
+        $this->assertFalse(approximatelyEqual(10.0, 10.01));
+    }
 }
