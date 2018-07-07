@@ -46,9 +46,10 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`isEven`](#iseven)
 * [`isPrime`](#isprime)
 * [`lcm`](#lcm)
+* [`median`](#median)
 * [`maxN`](#maxn)
 * [`minN`](#minn)
-* [`median`](#median)
+* [`approximatelyEqual`](#approximatelyequal)
 
 </details>
 
@@ -57,8 +58,6 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 <details>
 <summary>View contents</summary>
 
-* [`countVowels`](#countvowels)
-* [`decapitalize`](#decapitalize)
 * [`endsWith`](#endswith)
 * [`firstStringBetween`](#firststringbetween)
 * [`isAnagram`](#isanagram)
@@ -66,6 +65,8 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`isUpperCase`](#isuppercase)
 * [`palindrome`](#palindrome)
 * [`startsWith`](#startswith)
+* [`countVowels`](#countvowels)
+* [`decapitalize`](#decapitalize)
 
 </details>
 
@@ -721,6 +722,32 @@ lcm(1, 3, 4, 5); // 60
 
 <br>[⬆ Back to top](#table-of-contents)
 
+### median
+Returns the median of an array of numbers.
+
+```php
+function median($numbers)
+{
+    sort($numbers);
+    $totalNumbers = count($numbers);
+    $mid = floor($totalNumbers / 2);
+
+    return ($totalNumbers % 2) === 0 ? ($numbers[$mid - 1] + $numbers[$mid]) / 2 : $numbers[$mid];
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+median([1, 3, 3, 6, 7, 8, 9]); // 6
+median([1, 2, 3, 6, 7, 9]); // 4.5
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 ### maxN
 Returns the n maximum elements from the provided array.
 
@@ -775,85 +802,12 @@ maxN([1, 2, 3, 4, 5]); // 1
 
 <br>[⬆ Back to top](#table-of-contents)
 
-### median
-Returns the median of an array of numbers.
-
-```php
-function median($numbers)
-{
-    sort($numbers);
-    $totalNumbers = count($numbers);
-    $mid = floor($totalNumbers / 2);
-
-    return ($totalNumbers % 2) === 0 ? ($numbers[$mid - 1] + $numbers[$mid]) / 2 : $numbers[$mid];
-}
-```
-
-<details>
-<summary>Examples</summary>
-
-```php
-median([1, 3, 3, 6, 7, 8, 9]); // 6
-median([1, 2, 3, 6, 7, 9]); // 4.5
-```
-
-</details>
 
 <br>[⬆ Back to top](#table-of-contents)
 
 
 ---
  ## 📜 String
-
-### countVowels
-
-Retuns number of vowels in provided string.
-
-Use a regular expression to count the number of vowels (A, E, I, O, U) in a string.
-
-```php
-function countVowels($string)
-{
-    preg_match_all('/[aeiou]/i', $string, $matches);
-
-    return count($matches[0]);
-}
-```
-
-<details>
-<summary>Examples</summary>
-
-```php
-countVowels('sampleInput'); // 4
-```
-
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
-### decapitalize
-
-Decapitalizes the first letter of a string.
-
-Decapitalizes the fist letter of the sring and then adds it with rest of the string. Omit the ```upperRest``` parameter to keep the rest of the string intact, or set it to ```true``` to convert to uppercase.
-
-```php
-function decapitalize($string, $upperRest = false)
-{
-    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1) : substr($string, 1));
-}
-```
-
-<details>
-<summary>Examples</summary>
-
-```php
-decapitalize('FooBar'); // 'fooBar'
-```
-
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
 
 ### endsWith
 
@@ -1013,6 +967,56 @@ function startsWith($haystack, $needle)
 
 ```php
 startsWith('Hi, this is me', 'Hi'); // true
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### countVowels
+
+Retuns number of vowels in provided string.
+
+Use a regular expression to count the number of vowels (A, E, I, O, U) in a string.
+
+```php
+function countVowels($string)
+{
+    preg_match_all('/[aeiou]/i', $string, $matches);
+
+    return count($matches[0]);
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+countVowels('sampleInput'); // 4
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### decapitalize
+
+Decapitalizes the first letter of a string.
+
+Decapitalizes the fist letter of the sring and then adds it with rest of the string. Omit the ```upperRest``` parameter to keep the rest of the string intact, or set it to ```true``` to convert to uppercase.
+
+```php
+function decapitalize($string, $upperRest = false)
+{
+    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1) : substr($string, 1));
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+decapitalize('FooBar'); // 'fooBar'
 ```
 
 </details>
