@@ -294,3 +294,8 @@ function decapitalize($string, $upperRest = false)
 {
     return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
 }
+
+function approximatelyEqual($number1, $number2, $epsilon = 0.001)
+{
+    return abs($number1 - $number2) < $epsilon;
+}
