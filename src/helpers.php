@@ -299,3 +299,8 @@ function approximatelyEqual($number1, $number2, $epsilon = 0.001)
 {
     return abs($number1 - $number2) < $epsilon;
 }
+
+function clampNumber($num, $a, $b)
+{
+    return max(min($num, max($a, $b)), min($a, $b));
+}

@@ -122,4 +122,11 @@ class MathTest extends TestCase
 
         $this->assertFalse(approximatelyEqual(10.0, 10.01));
     }
+
+    public function testClampNumber()
+    {
+        $this->assertEquals(3, clampNumber(2, 3, 5));
+
+        $this->assertEquals(-1, clampNumber(1, -1, -5));
+    }
 }
