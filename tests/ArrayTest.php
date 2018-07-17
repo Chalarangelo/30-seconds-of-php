@@ -231,4 +231,67 @@ class ArrayTest extends TestCase
             'organization' => $appzcoderClass,
         ], 'name'));
     }
+
+    public function testOrderBy()
+    {
+        $this->assertEquals(
+            [
+                [
+                    'id' => 4,
+                    'name' => 'Khaja'
+                ],
+                [
+                    'id' => 3,
+                    'name' => 'Khaja'
+                ],
+                [
+                    'id' => 2,
+                    'name' => 'Joy'
+                ],
+                [
+                    'id' => 1,
+                    'name' => 'Raja'
+                ],
+
+            ],
+            orderBy(
+                [
+                    [
+                        'id' => 2,
+                        'name' => 'Joy'
+                    ],
+                    [
+                        'id' => 3,
+                        'name' => 'Khaja'
+                    ],
+                    [
+                        'id' => 4,
+                        'name' => 'Khaja'
+                    ],
+                    [
+                        'id' => 1,
+                        'name' => 'Raja'
+                    ]
+                ],
+                'id',
+                'desc'
+            )
+        );
+
+        $orderClass = new \stdClass();
+        $orderClass->id = 1;
+        $orderClass->name = 'Raja';
+
+        $orderClass2 = new \stdClass();
+        $orderClass2->id = 2;
+        $orderClass2->name = 'Joy';
+
+        $orderClass3 = new \stdClass();
+        $orderClass3->id = 3;
+        $orderClass3->name = 'Khaja';
+
+        $this->assertEquals([$orderClass2, $orderClass3, $orderClass], orderBy([
+            $orderClass, $orderClass3, $orderClass2
+        ], 'name'));
+    }
 }
