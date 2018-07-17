@@ -50,6 +50,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`maxN`](#maxn)
 * [`minN`](#minn)
 * [`approximatelyEqual`](#approximatelyequal)
+* [`clampNumber`](#clampnumber)
 
 </details>
 
@@ -822,6 +823,31 @@ function approximatelyEqual($number1, $number2, $epsilon = 0.001)
 approximatelyEqual(10.0, 10.00001); // true
 
 approximatelyEqual(10.0, 10.01); // false
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### clampNumber
+
+Clamps num within the inclusive range specified by the boundary values a and b.
+
+If num falls within the range, return num. Otherwise, return the nearest number in the range.
+
+```php
+function clampNumber($num, $a, $b)
+{
+    return max(min($num, max($a, $b)), min($a, $b));
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+clampNumber(2, 3, 5); // 3
+clampNumber(1, -1, -5); // -1
 ```
 
 </details>
