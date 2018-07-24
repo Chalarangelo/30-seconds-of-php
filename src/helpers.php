@@ -263,44 +263,46 @@ function compose(...$functions)
     );
 }
 
-function maxN($numbers)
+function orderBy(array $items, $sortingAttr, $sortingType = 'asc')
 {
-    $maxValue = max($numbers);
-    $maxValueArray = array_filter($numbers, function ($value) use ($maxValue) {
-        return $maxValue === $value;
-    });
+    if(is_array($items) && !empty($items)){
 
-    return count($maxValueArray);
-}
+        $trimmedAttr = trim($sortingAttr, ' ');
+        $sortingType = trim($sortingType, ' ');
+        $itemValuesForSortingAttr = [];
+        $sortedItems = [];
+        $sortedItemCollection = [];
 
-function minN($numbers)
-{
-    $minValue = min($numbers);
-    $minValueArray = array_filter($numbers, function ($value) use ($minValue) {
-        return $minValue === $value;
-    });
+        foreach($items as $item){
+            if(is_object($item) && property_exists($item, $trimmedAttr)){
+                $itemValuesForSortingAttr[] = $item->{$trimmedAttr};
+            }elseif (is_array($item) && array_key_exists($trimmedAttr, $item)) {
+                $itemValuesForSortingAttr[] = $item[$trimmedAttr] ;
+            }
+        }
+        $itemValuesForSortingAttr = array_unique($itemValuesForSortingAttr);
+        if(strtolower($sortingType) === 'desc'){
+            rsort($itemValuesForSortingAttr);
+        }elseif(strtolower($sortingType) === 'asc'){
+            sort($itemValuesForSortingAttr);
+        }
 
-    return count($minValueArray);
-}
+        foreach($itemValuesForSortingAttr as $itemAttrVal){
+            $sortedItems[] = array_filter($items, function($itemVal) use($itemAttrVal, $trimmedAttr){
+                if(is_object($itemVal)){
+                    return $itemVal->{$trimmedAttr} == $itemAttrVal;
+                }elseif(is_array($itemVal)){
+                    return $itemVal[$trimmedAttr] == $itemAttrVal;
+                }
 
-function countVowels($string)
-{
-    preg_match_all('/[aeiou]/i', $string, $matches);
+            });
+        }
 
-    return count($matches[0]);
-}
-
-function decapitalize($string, $upperRest = false)
-{
-    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
-}
-
-function approximatelyEqual($number1, $number2, $epsilon = 0.001)
-{
-    return abs($number1 - $number2) < $epsilon;
-}
-
-function clampNumber($num, $a, $b)
-{
-    return max(min($num, max($a, $b)), min($a, $b));
+        foreach($sortedItems as $sortedItemVals){
+            foreach($sortedItemVals as $sortedItemVal){
+                $sortedItemCollection [] = $sortedItemVal;
+            }
+        }
+        return $sortedItemCollection;
+    }
 }
