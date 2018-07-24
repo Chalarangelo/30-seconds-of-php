@@ -341,7 +341,7 @@ function orderBy(array $items, $sortingAttr, $sortingType = 'asc')
 
         foreach ($sortedItems as $sortedItemVals) {
             foreach ($sortedItemVals as $sortedItemVal) {
-                $sortedItemCollection [] = $sortedItemVal;
+                $sortedItemCollection[] = $sortedItemVal;
             }
         }
 
