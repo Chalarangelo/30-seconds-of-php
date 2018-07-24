@@ -6,37 +6,41 @@ function orderBy(array $items, $sortingAttr, $sortingType = 'asc')
 {
     if(is_array($items) && !empty($items)){
 
-            $itemValuesForSortingAttr = [];
-            foreach($items as $item){
-                if (is_array($item) && array_key_exists(trim($sortingAttr, ' '), $item)) {
-                    $itemValuesForSortingAttr[] = $item[$sortingAttr] ;
-                }
+        $trimmedAttr = trim($sortingAttr, ' ');
+        $sortingType = trim($sortingType, ' ');
+        $itemValuesForSortingAttr = [];
+        foreach($items as $item){
+            if(is_object($item) && property_exists($item, $trimmedAttr)){
+                $itemValuesForSortingAttr[] = $item->{$trimmedAttr};
+            }elseif (is_array($item) && array_key_exists($trimmedAttr, $item)) {
+                $itemValuesForSortingAttr[] = $item[$trimmedAttr] ;
             }
-
-            $itemValuesForSortingAttr = array_unique($itemValuesForSortingAttr);
-
-            if(strtolower(trim($sortingType, ' ')) === 'desc'){
-                rsort($itemValuesForSortingAttr);
-            }elseif(strtolower(trim($sortingType, ' ')) === 'asc'){
-                sort($itemValuesForSortingAttr);
-            }
-            $sortedItems = [];
-            foreach($itemValuesForSortingAttr as $itemAttrVal){
-                $sortedItems[] = array_filter($items, function($itemVal) use($itemAttrVal, $sortingAttr){
-                   if(is_array($itemVal)){
-                        return $itemVal[$sortingAttr] == $itemAttrVal;
-                    }
-                });
-            }
-            $sortedItemCollection = [];
-            foreach($sortedItems as $sortedItemVals){
-                foreach($sortedItemVals as $sortedItemVal){
-                    $sortedItemCollection [] = $sortedItemVal;
-                }
-            }
-
-            return $sortedItemCollection;
         }
+        $itemValuesForSortingAttr = array_unique($itemValuesForSortingAttr);
+        if(strtolower($sortingType) === 'desc'){
+            rsort($itemValuesForSortingAttr);
+        }elseif(strtolower($sortingType) === 'asc'){
+            sort($itemValuesForSortingAttr);
+        }
+        $sortedItems = [];
+        foreach($itemValuesForSortingAttr as $itemAttrVal){
+            $sortedItems[] = array_filter($items, function($itemVal) use($itemAttrVal, $trimmedAttr){
+                if(is_object($itemVal)){
+                    return $itemVal->{$trimmedAttr} == $itemAttrVal;
+                }elseif(is_array($itemVal)){
+                    return $itemVal[$trimmedAttr] == $itemAttrVal;
+                }
+
+            });
+        }
+        $sortedItemCollection = [];
+        foreach($sortedItems as $sortedItemVals){
+            foreach($sortedItemVals as $sortedItemVal){
+                $sortedItemCollection [] = $sortedItemVal;
+            }
+        }
+        return $sortedItemCollection;
+    }
 }
 ```
 
