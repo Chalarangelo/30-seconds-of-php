@@ -47,6 +47,10 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`isPrime`](#isprime)
 * [`lcm`](#lcm)
 * [`median`](#median)
+* [`maxN`](#maxn)
+* [`minN`](#minn)
+* [`approximatelyEqual`](#approximatelyequal)
+* [`clampNumber`](#clampnumber)
 
 </details>
 
@@ -62,6 +66,8 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`isUpperCase`](#isuppercase)
 * [`palindrome`](#palindrome)
 * [`startsWith`](#startswith)
+* [`countVowels`](#countvowels)
+* [`decapitalize`](#decapitalize)
 
 </details>
 
@@ -743,6 +749,111 @@ median([1, 2, 3, 6, 7, 9]); // 4.5
 
 <br>[⬆ Back to top](#table-of-contents)
 
+### maxN
+Returns the n maximum elements from the provided array.
+
+```php
+function maxN($numbers)
+{
+    $maxValue = max($numbers);
+    $maxValueArray = array_filter($numbers, function ($value) use ($maxValue) {
+        return $maxValue === $value;
+    });
+
+    return count($maxValueArray);
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+maxN([1, 2, 3, 4, 5, 5]); // 2
+maxN([1, 2, 3, 4, 5]); // 1
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### minN
+Returns the n minimum elements from the provided array.
+
+```php
+function minN($numbers)
+{
+    $minValue = min($numbers);
+    $minValueArray = array_filter($numbers, function ($value) use ($minValue) {
+        return $minValue === $value;
+    });
+
+    return count($minValueArray);
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+maxN([1, 1, 2, 3, 4, 5, 5]); // 2
+maxN([1, 2, 3, 4, 5]); // 1
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### approximatelyEqual
+
+Checks if two numbers are approximately equal to each other.
+
+Use abs() to compare the absolute difference of the two values to epsilon. Omit the third parameter, epsilon, to use a default value of 0.001.
+
+```php
+function approximatelyEqual($number1, $number2, $epsilon = 0.001)
+{
+    return abs($number1 - $number2) < $epsilon;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+approximatelyEqual(10.0, 10.00001); // true
+
+approximatelyEqual(10.0, 10.01); // false
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### clampNumber
+
+Clamps num within the inclusive range specified by the boundary values a and b.
+
+If num falls within the range, return num. Otherwise, return the nearest number in the range.
+
+```php
+function clampNumber($num, $a, $b)
+{
+    return max(min($num, max($a, $b)), min($a, $b));
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+clampNumber(2, 3, 5); // 3
+clampNumber(1, -1, -5); // -1
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ---
  ## 📜 String
@@ -905,6 +1016,56 @@ function startsWith($haystack, $needle)
 
 ```php
 startsWith('Hi, this is me', 'Hi'); // true
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### countVowels
+
+Retuns number of vowels in provided string.
+
+Use a regular expression to count the number of vowels (A, E, I, O, U) in a string.
+
+```php
+function countVowels($string)
+{
+    preg_match_all('/[aeiou]/i', $string, $matches);
+
+    return count($matches[0]);
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+countVowels('sampleInput'); // 4
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### decapitalize
+
+Decapitalizes the first letter of a string.
+
+Decapitalizes the fist letter of the sring and then adds it with rest of the string. Omit the ```upperRest``` parameter to keep the rest of the string intact, or set it to ```true``` to convert to uppercase.
+
+```php
+function decapitalize($string, $upperRest = false)
+{
+    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1) : substr($string, 1));
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+decapitalize('FooBar'); // 'fooBar'
 ```
 
 </details>

@@ -89,4 +89,44 @@ class MathTest extends TestCase
             median([1, 2, 3, 6, 7, 9])
         );
     }
+
+    public function testMaxN()
+    {
+        $this->assertEquals(
+            1,
+            maxN([1, 2, 3, 4, 5])
+        );
+
+        $this->assertEquals(
+            2,
+            maxN([1, 2, 3, 4, 5, 5])
+        );
+    }
+
+    public function testMinN()
+    {
+        $this->assertEquals(
+            1,
+            minN([1, 2, 3, 4, 5, 5])
+        );
+
+        $this->assertEquals(
+            2,
+            minN([1, 1, 2, 3, 4, 5, 5])
+        );
+    }
+
+    public function testApproximatelyEqual()
+    {
+        $this->assertTrue(approximatelyEqual(10.0, 10.00001));
+
+        $this->assertFalse(approximatelyEqual(10.0, 10.01));
+    }
+
+    public function testClampNumber()
+    {
+        $this->assertEquals(3, clampNumber(2, 3, 5));
+
+        $this->assertEquals(-1, clampNumber(1, -1, -5));
+    }
 }
