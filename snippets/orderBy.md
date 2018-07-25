@@ -3,47 +3,27 @@
 sorts a collection of arrays or objects by any one of their keys or properties
 
 ```php
-function orderBy(array $items, $sortingAttr, $sortingType = 'asc')
+function orderBy(array $items, $attr, $order = 'asc')
 {
-        $trimmedAttr = trim($sortingAttr, ' ');
-        $sortingType = trim($sortingType, ' ');
-        $itemValuesForSortingAttr = [];
-        $sortedItems = [];
-        $sortedItemCollection = [];
+    $sortedItemCollection = [];
 
-        foreach ($items as $item) {
-            if (is_object($item) && property_exists($item, $trimmedAttr)) {
-                $itemValuesForSortingAttr[] = $item->{$trimmedAttr};
-            } elseif (is_array($item) && array_key_exists($trimmedAttr, $item)) {
-                $itemValuesForSortingAttr[] = $item[$trimmedAttr] ;
-            }
+    $itemVals = array_unique(array_map(function($item) use($attr) {
+        return is_object($item) ? $item->{$attr} : $item[$attr] ;
+    }, $items));
+
+    if ($order === 'asc') sort($itemVals);
+    if ($order === 'desc') rsort($itemVals);
+
+    foreach ($itemVals as $itemVal) {
+        $sortedItems = array_filter($items, function($item) use($itemVal, $attr) {
+            return (is_object($item) ? $item->{$attr} : $item[$attr]) === $itemVal;
+        });
+        foreach ($sortedItems as $sortedItem) {
+            $sortedItemCollection[] = $sortedItem;
         }
+    }
 
-        $itemValuesForSortingAttr = array_unique($itemValuesForSortingAttr);
-
-        if (strtolower($sortingType) === 'desc') {
-            rsort($itemValuesForSortingAttr);
-        } elseif (strtolower($sortingType) === 'asc') {
-            sort($itemValuesForSortingAttr);
-        }
-
-        foreach ($itemValuesForSortingAttr as $itemAttrVal) {
-            $sortedItems[] = array_filter($items, function($itemVal) use($itemAttrVal, $trimmedAttr) {
-                if (is_object($itemVal)) {
-                    return $itemVal->{$trimmedAttr} === $itemAttrVal;
-                } elseif (is_array($itemVal)) {
-                    return $itemVal[$trimmedAttr] === $itemAttrVal;
-                }
-            });
-        }
-
-        foreach ($sortedItems as $sortedItemVals) {
-            foreach ($sortedItemVals as $sortedItemVal) {
-                $sortedItemCollection[] = $sortedItemVal;
-            }
-        }
-
-        return $sortedItemCollection;
+    return $sortedItemCollection;
 }
 ```
 
