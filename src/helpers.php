@@ -305,25 +305,18 @@ function clampNumber($num, $a, $b)
     return max(min($num, max($a, $b)), min($a, $b));
 }
 
-function orderBy(array $items, $attr, $order = 'asc')
+function orderBy($items, $attr, $order)
 {
-    $sortedItemCollection = [];
-
-    $itemVals = array_unique(array_map(function($item) use($attr) {
-        return is_object($item) ? $item->{$attr} : $item[$attr] ;
-    }, $items));
-
-    if ($order === 'asc') sort($itemVals);
-    if ($order === 'desc') rsort($itemVals);
-
-    foreach ($itemVals as $itemVal) {
-        $sortedItems = array_filter($items, function($item) use($itemVal, $attr) {
-            return (is_object($item) ? $item->{$attr} : $item[$attr]) === $itemVal;
-        });
-        foreach ($sortedItems as $sortedItem) {
-            $sortedItemCollection[] = $sortedItem;
-        }
+    $sortedItems = [];
+    foreach ($items as $item) {
+        $key = is_object($item) ? $item->{$attr} : $item[$attr];
+        $sortedItems[$key] = $item;
+    }
+    if ($order === 'desc') {
+        krsort($sortedItems);
+    } else {
+        ksort($sortedItems);
     }
 
-    return $sortedItemCollection;
+    return array_values($sortedItems);
 }
