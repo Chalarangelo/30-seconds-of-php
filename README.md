@@ -1163,7 +1163,7 @@ $compose(3); // 20
 
 ### memoize
 
-Memorize function results in memory.
+Memoization of a function results in memory.
 
 ```php
 function memoize($func)
