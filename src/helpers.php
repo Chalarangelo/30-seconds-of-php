@@ -320,3 +320,21 @@ function orderBy($items, $attr, $order)
 
     return array_values($sortedItems);
 }
+
+function memoize($func)
+{
+    return function () use ($func) {
+        static $cache = [];
+
+        $args = func_get_args();
+        $key = serialize($args);
+        $cached = true;
+
+        if (!isset($cache[$key])) {
+            $cache[$key] = call_user_func_array($func, $args);
+            $cached = false;
+        }
+
+        return ['result' => $cache[$key], 'cached' => $cached];
+    };
+}
