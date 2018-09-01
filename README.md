@@ -79,6 +79,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 
 * [`compose`](#compose)
 * [`memoize`](#memoize)
+* [`curry`](#curry)
 
 </details>
 
@@ -1198,6 +1199,49 @@ $memoizedAdd = memoize(
 var_dump($memoizedAdd(5)); // ['result' => 15, 'cached' => false]
 var_dump($memoizedAdd(6)); // ['result' => 16, 'cached' => false]
 var_dump($memoizedAdd(5)); // ['result' => 15, 'cached' => true]
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### curry
+
+Curries a function to take arguments in multiple calls.
+
+```php
+function curry($function)
+{
+    $accumulator = function ($arguments) use ($function, &$accumulator) {
+        return function (...$args) use ($function, $arguments, $accumulator) {
+            $arguments = array_merge($arguments, $args);
+            $reflection = new ReflectionFunction($function);
+            $totalArguments = $reflection->getNumberOfRequiredParameters();
+
+            if ($totalArguments <= count($arguments)) {
+                return call_user_func_array($function, $arguments);
+            }
+
+            return $accumulator($arguments);
+        };
+    };
+
+    return $accumulator([]);
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+$curriedAdd = curry(
+    function ($a, $b) {
+        return $a + $b;
+    }
+);
+
+$add10 = $curriedAdd(10);
+var_dump($add10(15)); // 25
 ```
 
 </details>
