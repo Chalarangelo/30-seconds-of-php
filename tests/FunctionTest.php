@@ -46,4 +46,17 @@ class FunctionTest extends TestCase
             $memoizedAdd(5)
         );
     }
+
+    public function testCurry()
+    {
+        $curriedAdd = curry(
+            function ($a, $b) {
+                return $a + $b;
+            }
+        );
+        
+        $add10 = $curriedAdd(10);
+
+        $this->assertEquals(25, $add10(15));
+    }
 }
