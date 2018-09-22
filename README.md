@@ -80,6 +80,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`compose`](#compose)
 * [`memoize`](#memoize)
 * [`curry`](#curry)
+* [`once`](#once)
 
 </details>
 
@@ -1242,6 +1243,35 @@ $curriedAdd = curry(
 
 $add10 = $curriedAdd(10);
 var_dump($add10(15)); // 25
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### once
+
+Call a function only once.
+
+```php
+function once($function)
+{
+    return function (...$args) use ($function) {
+        static $called = false;
+        if ($called) {
+            return;
+        }
+        $called = true;
+        return call_user_func_array($function, $args);
+    };
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+once('sampleInput'); // 'sampleOutput'
 ```
 
 </details>
