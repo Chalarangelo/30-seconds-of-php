@@ -20,7 +20,14 @@ function once($function)
 <summary>Examples</summary>
 
 ```php
-once('sampleInput'); // 'sampleOutput'
+$add = function ($a, $b) {
+    return $a + $b;
+};
+
+$once = once($add);
+
+var_dump($once(10, 5)); // 15
+var_dump($once(20, 10)); // null
 ```
 
 </details>
