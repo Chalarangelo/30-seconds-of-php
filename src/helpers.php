@@ -357,3 +357,15 @@ function curry($function)
 
     return $accumulator([]);
 }
+
+function once($function)
+{
+    return function (...$args) use ($function) {
+        static $called = false;
+        if ($called) {
+            return;
+        }
+        $called = true;
+        return call_user_func_array($function, $args);
+    };
+}

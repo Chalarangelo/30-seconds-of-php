@@ -59,4 +59,17 @@ class FunctionTest extends TestCase
 
         $this->assertEquals(25, $add10(15));
     }
+
+    public function testOnce()
+    {
+        $add = function ($a, $b) {
+            return $a + $b;
+        };
+        
+        $once = once($add);
+
+        $this->assertEquals(15, $once(10, 5));
+
+        $this->assertEquals(null, $once(20, 10));
+    }
 }
