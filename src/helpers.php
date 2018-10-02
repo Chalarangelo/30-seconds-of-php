@@ -80,6 +80,7 @@ function last($items)
 function pull(&$items, ...$params)
 {
     $items = array_values(array_diff($items, $params));
+
     return $items;
 }
 
@@ -152,8 +153,8 @@ function fibonacci($n)
 {
     $sequence = [0, 1];
 
-    for ($i = 2; $i < $n; $i++) {
-        $sequence[$i] = $sequence[$i-1] + $sequence[$i-2];
+    for ($i = 2; $i < $n; ++$i) {
+        $sequence[$i] = $sequence[$i - 1] + $sequence[$i - 2];
     }
 
     return $sequence;
@@ -166,13 +167,14 @@ function gcd(...$numbers)
     }
 
     $r = $numbers[0] % $numbers[1];
+
     return $r === 0 ? abs($numbers[1]) : gcd($numbers[1], $r);
 }
 
 function lcm(...$numbers)
 {
     $ans = $numbers[0];
-    for ($i = 1; $i < count($numbers); $i++) {
+    for ($i = 1; $i < count($numbers); ++$i) {
         $ans = ((($numbers[$i] * $ans)) / (gcd($numbers[$i], $ans)));
     }
 
@@ -182,7 +184,7 @@ function lcm(...$numbers)
 function isPrime($number)
 {
     $boundary = floor(sqrt($number));
-    for ($i = 2; $i <= $boundary; $i++) {
+    for ($i = 2; $i <= $boundary; ++$i) {
         if ($number % $i === 0) {
             return false;
         }
@@ -212,7 +214,7 @@ function endsWith($haystack, $needle)
 
 function startsWith($haystack, $needle)
 {
-     return 0 === strpos($haystack, $needle);
+    return 0 === strpos($haystack, $needle);
 }
 
 function isLowerCase($string)
@@ -292,7 +294,7 @@ function countVowels($string)
 
 function decapitalize($string, $upperRest = false)
 {
-    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
+    return strtolower(substr($string, 0, 1)).($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
 }
 
 function approximatelyEqual($number1, $number2, $epsilon = 0.001)
@@ -366,6 +368,25 @@ function once($function)
             return;
         }
         $called = true;
+
         return call_user_func_array($function, $args);
     };
+}
+
+function distance($lat1, $lon1, $lat2, $lon2, $unit = 'M')
+{
+    $theta = $lon1 - $lon2;
+    $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) + cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+    $dist = acos($dist);
+    $dist = rad2deg($dist);
+    $miles = $dist * 60 * 1.1515;
+    $unit = strtoupper($unit);
+
+    if ($unit == 'K') {
+        return $miles * 1.609344;
+    } elseif ($unit == 'N') {
+        return $miles * 0.8684;
+    } else {
+        return $miles;
+    }
 }
