@@ -369,3 +369,26 @@ function once($function)
         return call_user_func_array($function, $args);
     };
 }
+
+function bubbleSort($arr){
+    $arr = array_unique($arr);
+    $nArr = sizeof($arr);
+    $tempo = [];
+    for($i=0; $i<$nArr-1; $i++) { 
+        $swapped = false;
+
+        for($j=0; $j<$nArr-1-$i; $j++){
+            if($arr[$j] > $arr[$j+1]){
+                $temp = $arr[$j];
+                $arr[$j] = $arr[$j+1];
+                $arr[$j+1] = $temp;
+                $swapped = true;
+            }
+        }
+        if(!$swapped){
+            break;
+        }
+    }
+
+    return $arr;
+}
