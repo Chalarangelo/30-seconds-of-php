@@ -12,7 +12,7 @@ function curry($function)
             $totalArguments = $reflection->getNumberOfRequiredParameters();
 
             if ($totalArguments <= count($arguments)) {
-                return call_user_func_array($function, $arguments);
+                return $function(...$arguments);
             }
 
             return $accumulator($arguments);
