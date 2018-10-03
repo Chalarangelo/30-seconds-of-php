@@ -372,12 +372,9 @@ function once($function)
 
 function bubbleSort($arr){
     $arr = array_unique($arr);
-    $nArr = sizeof($arr);
-    $tempo = [];
-    for($i=0; $i<$nArr-1; $i++) { 
+    for($i=0; $i<sizeof($arr)-1; $i++) { 
         $swapped = false;
-
-        for($j=0; $j<$nArr-1-$i; $j++){
+        for($j=0; $j<sizeof($arr)-1-$i; $j++){
             if($arr[$j] > $arr[$j+1]){
                 $temp = $arr[$j];
                 $arr[$j] = $arr[$j+1];
@@ -389,6 +386,5 @@ function bubbleSort($arr){
             break;
         }
     }
-
     return $arr;
 }
