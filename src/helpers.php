@@ -207,12 +207,12 @@ function median($numbers)
 
 function endsWith($haystack, $needle)
 {
-    return substr($haystack, -strlen($needle)) === $needle;
+    return strrpos($haystack, $needle) === (strlen($haystack) - strlen($needle));
 }
 
 function startsWith($haystack, $needle)
 {
-     return 0 === strpos($haystack, $needle);
+     return strpos($haystack, $needle) === 0;
 }
 
 function isLowerCase($string)
