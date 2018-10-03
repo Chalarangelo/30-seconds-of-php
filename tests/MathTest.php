@@ -129,4 +129,13 @@ class MathTest extends TestCase
 
         $this->assertEquals(-1, clampNumber(1, -1, -5));
     }
+
+    public function testDistance()
+    {
+        $this->assertEquals(9434.7468636144, distance(37.090240, -95.712891, -25.274399, 133.775131, 'M'));
+
+        $this->assertEquals(15183.753256476704, distance(37.090240, -95.712891, -25.274399, 133.775131, 'K'));
+
+        $this->assertEquals(8193.1341763628, distance(37.090240, -95.712891, -25.274399, 133.775131, 'N'));
+    }
 }
