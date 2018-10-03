@@ -331,7 +331,7 @@ function memoize($func)
         $cached = true;
 
         if (!isset($cache[$key])) {
-            $cache[$key] = call_user_func_array($func, $args);
+            $cache[$key] = $func(...$args);
             $cached = false;
         }
 
@@ -348,7 +348,7 @@ function curry($function)
             $totalArguments = $reflection->getNumberOfRequiredParameters();
 
             if ($totalArguments <= count($arguments)) {
-                return call_user_func_array($function, $arguments);
+                return $function(...$arguments);
             }
 
             return $accumulator($arguments);
@@ -366,6 +366,6 @@ function once($function)
             return;
         }
         $called = true;
-        return call_user_func_array($function, $args);
+        return $function(...$args);
     };
 }

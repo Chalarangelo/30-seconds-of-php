@@ -13,7 +13,7 @@ function memoize($func)
         $cached = true;
 
         if (!isset($cache[$key])) {
-            $cache[$key] = call_user_func_array($func, $args);
+            $cache[$key] = $func(...$args);
             $cached = false;
         }
 
