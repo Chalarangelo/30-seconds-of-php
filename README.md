@@ -910,7 +910,7 @@ Check if a string is ends with a given substring.
 ```php
 function endsWith($haystack, $needle)
 {
-    return substr($haystack, -strlen($needle)) === $needle;
+	return (strrpos($haystack, $needle) === (strlen($haystack) - strlen($needle)));
 }
 ```
 
@@ -1053,7 +1053,7 @@ Check if a string is starts with a given substring.
 ```php
 function startsWith($haystack, $needle)
 {
-    return substr($haystack, 0, strlen($needle)) === $needle;
+    return (strpos($haystack, $needle) === 0);
 }
 ```
 
