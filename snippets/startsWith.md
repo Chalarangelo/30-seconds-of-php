@@ -5,7 +5,7 @@ Check if a string is starts with a given substring.
 ```php
 function startsWith($haystack, $needle)
 {
-    return substr($haystack, 0, strlen($needle)) === $needle;
+    return (strpos($haystack, $needle) === 0);
 }
 ```
 
