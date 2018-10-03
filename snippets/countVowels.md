@@ -1,6 +1,6 @@
 ### countVowels
 
-Retuns number of vowels in provided string.
+Returns number of vowels in provided string.
 
 Use a regular expression to count the number of vowels (A, E, I, O, U) in a string.
 
