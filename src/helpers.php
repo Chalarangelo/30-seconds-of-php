@@ -292,7 +292,7 @@ function countVowels($string)
 
 function decapitalize($string, $upperRest = false)
 {
-    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
+    return lcfirst($upperRest ? strtoupper($string) : $string);
 }
 
 function approximatelyEqual($number1, $number2, $epsilon = 0.001)
