@@ -369,3 +369,13 @@ function once($function)
         return $function(...$args);
     };
 }
+
+function distance($lat1, $lon1, $lat2, $lon2, $unit = 'M')
+{
+    $miles = rad2deg(acos(sin(deg2rad($lat1)) * sin(deg2rad($lat2)) + cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($lon1 - $lon2)))) * 60 * 1.1515;
+    if ($unit == 'K')
+        return $miles * 1.609344;
+    if ($unit == 'N')
+        return $miles * 0.8684;
+    return $miles;
+}
