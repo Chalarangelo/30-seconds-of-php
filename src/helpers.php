@@ -237,15 +237,7 @@ function palindrome($string)
 
 function firstStringBetween($haystack, $start, $end)
 {
-    $char = strpos($haystack, $start);
-    if ($char === false) {
-        return '';
-    }
-
-    $char += strlen($start);
-    $len = strpos($haystack, $end, $char) - $char;
-
-    return substr($haystack, $char, $len);
+    return trim(strstr(strstr($haystack, $start), $end, true), $start . $end);
 }
 
 function compose(...$functions)
