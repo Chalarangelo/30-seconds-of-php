@@ -57,6 +57,11 @@ class StringTest extends TestCase
             '',
             firstStringBetween('', '[', ']')
         );
+
+        $this->assertSame(
+            '',
+            firstStringBetween('This is a [custom] string', '[', '#')
+        );
     }
 
     public function testCountVowels()
