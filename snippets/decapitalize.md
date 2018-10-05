@@ -7,7 +7,7 @@ Decapitalizes the first letter of the sring and then adds it with rest of the st
 ```php
 function decapitalize($string, $upperRest = false)
 {
-    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
+    return lcfirst($upperRest ? strtoupper($string) : $string);
 }
 ```
 

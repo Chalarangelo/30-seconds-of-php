@@ -237,15 +237,7 @@ function palindrome($string)
 
 function firstStringBetween($haystack, $start, $end)
 {
-    $char = strpos($haystack, $start);
-    if ($char === false) {
-        return '';
-    }
-
-    $char += strlen($start);
-    $len = strpos($haystack, $end, $char) - $char;
-
-    return substr($haystack, $char, $len);
+    return trim(strstr(strstr($haystack, $start), $end, true), $start . $end);
 }
 
 function compose(...$functions)
@@ -292,7 +284,7 @@ function countVowels($string)
 
 function decapitalize($string, $upperRest = false)
 {
-    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
+    return lcfirst($upperRest ? strtoupper($string) : $string);
 }
 
 function approximatelyEqual($number1, $number2, $epsilon = 0.001)
