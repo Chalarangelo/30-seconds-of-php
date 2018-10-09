@@ -251,4 +251,13 @@ class ArrayTest extends TestCase
             )
         );
     }
+
+
+    public function testRotate()
+    {
+        $this->assertEquals([3, 5, 2, 4, 1], rotate([1, 3, 5, 2, 4]));
+        $this->assertEquals([5, 2, 4, 1, 3], rotate([1, 3, 5, 2, 4], 2));
+        $this->assertEquals([5, 2, 4, 1, 3], rotate(rotate([1, 3, 5, 2, 4])));
+
+    }
 }

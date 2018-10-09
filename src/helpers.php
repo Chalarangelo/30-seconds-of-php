@@ -361,3 +361,12 @@ function once($function)
         return $function(...$args);
     };
 }
+
+function rotate($arr, $shift=1)
+{
+  $resultStarting = array_slice($arr, $shift); //extracting elements starting from $shift position till end
+  $resultEnding = array_slice($arr, 0, $shift); //extracting elements from start till $shift position
+  $result = array_merge($resultStarting, $resultEnding);
+
+  return $result;
+}
