@@ -14,4 +14,4 @@
 Note: **DO NOT TOUCH** the **[README.md](README.md)** file and **data** directory.
 
 ## Coding Style
-We follows the PSR-2 coding standard.
+We follow the PSR-2 coding standard.
