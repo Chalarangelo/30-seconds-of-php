@@ -1040,7 +1040,7 @@ palindrome(2221222); // true
 
 ### startsWith
 
-Check if a string is starts with a given substring.
+Check if a string starts with a given substring.
 
 ```php
 function startsWith($haystack, $needle)
