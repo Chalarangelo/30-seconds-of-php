@@ -69,6 +69,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`startsWith`](#startswith)
 * [`countVowels`](#countvowels)
 * [`decapitalize`](#decapitalize)
+* [`isContain`](#iscontain)
 
 </details>
 
@@ -81,6 +82,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`memoize`](#memoize)
 * [`curry`](#curry)
 * [`once`](#once)
+* [`variadicFunction`](#variadicfunction)
 
 </details>
 
@@ -1110,6 +1112,30 @@ decapitalize('FooBar'); // 'fooBar'
 
 <br>[⬆ Back to top](#table-of-contents)
 
+### isContain
+
+Check if a word / substring exist in a given string input.
+Using `strpos` to find the position of the first occurrence of a substring in a string. Returns either `true` or `false`
+```php
+function isContain($string,$needle)
+{
+  return strpos($string,$needle);
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+isContain('This is an example string', 'example'); // true
+```
+```php
+isContain('This is an example string', 'hello'); // false
+```
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
 
 ---
  ## 🎛️ Function
@@ -1272,6 +1298,35 @@ $once = once($add);
 
 var_dump($once(10, 5)); // 15
 var_dump($once(20, 10)); // null
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### variadicFunction
+
+Variadic functions allows you to capture a variable number of arguments to a function.
+
+The function accepts any number of variables to execute the code. It uses a for loop to iterate over the parameters.
+
+```php
+function variadicFunction($operands)
+{
+  $sum = 0;
+  foreach($operands as $singleOperand) {
+    $sum += $singleOperand;
+  }
+  return $sum;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+variadicFunction(1,2); // 3
+variadicFunction(1,2,3,4); // 10
 ```
 
 </details>
