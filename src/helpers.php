@@ -221,12 +221,12 @@ function endsWith($haystack, $needle)
 
 function startsWith($haystack, $needle)
 {
-     return strpos($haystack, $needle) === 0;
+    return strpos($haystack, $needle) === 0;
 }
 
-function isContain($string,$needle)
+function isContains($string, $needle)
 {
-  return strpos($string,$needle) !== false;
+    return strpos($string, $needle) !== false;
 }
 
 function isLowerCase($string)

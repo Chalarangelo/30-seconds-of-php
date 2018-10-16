@@ -18,11 +18,11 @@ class StringTest extends TestCase
         );
     }
 
-    public function testIsContain()
+    public function testIsContains()
     {
-      $this->assertTrue(
-          isContain('This is an example string', 'example')
-      );
+        $this->assertTrue(
+            isContains('This is an example string', 'example')
+        );
     }
 
     public function testIsUpperCase()
