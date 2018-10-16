@@ -217,7 +217,7 @@ function startsWith($haystack, $needle)
 
 function isContain($string,$needle)
 {
-  return strpos($string,$needle);
+  return strpos($string,$needle) !== false;
 }
 
 function isLowerCase($string)

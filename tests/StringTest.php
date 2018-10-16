@@ -21,7 +21,7 @@ class StringTest extends TestCase
     public function testIsContain()
     {
       $this->assertTrue(
-          startsWith('This is an example string', 'example')
+          isContain('This is an example string', 'example')
       );
     }
 
