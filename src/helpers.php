@@ -205,6 +205,15 @@ function median($numbers)
     return ($totalNumbers % 2) === 0 ? ($numbers[$mid - 1] + $numbers[$mid]) / 2 : $numbers[$mid];
 }
 
+function variadicFunction($operands)
+{
+  $sum = 0;
+  foreach($operands as $singleOperand) {
+    $sum += $singleOperand;
+  }
+  return $sum;
+}
+
 function endsWith($haystack, $needle)
 {
     return strrpos($haystack, $needle) === (strlen($haystack) - strlen($needle));
