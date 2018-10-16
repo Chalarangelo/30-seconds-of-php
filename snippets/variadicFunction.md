@@ -7,11 +7,11 @@ The function accepts any number of variables to execute the code. It uses a for 
 ```php
 function variadicFunction($operands)
 {
-  $sum = 0;
-  foreach($operands as $singleOperand) {
-    $sum += $singleOperand;
-  }
-  return $sum;
+    $sum = 0;
+    foreach($operands as $singleOperand) {
+        $sum += $singleOperand;
+    }
+    return $sum;
 }
 ```
 
@@ -19,8 +19,8 @@ function variadicFunction($operands)
 <summary>Examples</summary>
 
 ```php
-variadicFunction(1,2); // 3
-variadicFunction(1,2,3,4); // 10
+variadicFunction([1, 2]); // 3
+variadicFunction([1, 2, 3, 4]); // 10
 ```
 
 </details>

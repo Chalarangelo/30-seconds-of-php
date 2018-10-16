@@ -207,11 +207,11 @@ function median($numbers)
 
 function variadicFunction($operands)
 {
-  $sum = 0;
-  foreach($operands as $singleOperand) {
-    $sum += $singleOperand;
-  }
-  return $sum;
+    $sum = 0;
+    foreach($operands as $singleOperand) {
+        $sum += $singleOperand;
+    }
+    return $sum;
 }
 
 function endsWith($haystack, $needle)
