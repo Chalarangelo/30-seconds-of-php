@@ -90,6 +90,19 @@ class MathTest extends TestCase
         );
     }
 
+    public function testVariadicFunction()
+    {
+      $this->assertEquals(
+          3,
+          variadicFunction([1, 2])
+      );
+
+      $this->assertEquals(
+          10,
+          variadicFunction([1, 2, 3, 4])
+      );
+    }
+
     public function testMaxN()
     {
         $this->assertEquals(

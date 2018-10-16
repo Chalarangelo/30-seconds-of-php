@@ -18,6 +18,13 @@ class StringTest extends TestCase
         );
     }
 
+    public function testIsContain()
+    {
+      $this->assertTrue(
+          isContain('This is an example string', 'example')
+      );
+    }
+
     public function testIsUpperCase()
     {
         $this->assertTrue(
