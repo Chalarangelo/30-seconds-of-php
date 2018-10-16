@@ -69,7 +69,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`startsWith`](#startswith)
 * [`countVowels`](#countvowels)
 * [`decapitalize`](#decapitalize)
-* [`isContain`](#iscontain)
+* [`isContains`](#iscontains)
 
 </details>
 
@@ -1112,14 +1112,14 @@ decapitalize('FooBar'); // 'fooBar'
 
 <br>[⬆ Back to top](#table-of-contents)
 
-### isContain
+### isContains
 
 Check if a word / substring exist in a given string input.
 Using `strpos` to find the position of the first occurrence of a substring in a string. Returns either `true` or `false`
 ```php
-function isContain($string,$needle)
+function isContains($string, $needle)
 {
-  return strpos($string,$needle);
+    return strpos($string, $needle);
 }
 ```
 
@@ -1127,10 +1127,10 @@ function isContain($string,$needle)
 <summary>Examples</summary>
 
 ```php
-isContain('This is an example string', 'example'); // true
+isContains('This is an example string', 'example'); // true
 ```
 ```php
-isContain('This is an example string', 'hello'); // false
+isContains('This is an example string', 'hello'); // false
 ```
 </details>
 
@@ -1313,11 +1313,11 @@ The function accepts any number of variables to execute the code. It uses a for 
 ```php
 function variadicFunction($operands)
 {
-  $sum = 0;
-  foreach($operands as $singleOperand) {
-    $sum += $singleOperand;
-  }
-  return $sum;
+    $sum = 0;
+    foreach($operands as $singleOperand) {
+        $sum += $singleOperand;
+    }
+    return $sum;
 }
 ```
 
@@ -1325,8 +1325,8 @@ function variadicFunction($operands)
 <summary>Examples</summary>
 
 ```php
-variadicFunction(1,2); // 3
-variadicFunction(1,2,3,4); // 10
+variadicFunction([1, 2]); // 3
+variadicFunction([1, 2, 3, 4]); // 10
 ```
 
 </details>
