@@ -17,8 +17,8 @@ function minN($numbers)
 <summary>Examples</summary>
 
 ```php
-maxN([1, 1, 2, 3, 4, 5, 5]); // 2
-maxN([1, 2, 3, 4, 5]); // 1
+minN([1, 1, 2, 3, 4, 5, 5]); // 2
+minN([1, 2, 3, 4, 5]); // 1
 ```
 
 </details>

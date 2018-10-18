@@ -24,7 +24,7 @@ function groupBy($items, $func)
 <summary>Examples</summary>
 
 ```php
-groupBy(['one', 'two', 'three'], 'strlen') // [3 => ['one', 'two'], 5 => ['three']]
+groupBy(['one', 'two', 'three'], 'strlen'); // [3 => ['one', 'two'], 5 => ['three']]
 ```
 
 </details>
