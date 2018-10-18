@@ -316,7 +316,7 @@ function groupBy($items, $func)
 <summary>Examples</summary>
 
 ```php
-groupBy(['one', 'two', 'three'], 'strlen') // [3 => ['one', 'two'], 5 => ['three']]
+groupBy(['one', 'two', 'three'], 'strlen'); // [3 => ['one', 'two'], 5 => ['three']]
 ```
 
 </details>
@@ -842,8 +842,8 @@ function minN($numbers)
 <summary>Examples</summary>
 
 ```php
-maxN([1, 1, 2, 3, 4, 5, 5]); // 2
-maxN([1, 2, 3, 4, 5]); // 1
+minN([1, 1, 2, 3, 4, 5, 5]); // 2
+minN([1, 2, 3, 4, 5]); // 1
 ```
 
 </details>
@@ -1092,7 +1092,7 @@ countVowels('sampleInput'); // 4
 
 Decapitalizes the first letter of a string.
 
-Decapitalizes the first letter of the sring and then adds it with rest of the string. Omit the ```upperRest``` parameter to keep the rest of the string intact, or set it to ```true``` to convert to uppercase.
+Decapitalizes the first letter of the string and then adds it with rest of the string. Omit the ```upperRest``` parameter to keep the rest of the string intact, or set it to ```true``` to convert to uppercase.
 
 ```php
 function decapitalize($string, $upperRest = false)
