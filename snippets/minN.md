@@ -1,5 +1,5 @@
 ### minN
-Returns the n minimum elements from the provided array.
+Returns the `n` minimum elements from the provided array.
 
 ```php
 function minN($numbers)
