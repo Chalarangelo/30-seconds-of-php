@@ -172,8 +172,8 @@ function gcd(...$numbers)
 function lcm(...$numbers)
 {
     $ans = $numbers[0];
-    for ($i = 1; $i < count($numbers); $i++) {
-        $ans = ((($numbers[$i] * $ans)) / (gcd($numbers[$i], $ans)));
+    for ($i = 1, $max = count($numbers); $i < $max; $i++) {
+        $ans = (($numbers[$i] * $ans) / gcd($numbers[$i], $ans));
     }
 
     return $ans;
