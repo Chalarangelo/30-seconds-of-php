@@ -6,7 +6,7 @@ function average(...$items)
 {
     $count = count($items);
     
-    return $count === 0 ? 0 : array_sum($items) / $count;
+    return $count === 0 ? NULL : array_sum($items) / $count;
 }
 ```
 
