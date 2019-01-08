@@ -10,11 +10,6 @@ function any($items, $func)
     return count(array_filter($items, $func)) > 0;
 }
 
-function chunk($items, $size)
-{
-    return array_chunk($items, $size);
-}
-
 function flatten($items)
 {
     $result = [];

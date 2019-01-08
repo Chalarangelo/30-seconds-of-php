@@ -22,14 +22,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    public function testChunk()
-    {
-        $this->assertEquals(
-            [[1, 2], [3, 4], [5]],
-            chunk([1, 2, 3, 4, 5], 2)
-        );
-    }
-
     public function testFlatten()
     {
         $this->assertEquals(
