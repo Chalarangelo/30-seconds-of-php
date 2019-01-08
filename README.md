@@ -14,7 +14,6 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 
 * [`all`](#all)
 * [`any`](#any)
-* [`chunk`](#chunk)
 * [`deepFlatten`](#deepflatten)
 * [`drop`](#drop)
 * [`findLast`](#findlast)
@@ -129,27 +128,6 @@ function any($items, $func)
 any([1, 2, 3, 4], function ($item) {
     return $item < 2;
 }); // true
-```
-
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
-### chunk
-Chunks an array into smaller arrays of a specified size.
-
-```php
-function chunk($items, $size)
-{
-    return array_chunk($items, $size);
-}
-```
-
-<details>
-<summary>Examples</summary>
-
-```php
-chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]
 ```
 
 </details>
