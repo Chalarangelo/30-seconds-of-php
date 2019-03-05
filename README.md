@@ -1099,7 +1099,7 @@ Using `strpos` to find the position of the first occurrence of a substring in a 
 ```php
 function isContains($string, $needle)
 {
-    return strpos($string, $needle);
+    return strpos($string, $needle) === false ? false : true;
 }
 ```
 
