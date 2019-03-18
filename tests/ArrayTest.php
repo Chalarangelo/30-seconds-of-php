@@ -243,4 +243,13 @@ class ArrayTest extends TestCase
             )
         );
     }
+
+    public function testArrayToCSV()
+    {
+        // Intentionally testing using a delimiter other than the default.
+        $this->assertEquals(
+            '"a"'."\t".'"""b"" good"'."\n".'"c"'."\t3.14",
+            arrayToCSV([['a', '"b" good'], ['c', 3.14]], "\t")
+        );
+    }
 }

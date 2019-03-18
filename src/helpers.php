@@ -324,6 +324,17 @@ function orderBy($items, $attr, $order)
     return array_values($sortedItems);
 }
 
+function arrayToCSV($rows, $del = ',')
+{
+    $escape = function ($x) {
+        return is_numeric($x) ? $x : '"'.str_replace('"', '""', $x).'"';
+    };
+    $rowToCSV = function ($row) use ($del, $escape) {
+        return implode($del, array_map($escape, $row));
+    };
+    return implode("\n", array_map($rowToCSV, $rows));
+}
+
 function memoize($func)
 {
     return function () use ($func) {
