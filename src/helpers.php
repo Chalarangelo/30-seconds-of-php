@@ -372,3 +372,22 @@ function once($function)
         return $function(...$args);
     };
 }
+
+function bubbleSort($arr){
+    $arr = array_unique($arr);
+    for($i=0; $i<sizeof($arr)-1; $i++) { 
+        $swapped = false;
+        for($j=0; $j<sizeof($arr)-1-$i; $j++){
+            if($arr[$j] > $arr[$j+1]){
+                $temp = $arr[$j];
+                $arr[$j] = $arr[$j+1];
+                $arr[$j+1] = $temp;
+                $swapped = true;
+            }
+        }
+        if(!$swapped){
+            break;
+        }
+    }
+    return $arr;
+}

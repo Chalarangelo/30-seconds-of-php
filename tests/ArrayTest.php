@@ -243,4 +243,13 @@ class ArrayTest extends TestCase
             )
         );
     }
+
+    public function testBubblesSort()
+    {
+        $this->assertEquals(
+            [5,7,11,12,20,35,44,90],
+            bubbleSort([44, 11, 7, 20, 12, 90, 35, 5])
+        );
+    }
 }
+
