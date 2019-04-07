@@ -373,21 +373,22 @@ function once($function)
     };
 }
 
-function bubbleSort($arr){
-    $arr = array_unique($arr);
-    for($i=0; $i<sizeof($arr)-1; $i++) { 
+function bubbleSort($array) {
+    $array = array_unique($array);
+    $arrayLength = count($array);
+    for ($i = 0; $i < $arrayLength - 1; $i++) { 
         $swapped = false;
-        for($j=0; $j<sizeof($arr)-1-$i; $j++){
-            if($arr[$j] > $arr[$j+1]){
-                $temp = $arr[$j];
-                $arr[$j] = $arr[$j+1];
-                $arr[$j+1] = $temp;
+        for ($j = 0; $j < $arrayLength - 1 - $i; $j++) {
+            if ($array[$j] > $array[$j + 1]) {
+                $temp = $array[$j];
+                $array[$j] = $array[$j + 1];
+                $array[$j + 1] = $temp;
                 $swapped = true;
             }
         }
-        if(!$swapped){
+        if (!$swapped) {
             break;
         }
     }
-    return $arr;
+    return $array;
 }
