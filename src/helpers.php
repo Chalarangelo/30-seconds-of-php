@@ -373,10 +373,11 @@ function once($function)
     };
 }
 
-function bubbleSort($array) {
+function bubbleSort($array)
+{
     $array = array_unique($array);
     $arrayLength = count($array);
-    for ($i = 0; $i < $arrayLength - 1; $i++) { 
+    for ($i = 0; $i < $arrayLength - 1; $i++) {
         $swapped = false;
         for ($j = 0; $j < $arrayLength - 1 - $i; $j++) {
             if ($array[$j] > $array[$j + 1]) {
@@ -390,5 +391,14 @@ function bubbleSort($array) {
             break;
         }
     }
+    return $array;
+}
+
+function rotate($array, $shift = 1)
+{
+    for ($i = 0; $i < $shift; $i++) {
+        array_push($array, array_shift($array));
+    }
+
     return $array;
 }
