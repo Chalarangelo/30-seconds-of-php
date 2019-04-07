@@ -72,4 +72,17 @@ class FunctionTest extends TestCase
 
         $this->assertEquals(null, $once(20, 10));
     }
+
+    public function testVariadicFunction()
+    {
+        $this->assertEquals(
+            3,
+            variadicFunction([1, 2])
+        );
+
+        $this->assertEquals(
+            10,
+            variadicFunction([1, 2, 3, 4])
+        );
+    }
 }

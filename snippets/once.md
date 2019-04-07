@@ -11,7 +11,7 @@ function once($function)
             return;
         }
         $called = true;
-        return call_user_func_array($function, $args);
+        return $function(...$args);
     };
 }
 ```

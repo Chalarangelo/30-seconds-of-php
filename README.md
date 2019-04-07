@@ -14,7 +14,6 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 
 * [`all`](#all)
 * [`any`](#any)
-* [`chunk`](#chunk)
 * [`deepFlatten`](#deepflatten)
 * [`drop`](#drop)
 * [`findLast`](#findlast)
@@ -69,6 +68,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`startsWith`](#startswith)
 * [`countVowels`](#countvowels)
 * [`decapitalize`](#decapitalize)
+* [`isContains`](#iscontains)
 
 </details>
 
@@ -81,6 +81,7 @@ Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalar
 * [`memoize`](#memoize)
 * [`curry`](#curry)
 * [`once`](#once)
+* [`variadicFunction`](#variadicfunction)
 
 </details>
 
@@ -127,27 +128,6 @@ function any($items, $func)
 any([1, 2, 3, 4], function ($item) {
     return $item < 2;
 }); // true
-```
-
-</details>
-
-<br>[⬆ Back to top](#table-of-contents)
-
-### chunk
-Chunks an array into smaller arrays of a specified size.
-
-```php
-function chunk($items, $size)
-{
-    return array_chunk($items, $size);
-}
-```
-
-<details>
-<summary>Examples</summary>
-
-```php
-chunk([1, 2, 3, 4, 5], 2); // [[1, 2], [3, 4], [5]]
 ```
 
 </details>
@@ -314,7 +294,7 @@ function groupBy($items, $func)
 <summary>Examples</summary>
 
 ```php
-groupBy(['one', 'two', 'three'], 'strlen') // [3 => ['one', 'two'], 5 => ['three']]
+groupBy(['one', 'two', 'three'], 'strlen'); // [3 => ['one', 'two'], 5 => ['three']]
 ```
 
 </details>
@@ -598,7 +578,9 @@ Returns the average of two or more numbers.
 ```php
 function average(...$items)
 {
-    return count($items) === 0 ? 0 : array_sum($items) / count($items);
+    $count = count($items);
+    
+    return $count === 0 ? 0 : array_sum($items) / $count;
 }
 ```
 
@@ -748,8 +730,8 @@ Returns the least common multiple of two or more numbers.
 function lcm(...$numbers)
 {
     $ans = $numbers[0];
-    for ($i = 1; $i < count($numbers); $i++) {
-        $ans = ((($numbers[$i] * $ans)) / (gcd($numbers[$i], $ans)));
+    for ($i = 1, $max = count($numbers); $i < $max; $i++) {
+        $ans = (($numbers[$i] * $ans) / gcd($numbers[$i], $ans));
     }
 
     return $ans;
@@ -840,8 +822,8 @@ function minN($numbers)
 <summary>Examples</summary>
 
 ```php
-maxN([1, 1, 2, 3, 4, 5, 5]); // 2
-maxN([1, 2, 3, 4, 5]); // 1
+minN([1, 1, 2, 3, 4, 5, 5]); // 2
+minN([1, 2, 3, 4, 5]); // 1
 ```
 
 </details>
@@ -910,7 +892,7 @@ Check if a string is ends with a given substring.
 ```php
 function endsWith($haystack, $needle)
 {
-    return substr($haystack, -strlen($needle)) === $needle;
+    return strrpos($haystack, $needle) === (strlen($haystack) - strlen($needle));
 }
 ```
 
@@ -932,15 +914,7 @@ Returns the first string there is between the strings from the parameter start a
 ```php
 function firstStringBetween($haystack, $start, $end)
 {
-    $char = strpos($haystack, $start);
-    if ($char === false) {
-        return '';
-    }
-
-    $char += strlen($start);
-    $len = strpos($haystack, $end, $char) - $char;
-
-    return substr($haystack, $char, $len);
+    return trim(strstr(strstr($haystack, $start), $end, true), $start . $end);
 }
 ```
 
@@ -1048,12 +1022,12 @@ palindrome(2221222); // true
 
 ### startsWith
 
-Check if a string is starts with a given substring.
+Check if a string starts with a given substring.
 
 ```php
 function startsWith($haystack, $needle)
 {
-    return substr($haystack, 0, strlen($needle)) === $needle;
+    return strpos($haystack, $needle) === 0;
 }
 ```
 
@@ -1070,7 +1044,7 @@ startsWith('Hi, this is me', 'Hi'); // true
 
 ### countVowels
 
-Retuns number of vowels in provided string.
+Returns number of vowels in provided string.
 
 Use a regular expression to count the number of vowels (A, E, I, O, U) in a string.
 
@@ -1098,12 +1072,12 @@ countVowels('sampleInput'); // 4
 
 Decapitalizes the first letter of a string.
 
-Decapitalizes the first letter of the sring and then adds it with rest of the string. Omit the ```upperRest``` parameter to keep the rest of the string intact, or set it to ```true``` to convert to uppercase.
+Decapitalizes the first letter of the string and then adds it with rest of the string. Omit the ```upperRest``` parameter to keep the rest of the string intact, or set it to ```true``` to convert to uppercase.
 
 ```php
 function decapitalize($string, $upperRest = false)
 {
-    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
+    return lcfirst($upperRest ? strtoupper($string) : $string);
 }
 ```
 
@@ -1114,6 +1088,30 @@ function decapitalize($string, $upperRest = false)
 decapitalize('FooBar'); // 'fooBar'
 ```
 
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### isContains
+
+Check if a word / substring exist in a given string input.
+Using `strpos` to find the position of the first occurrence of a substring in a string. Returns either `true` or `false`
+```php
+function isContains($string, $needle)
+{
+    return strpos($string, $needle) === false ? false : true;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+isContains('This is an example string', 'example'); // true
+```
+```php
+isContains('This is an example string', 'hello'); // false
+```
 </details>
 
 <br>[⬆ Back to top](#table-of-contents)
@@ -1179,7 +1177,7 @@ function memoize($func)
         $cached = true;
 
         if (!isset($cache[$key])) {
-            $cache[$key] = call_user_func_array($func, $args);
+            $cache[$key] = $func(...$args);
             $cached = false;
         }
 
@@ -1221,7 +1219,7 @@ function curry($function)
             $totalArguments = $reflection->getNumberOfRequiredParameters();
 
             if ($totalArguments <= count($arguments)) {
-                return call_user_func_array($function, $arguments);
+                return $function(...$arguments);
             }
 
             return $accumulator($arguments);
@@ -1263,7 +1261,7 @@ function once($function)
             return;
         }
         $called = true;
-        return call_user_func_array($function, $args);
+        return $function(...$args);
     };
 }
 ```
@@ -1280,6 +1278,35 @@ $once = once($add);
 
 var_dump($once(10, 5)); // 15
 var_dump($once(20, 10)); // null
+```
+
+</details>
+
+<br>[⬆ Back to top](#table-of-contents)
+
+### variadicFunction
+
+Variadic functions allows you to capture a variable number of arguments to a function.
+
+The function accepts any number of variables to execute the code. It uses a for loop to iterate over the parameters.
+
+```php
+function variadicFunction($operands)
+{
+    $sum = 0;
+    foreach($operands as $singleOperand) {
+        $sum += $singleOperand;
+    }
+    return $sum;
+}
+```
+
+<details>
+<summary>Examples</summary>
+
+```php
+variadicFunction([1, 2]); // 3
+variadicFunction([1, 2, 3, 4]); // 10
 ```
 
 </details>

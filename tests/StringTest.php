@@ -18,6 +18,13 @@ class StringTest extends TestCase
         );
     }
 
+    public function testIsContains()
+    {
+        $this->assertTrue(
+            isContains('This is an example string', 'example')
+        );
+    }
+
     public function testIsUpperCase()
     {
         $this->assertTrue(
@@ -56,6 +63,11 @@ class StringTest extends TestCase
         $this->assertSame(
             '',
             firstStringBetween('', '[', ']')
+        );
+
+        $this->assertSame(
+            '',
+            firstStringBetween('This is a [custom] string', '[', '#')
         );
     }
 

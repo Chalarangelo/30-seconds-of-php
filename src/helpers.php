@@ -10,11 +10,6 @@ function any($items, $func)
     return count(array_filter($items, $func)) > 0;
 }
 
-function chunk($items, $size)
-{
-    return array_chunk($items, $size);
-}
-
 function flatten($items)
 {
     $result = [];
@@ -136,7 +131,9 @@ function groupBy($items, $func)
 
 function average(...$items)
 {
-    return count($items) === 0 ? 0 : array_sum($items) / count($items);
+    $count = count($items);
+
+    return $count === 0 ? 0 : array_sum($items) / $count;
 }
 
 function factorial($n)
@@ -172,8 +169,8 @@ function gcd(...$numbers)
 function lcm(...$numbers)
 {
     $ans = $numbers[0];
-    for ($i = 1; $i < count($numbers); $i++) {
-        $ans = ((($numbers[$i] * $ans)) / (gcd($numbers[$i], $ans)));
+    for ($i = 1, $max = count($numbers); $i < $max; $i++) {
+        $ans = (($numbers[$i] * $ans) / gcd($numbers[$i], $ans));
     }
 
     return $ans;
@@ -205,14 +202,28 @@ function median($numbers)
     return ($totalNumbers % 2) === 0 ? ($numbers[$mid - 1] + $numbers[$mid]) / 2 : $numbers[$mid];
 }
 
+function variadicFunction($operands)
+{
+    $sum = 0;
+    foreach($operands as $singleOperand) {
+        $sum += $singleOperand;
+    }
+    return $sum;
+}
+
 function endsWith($haystack, $needle)
 {
-    return substr($haystack, -strlen($needle)) === $needle;
+    return strrpos($haystack, $needle) === (strlen($haystack) - strlen($needle));
 }
 
 function startsWith($haystack, $needle)
 {
-     return 0 === strpos($haystack, $needle);
+    return strpos($haystack, $needle) === 0;
+}
+
+function isContains($string, $needle)
+{
+    return strpos($string, $needle) !== false;
 }
 
 function isLowerCase($string)
@@ -237,15 +248,7 @@ function palindrome($string)
 
 function firstStringBetween($haystack, $start, $end)
 {
-    $char = strpos($haystack, $start);
-    if ($char === false) {
-        return '';
-    }
-
-    $char += strlen($start);
-    $len = strpos($haystack, $end, $char) - $char;
-
-    return substr($haystack, $char, $len);
+    return trim(strstr(strstr($haystack, $start), $end, true), $start . $end);
 }
 
 function compose(...$functions)
@@ -292,7 +295,7 @@ function countVowels($string)
 
 function decapitalize($string, $upperRest = false)
 {
-    return strtolower(substr($string, 0, 1)) . ($upperRest ? strtoupper(substr($string, 1)) : substr($string, 1));
+    return lcfirst($upperRest ? strtoupper($string) : $string);
 }
 
 function approximatelyEqual($number1, $number2, $epsilon = 0.001)
@@ -331,7 +334,7 @@ function memoize($func)
         $cached = true;
 
         if (!isset($cache[$key])) {
-            $cache[$key] = call_user_func_array($func, $args);
+            $cache[$key] = $func(...$args);
             $cached = false;
         }
 
@@ -348,7 +351,7 @@ function curry($function)
             $totalArguments = $reflection->getNumberOfRequiredParameters();
 
             if ($totalArguments <= count($arguments)) {
-                return call_user_func_array($function, $arguments);
+                return $function(...$arguments);
             }
 
             return $accumulator($arguments);
@@ -366,7 +369,7 @@ function once($function)
             return;
         }
         $called = true;
-        return call_user_func_array($function, $args);
+        return $function(...$args);
     };
 }
 
