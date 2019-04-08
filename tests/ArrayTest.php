@@ -251,5 +251,25 @@ class ArrayTest extends TestCase
             bubbleSort([44, 11, 7, 20, 12, 90, 35, 5])
         );
     }
+
+    public function rotateDataProvider()
+    {
+        return [
+            [
+                [1, 3, 5, 2, 4], [3, 5, 2, 4, 1], 1
+            ],
+            [
+                [1, 3, 5, 2, 4], [5, 2, 4, 1, 3], 2
+            ],
+        ];
+    }
+
+    /**
+     * @dataProvider rotateDataProvider
+     */
+    public function testRotate($array, $expected, $shift)
+    {
+        $this->assertEquals(rotate($array, $shift), $expected);
+    }
 }
 
