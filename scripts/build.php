@@ -17,6 +17,8 @@ $database = json_decode(file_get_contents($projectDir . '/data/database.json'));
 
 $tableOfContents = '';
 $snippets = '';
+$vsCodeSnippets = [];
+
 foreach ($tags as $tag) {
 $tableOfContents .= "
 ### {$tag->icon} {$tag->name}
@@ -36,7 +38,21 @@ $snippets .= "
         if (in_array($tagName, $functionTags)) {
             $tableOfContents .= "* [`{$function}`](#" . strtolower($function) . ")\n";
 
-            $snippets .= file_get_contents($projectDir . 'snippets/' . $function . '.md');
+            $snippetString = file_get_contents($projectDir . 'snippets/' . $function . '.md');
+
+            preg_match('/```php([^`]*)```/', $snippetString, $functionMatch);
+            $vscodeSnippetFunction =  preg_replace('/(```php\n?|```)/', '', $functionMatch[0]);
+
+            $paragraphs = explode("\n", trim(str_replace("\n\n", "\n", $snippetString)));
+            $vscodeSnippetDescription = $paragraphs[1];
+
+            $vsCodeSnippets[$function] = [
+                'prefix' => '30php_' . $function,
+                'body' => explode("\n", $vscodeSnippetFunction),
+                'description' => $vscodeSnippetDescription,
+            ];
+            
+            $snippets .= $snippetString;
             $snippets .= "\n<br>[⬆ Back to top](#table-of-contents)\n\n";
         }
     }
@@ -45,6 +61,8 @@ $tableOfContents .= '
 </details>
 ';
 }
+
+file_put_contents($projectDir . 'vscode_snippets/snippets.json', json_encode($vsCodeSnippets));
 
 $readme .= $tableOfContents;
 $readme .= $snippets;
