@@ -3,8 +3,6 @@
 # 30 seconds of php code
 > A curated collection of useful PHP snippets that you can understand in 30 seconds or less.
 
-Note: This project is inspired by [30 Seconds of Code](https://github.com/Chalarangelo/30-seconds-of-code), but there is no affiliation with that project.
-
 ## Table of Contents
 
 ### 📚 Array
