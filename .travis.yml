@@ -1,29 +1,12 @@
-matrix:
-  include:
-    - language: node_js
-      cache:
-        directories:
-          - node_modules
-      node_js:
-        - lts/*
-      script:
-        - npm run extractor
-        - npm run builder
-      after_success:
-        - chmod +x .travis/push.sh
-        - .travis/push.sh
-    
-    - language: php
-      sudo: false
-      cache:
-        directories:
-          - "$HOME/.composer/cache"
-      php:
-        - 7.2
-      before_script:
-        - travis_retry composer self-update
-        - travis_retry composer install --no-interaction --prefer-dist no-suggest
-      script:
-        - vendor/bin/phpunit --verbose
-      after_success:
-        - composer build
+language: node_js
+cache:
+  directories:
+    - node_modules
+node_js:
+- lts/*
+script:
+- npm run extractor
+- npm run builder
+after_success:
+- chmod +x .travis/push.sh
+- .travis/push.sh
