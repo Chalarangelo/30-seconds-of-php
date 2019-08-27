@@ -10,7 +10,7 @@ If num falls within the range, return num. Otherwise, return the nearest number 
 ```php
 function clampNumber($num, $a, $b)
 {
-    return max(min($num, max($a, $b)), min($a, $b));
+  return max(min($num, max($a, $b)), min($a, $b));
 }
 ```
 

@@ -8,14 +8,14 @@ Call a function only once.
 ```php
 function once($function)
 {
-    return function (...$args) use ($function) {
-        static $called = false;
-        if ($called) {
-            return;
-        }
-        $called = true;
-        return $function(...$args);
-    };
+  return function (...$args) use ($function) {
+    static $called = false;
+    if ($called) {
+      return;
+    }
+    $called = true;
+    return $function(...$args);
+  };
 }
 ```
 
@@ -24,7 +24,7 @@ function once($function)
 
 ```php
 $add = function ($a, $b) {
-    return $a + $b;
+  return $a + $b;
 };
 
 $once = once($add);

@@ -7,16 +7,16 @@ Deep flattens an array.
 ```php
 function deepFlatten($items)
 {
-    $result = [];
-    foreach ($items as $item) {
-        if (!is_array($item)) {
-            $result[] = $item;
-        } else {
-            $result = array_merge($result, deepFlatten($item));
-        }
+  $result = [];
+  foreach ($items as $item) {
+    if (!is_array($item)) {
+      $result[] = $item;
+    } else {
+      $result = array_merge($result, deepFlatten($item));
     }
+  }
 
-    return $result;
+  return $result;
 }
 ```
 

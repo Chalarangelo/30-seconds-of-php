@@ -10,9 +10,9 @@ Use a regular expression to count the number of vowels (A, E, I, O, U) in a stri
 ```php
 function countVowels($string)
 {
-    preg_match_all('/[aeiou]/i', $string, $matches);
+  preg_match_all('/[aeiou]/i', $string, $matches);
 
-    return count($matches[0]);
+  return count($matches[0]);
 }
 ```
 

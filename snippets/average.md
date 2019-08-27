@@ -7,9 +7,9 @@ Returns the average of two or more numbers.
 ```php
 function average(...$items)
 {
-    $count = count($items);
-    
-    return $count === 0 ? 0 : array_sum($items) / $count;
+  $count = count($items);
+  
+  return $count === 0 ? 0 : array_sum($items) / $count;
 }
 ```
 

@@ -7,12 +7,12 @@ Returns the n minimum elements from the provided array.
 ```php
 function minN($numbers)
 {
-    $minValue = min($numbers);
-    $minValueArray = array_filter($numbers, function ($value) use ($minValue) {
-        return $minValue === $value;
-    });
+  $minValue = min($numbers);
+  $minValueArray = array_filter($numbers, function ($value) use ($minValue) {
+    return $minValue === $value;
+  });
 
-    return count($minValueArray);
+  return count($minValueArray);
 }
 ```
 

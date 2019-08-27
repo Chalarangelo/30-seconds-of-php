@@ -10,11 +10,11 @@ Given the $shift index, it merges the array values after $shift with the values 
 ```php
 function rotate($array, $shift = 1)
 {
-    for ($i = 0; $i < $shift; $i++) {
-        array_push($array, array_shift($array));
-    }
+  for ($i = 0; $i < $shift; $i++) {
+    array_push($array, array_shift($array));
+  }
 
-    return $array;
+  return $array;
 }
 ```
 

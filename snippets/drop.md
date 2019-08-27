@@ -7,7 +7,7 @@ Returns a new array with `n` elements removed from the left.
 ```php
 function drop($items, $n = 1)
 {
-    return array_slice($items, $n);
+  return array_slice($items, $n);
 }
 ```
 

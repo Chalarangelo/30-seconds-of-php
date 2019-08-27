@@ -8,20 +8,20 @@ Memoization of a function results in memory.
 ```php
 function memoize($func)
 {
-    return function () use ($func) {
-        static $cache = [];
+  return function () use ($func) {
+    static $cache = [];
 
-        $args = func_get_args();
-        $key = serialize($args);
-        $cached = true;
+    $args = func_get_args();
+    $key = serialize($args);
+    $cached = true;
 
-        if (!isset($cache[$key])) {
-            $cache[$key] = $func(...$args);
-            $cached = false;
-        }
+    if (!isset($cache[$key])) {
+      $cache[$key] = $func(...$args);
+      $cached = false;
+    }
 
-        return ['result' => $cache[$key], 'cached' => $cached];
-    };
+    return ['result' => $cache[$key], 'cached' => $cached];
+  };
 }
 ```
 
@@ -30,9 +30,9 @@ function memoize($func)
 
 ```php
 $memoizedAdd = memoize(
-    function ($num) {
-        return $num + 10;
-    }
+  function ($num) {
+    return $num + 10;
+  }
 );
 
 var_dump($memoizedAdd(5)); // ['result' => 15, 'cached' => false]

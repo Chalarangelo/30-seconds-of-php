@@ -10,7 +10,7 @@ Decapitalizes the first letter of the string and then adds it with rest of the s
 ```php
 function decapitalize($string, $upperRest = false)
 {
-    return lcfirst($upperRest ? strtoupper($string) : $string);
+  return lcfirst($upperRest ? strtoupper($string) : $string);
 }
 ```
 

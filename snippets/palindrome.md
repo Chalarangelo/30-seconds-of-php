@@ -8,7 +8,7 @@ Returns `true` if the given string is a palindrome, `false` otherwise.
 ```php
 function palindrome($string)
 {
-    return strrev($string) === (string) $string;
+  return strrev($string) === (string) $string;
 }
 ```
 

@@ -7,13 +7,13 @@ Generates an array, containing the Fibonacci sequence, up until the nth term.
 ```php
 function fibonacci($n)
 {
-    $sequence = [0, 1];
+  $sequence = [0, 1];
 
-    for ($i = 2; $i < $n; $i++) {
-        $sequence[$i] = $sequence[$i-1] + $sequence[$i-2];
-    }
+  for ($i = 2; $i < $n; $i++) {
+    $sequence[$i] = $sequence[$i-1] + $sequence[$i-2];
+  }
 
-    return $sequence;
+  return $sequence;
 }
 ```
 

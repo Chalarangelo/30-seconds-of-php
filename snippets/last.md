@@ -7,7 +7,7 @@ Returns the last element in an array.
 ```php
 function last($items)
 {
-    return end($items);
+  return end($items);
 }
 ```
 

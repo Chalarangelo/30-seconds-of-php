@@ -10,7 +10,7 @@ Use abs() to compare the absolute difference of the two values to epsilon. Omit 
 ```php
 function approximatelyEqual($number1, $number2, $epsilon = 0.001)
 {
-    return abs($number1 - $number2) < $epsilon;
+  return abs($number1 - $number2) < $epsilon;
 }
 ```
 

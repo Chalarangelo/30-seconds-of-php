@@ -7,12 +7,12 @@ Returns the n maximum elements from the provided array.
 ```php
 function maxN($numbers)
 {
-    $maxValue = max($numbers);
-    $maxValueArray = array_filter($numbers, function ($value) use ($maxValue) {
-        return $maxValue === $value;
-    });
+  $maxValue = max($numbers);
+  $maxValueArray = array_filter($numbers, function ($value) use ($maxValue) {
+    return $maxValue === $value;
+  });
 
-    return count($maxValueArray);
+  return count($maxValueArray);
 }
 ```
 

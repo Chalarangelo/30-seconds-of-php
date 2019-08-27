@@ -7,7 +7,7 @@ Returns `true` if the provided function returns `true` for at least one element 
 ```php
 function any($items, $func)
 {
-    return count(array_filter($items, $func)) > 0;
+  return count(array_filter($items, $func)) > 0;
 }
 ```
 
@@ -16,7 +16,7 @@ function any($items, $func)
 
 ```php
 any([1, 2, 3, 4], function ($item) {
-    return $item < 2;
+  return $item < 2;
 }); // true
 ```
 

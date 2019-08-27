@@ -8,7 +8,7 @@ Returns the first string there is between the strings from the parameter start a
 ```php
 function firstStringBetween($haystack, $start, $end)
 {
-    return trim(strstr(strstr($haystack, $start), $end, true), $start . $end);
+  return trim(strstr(strstr($haystack, $start), $end, true), $start . $end);
 }
 ```
 

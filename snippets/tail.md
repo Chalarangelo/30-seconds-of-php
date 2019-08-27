@@ -7,7 +7,7 @@ Returns all elements in an array except for the first one.
 ```php
 function tail($items)
 {
-    return count($items) > 1 ? array_slice($items, 1) : $items;
+  return count($items) > 1 ? array_slice($items, 1) : $items;
 }
 ```
 
