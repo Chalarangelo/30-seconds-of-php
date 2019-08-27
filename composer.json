@@ -1,8 +1,8 @@
 {
-    "name": "appzcoder/30-seconds-of-php-code",
+    "name": "30-seconds/30-seconds-of-php-code",
     "description": "A curated collection of useful PHP snippets that you can understand in 30 seconds or less.",
     "type": "project",
-    "license": "MIT",
+    "license": "CC0-1.0",
     "authors": [
         {
             "name": "Sohel Amin",
@@ -20,7 +20,6 @@
         "files": ["src/helpers.php"]
     },
     "scripts": {
-        "test": "phpunit",
-        "build": "php scripts/build.php"
+        "test": "phpunit"
     }
 }

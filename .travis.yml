@@ -1,24 +1,29 @@
-language: php
-sudo: false
-
-php:
-  - 7.2
-
-cache:
-  directories:
-    - "$HOME/.composer/cache"
-
-before_script:
-  - travis_retry composer self-update
-  - travis_retry composer install --no-interaction --prefer-dist --no-suggest
-
-script:
-  - vendor/bin/phpunit --verbose
-after_success:
-  - composer build
-  - chmod +x .travis/push.sh
-  - ".travis/push.sh"
-
-env:
-  matrix:
-    secure: invNYdjJ6ngLMCL1Io1H4cFa8MpV961YoAPTrztADY8T7KfRl6p/V0T3NgTY4nnR6+fDptf8+rmtMUJmJkeRE2TNArtlvAM0vcJe2kpni7xSXKVHcRUlPoBdpNMFr6CVmF0l1Uu+WcLQMVXDIohxjSMtiT+ubXFVlaIWdHjW2erx7CXiN8/DcHQ8XIeVKHgUuArbmv2lvnGHK3MyzJoe3PxafKOAglSFCOPF4ObWrK269IVhmA7NSo36UkPbdVThceK1iM+6z3cEm3sr4C7JZ1C9L3N0vNjlLebdmor7uH9LbqDVM+f3MDsiCZK2e5QOKv3GOJ+71we9UWGwmnFlRRESv0FfKoIYpqowz5DYbiNZxXNBFnpoCZOxiQlPhlfAkOjBx755DOuwsHynhDMrBPZp/JgCNRhvwmGjrr1zYq7HSNE4a6EnBaDpwqwVpbT6QU26pkNIF5Y5evdxbfgenZqWg/tG64Z+OVxTEx7K43tgyaoMcyBIm4UWugqABzNzNdkG0Skw95cOXWEwbjYrqbU0sonfYDTuGZktuKBFnTU2HqjRcQIoJYqa/PPjJGaSSgqRYk0nOJbsmAa61jFc04rykZ/0LufmUjWDAb7Fy6d1ZK2ugu+bK3K18iOrDNsVHhAGKGtQCbtCGqhnINxvG7JY5Z7S8/FYtlZYvApSShc=
+matrix:
+  include:
+    - language: node_js
+      cache:
+        directories:
+          - node_modules
+      node_js:
+        - lts/*
+      script:
+        - npm run extractor
+        - npm run builder
+      after_success:
+        - chmod +x .travis/push.sh
+        - .travis/push.sh
+    
+    - language: php
+      sudo: false
+      cache:
+        directories:
+          - "$HOME/.composer/cache"
+      php:
+        - 7.2
+      before_script:
+        - travis_retry composer self-update
+        - travis_retry composer install --no-interaction --prefer-dist no-suggest
+      script:
+        - vendor/bin/phpunit --verbose
+      after_success:
+        - composer build
