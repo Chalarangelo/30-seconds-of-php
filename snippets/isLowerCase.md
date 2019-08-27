@@ -1,4 +1,7 @@
-### isLowerCase
+---
+title:  isLowerCase
+tags: string,beginner
+---
 
 Returns `true` if the given string is lower case, `false` otherwise.
 

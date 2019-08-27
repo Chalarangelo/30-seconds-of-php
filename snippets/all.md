@@ -1,4 +1,7 @@
-### all
+---
+title:  all
+tags: array,beginner
+---
 Returns `true` if the provided function returns `true` for all elements of an array, `false` otherwise.
 
 ```php

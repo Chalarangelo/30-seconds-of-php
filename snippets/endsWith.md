@@ -1,4 +1,7 @@
-### endsWith
+---
+title:  endsWith
+tags: string,beginner
+---
 
 Check if a string is ends with a given substring.
 

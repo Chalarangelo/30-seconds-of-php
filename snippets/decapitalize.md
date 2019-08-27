@@ -1,4 +1,7 @@
-### decapitalize
+---
+title:  decapitalize
+tags: string,beginner
+---
 
 Decapitalizes the first letter of a string.
 

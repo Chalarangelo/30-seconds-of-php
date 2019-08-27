@@ -1,4 +1,7 @@
-### pluck
+---
+title:  pluck
+tags: array,beginner
+---
 Retrieves all of the values for a given key:
 
 ```php

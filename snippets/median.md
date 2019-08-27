@@ -1,4 +1,7 @@
-### median
+---
+title:  median
+tags: math,array,beginner
+---
 Returns the median of an array of numbers.
 
 ```php

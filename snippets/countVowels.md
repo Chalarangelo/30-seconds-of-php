@@ -1,4 +1,7 @@
-### countVowels
+---
+title:  countVowels
+tags: string,regexp,beginner
+---
 
 Returns number of vowels in provided string.
 

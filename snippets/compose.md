@@ -1,4 +1,7 @@
-### compose
+---
+title:  compose
+tags: function,intermediate
+---
 
 Return a new function that composes multiple functions into a single callable.
 

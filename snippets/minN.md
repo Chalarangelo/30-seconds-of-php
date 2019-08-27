@@ -1,4 +1,7 @@
-### minN
+---
+title:  minN
+tags: math,array,intermediate
+---
 Returns the n minimum elements from the provided array.
 
 ```php

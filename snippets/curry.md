@@ -1,4 +1,7 @@
-### curry
+---
+title:  curry
+tags: function,advanced
+---
 
 Curries a function to take arguments in multiple calls.
 

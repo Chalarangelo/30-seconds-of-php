@@ -1,4 +1,7 @@
-### orderBy
+---
+title:  orderBy
+tags: array,advanced
+---
 
 Sorts a collection of arrays or objects by key.
 

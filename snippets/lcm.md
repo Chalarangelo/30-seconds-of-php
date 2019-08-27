@@ -1,4 +1,7 @@
-### lcm
+---
+title:  lcm
+tags: math,intermediate
+---
 Returns the least common multiple of two or more numbers.
 
 ```php

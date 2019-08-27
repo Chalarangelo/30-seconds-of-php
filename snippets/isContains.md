@@ -1,4 +1,7 @@
-### isContains
+---
+title:  isContains
+tags: string,beginner
+---
 
 Check if a word / substring exist in a given string input.
 Using `strpos` to find the position of the first occurrence of a substring in a string. Returns either `true` or `false`

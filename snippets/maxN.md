@@ -1,4 +1,7 @@
-### maxN
+---
+title:  maxN
+tags: math,array,intermediate
+---
 Returns the n maximum elements from the provided array.
 
 ```php

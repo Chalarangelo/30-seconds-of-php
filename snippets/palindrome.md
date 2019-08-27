@@ -1,4 +1,7 @@
-### palindrome
+---
+title:  palindrome
+tags: string,beginner
+---
 
 Returns `true` if the given string is a palindrome, `false` otherwise.
 

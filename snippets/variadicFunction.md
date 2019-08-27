@@ -1,4 +1,7 @@
-### variadicFunction
+---
+title:  variadicFunction
+tags: function,intermediate
+---
 
 Variadic functions allows you to capture a variable number of arguments to a function.
 

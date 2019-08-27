@@ -1,4 +1,7 @@
-### reject
+---
+title:  reject
+tags: array,beginner
+---
 Filters the collection using the given callback.
 
 ```php

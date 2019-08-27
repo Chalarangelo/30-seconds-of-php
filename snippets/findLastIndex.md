@@ -1,4 +1,7 @@
-### findLastIndex
+---
+title:  findLastIndex
+tags: array,beginner
+---
 Returns the index of the last element for which the provided function returns a truthy value.
 
 ```php

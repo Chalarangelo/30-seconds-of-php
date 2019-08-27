@@ -1,4 +1,7 @@
-### firstStringBetween
+---
+title:  firstStringBetween
+tags: string,beginner
+---
 
 Returns the first string there is between the strings from the parameter start and end.
 

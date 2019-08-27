@@ -1,4 +1,7 @@
-### isUpperCase
+---
+title:  isUpperCase
+tags: string,beginner
+---
 
 Returns `true` if the given string is upper case, false otherwise.
 

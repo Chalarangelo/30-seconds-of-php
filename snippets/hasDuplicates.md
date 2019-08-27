@@ -1,4 +1,7 @@
-### hasDuplicates
+---
+title:  hasDuplicates
+tags: array,beginner
+---
 Checks a flat list for duplicate values. Returns `true` if duplicate values exists and `false` if values are all unique.
 
 ```php

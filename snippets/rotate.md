@@ -1,4 +1,7 @@
-### rotate
+---
+title:  rotate
+tags: array,beginner
+---
 
 Rotates the array (in left direction) by the number of shifts.
 

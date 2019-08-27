@@ -1,4 +1,7 @@
-### gcd
+---
+title:  gcd
+tags: math,intermediate
+---
 Calculates the greatest common divisor between two or more numbers.
 
 ```php

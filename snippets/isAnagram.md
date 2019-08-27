@@ -1,4 +1,7 @@
-### isAnagram
+---
+title:  isAnagram
+tags: string,beginner
+---
 
 Compare two strings and returns `true` if both strings are anagram, `false` otherwise.
 

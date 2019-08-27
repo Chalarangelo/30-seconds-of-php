@@ -1,4 +1,7 @@
-### startsWith
+---
+title:  startsWith
+tags: string,beginner
+---
 
 Check if a string starts with a given substring.
 
