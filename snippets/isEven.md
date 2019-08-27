@@ -11,11 +11,6 @@ function isEven($number)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 isEven(4); // true
 ```
-
-</details>

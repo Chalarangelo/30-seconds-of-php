@@ -16,12 +16,7 @@ function lcm(...$numbers)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 lcm(12, 7); // 84
 lcm(1, 3, 4, 5); // 60
 ```
-
-</details>

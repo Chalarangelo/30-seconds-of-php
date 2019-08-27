@@ -15,11 +15,6 @@ function factorial($n)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 factorial(6); // 720
 ```
-
-</details>

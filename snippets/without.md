@@ -11,11 +11,6 @@ function without($items, ...$params)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 without([2, 1, 2, 3], 1, 2); // [3]
 ```
-
-</details>

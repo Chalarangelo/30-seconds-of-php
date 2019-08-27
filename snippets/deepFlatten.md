@@ -20,11 +20,6 @@ function deepFlatten($items)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 deepFlatten([1, [2], [[3], 4], 5]); // [1, 2, 3, 4, 5]
 ```
-
-</details>

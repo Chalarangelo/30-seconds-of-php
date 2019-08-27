@@ -16,12 +16,7 @@ function maxN($numbers)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 maxN([1, 2, 3, 4, 5, 5]); // 2
 maxN([1, 2, 3, 4, 5]); // 1
 ```
-
-</details>

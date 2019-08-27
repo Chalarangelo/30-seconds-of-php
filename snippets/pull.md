@@ -12,12 +12,7 @@ function pull(&$items, ...$params)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 $items = ['a', 'b', 'c', 'a', 'b', 'c'];
 pull($items, 'a', 'c'); // $items will be ['b', 'b']
 ```
-
-</details>

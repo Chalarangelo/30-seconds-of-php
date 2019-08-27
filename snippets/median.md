@@ -15,12 +15,7 @@ function median($numbers)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 median([1, 3, 3, 6, 7, 8, 9]); // 6
 median([1, 2, 3, 6, 7, 9]); // 4.5
 ```
-
-</details>

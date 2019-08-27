@@ -12,11 +12,6 @@ function isAnagram($string1, $string2)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 isAnagram('act', 'cat'); // true
 ```
-
-</details>

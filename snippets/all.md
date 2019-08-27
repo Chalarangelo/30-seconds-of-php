@@ -2,6 +2,7 @@
 title:  all
 tags: array,beginner
 ---
+
 Returns `true` if the provided function returns `true` for all elements of an array, `false` otherwise.
 
 ```php
@@ -11,13 +12,8 @@ function all($items, $func)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 all([2, 3, 4, 5], function ($item) {
   return $item > 1;
 }); // true
 ```
-
-</details>

@@ -25,9 +25,6 @@ function memoize($func)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 $memoizedAdd = memoize(
   function ($num) {
@@ -39,5 +36,3 @@ var_dump($memoizedAdd(5)); // ['result' => 15, 'cached' => false]
 var_dump($memoizedAdd(6)); // ['result' => 16, 'cached' => false]
 var_dump($memoizedAdd(5)); // ['result' => 15, 'cached' => true]
 ```
-
-</details>

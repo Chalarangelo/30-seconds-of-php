@@ -11,11 +11,6 @@ function hasDuplicates($items)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 hasDuplicates([1, 2, 3, 4, 5, 5]); // true
 ```
-
-</details>

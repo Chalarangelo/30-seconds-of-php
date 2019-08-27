@@ -13,11 +13,6 @@ function average(...$items)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 average(1, 2, 3); // 2
 ```
-
-</details>

@@ -11,11 +11,6 @@ function tail($items)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 tail([1, 2, 3]); // [2, 3]
 ```
-
-</details>

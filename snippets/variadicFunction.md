@@ -18,12 +18,7 @@ function variadicFunction($operands)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 variadicFunction([1, 2]); // 3
 variadicFunction([1, 2, 3, 4]); // 10
 ```
-
-</details>

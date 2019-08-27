@@ -11,12 +11,7 @@ function take($items, $n = 1)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 take([1, 2, 3], 5); // [1, 2, 3]
 take([1, 2, 3, 4, 5], 2); // [1, 2]
 ```
-
-</details>

@@ -11,13 +11,8 @@ function reject($items, $func)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 reject(['Apple', 'Pear', 'Kiwi', 'Banana'], function ($item) {
   return strlen($item) > 4;
 }); // ['Pear', 'Kiwi']
 ```
-
-</details>

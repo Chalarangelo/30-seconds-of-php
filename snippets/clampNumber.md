@@ -14,12 +14,7 @@ function clampNumber($num, $a, $b)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 clampNumber(2, 3, 5); // 3
 clampNumber(1, -1, -5); // -1
 ```
-
-</details>

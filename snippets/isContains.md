@@ -12,9 +12,6 @@ function isContains($string, $needle)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 isContains('This is an example string', 'example'); // true
 ```

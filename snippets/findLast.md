@@ -13,14 +13,9 @@ function findLast($items, $func)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 findLast([1, 2, 3, 4], function ($n) {
   return ($n % 2) === 1;
 });
 // 3
 ```
-
-</details>

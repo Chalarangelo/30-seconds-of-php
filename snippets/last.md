@@ -11,11 +11,6 @@ function last($items)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 last([1, 2, 3]); // 3
 ```
-
-</details>

@@ -12,12 +12,7 @@ function palindrome($string)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 palindrome('racecar'); // true
 palindrome(2221222); // true
 ```
-
-</details>

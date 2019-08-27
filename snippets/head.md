@@ -11,11 +11,6 @@ function head($items)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 head([1, 2, 3]); // 1
 ```
-
-</details>

@@ -16,11 +16,6 @@ function countVowels($string)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 countVowels('sampleInput'); // 4
 ```
-
-</details>

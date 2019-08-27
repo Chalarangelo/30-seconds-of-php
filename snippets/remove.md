@@ -13,14 +13,9 @@ function remove($items, $func)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 remove([1, 2, 3, 4], function ($n) {
   return ($n % 2) === 0;
 });
 // [0 => 1, 2 => 3]
 ```
-
-</details>

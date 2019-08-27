@@ -11,12 +11,7 @@ function drop($items, $n = 1)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 drop([1, 2, 3]); // [2,3]
 drop([1, 2, 3], 2); // [3]
 ```
-
-</details>

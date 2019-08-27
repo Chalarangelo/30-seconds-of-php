@@ -20,11 +20,6 @@ function flatten($items)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 flatten([1, [2], 3, 4]); // [1, 2, 3, 4]
 ```
-
-</details>

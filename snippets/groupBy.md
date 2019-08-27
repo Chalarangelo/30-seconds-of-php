@@ -23,11 +23,6 @@ function groupBy($items, $func)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 groupBy(['one', 'two', 'three'], 'strlen'); // [3 => ['one', 'two'], 5 => ['three']]
 ```
-
-</details>

@@ -11,13 +11,8 @@ function any($items, $func)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 any([1, 2, 3, 4], function ($item) {
   return $item < 2;
 }); // true
 ```
-
-</details>

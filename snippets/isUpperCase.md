@@ -12,12 +12,7 @@ function isUpperCase($string)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 isUpperCase('MORNING SHOWS THE DAY!'); // true
 isUpperCase('qUick Fox'); // false
 ```
-
-</details>

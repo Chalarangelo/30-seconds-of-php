@@ -13,14 +13,9 @@ function findLastIndex($items, $func)
 }
 ```
 
-<details>
-<summary>Examples</summary>
-
 ```php
 findLastIndex([1, 2, 3, 4], function ($n) {
   return ($n % 2) === 1;
 });
 // 2
 ```
-
-</details>
