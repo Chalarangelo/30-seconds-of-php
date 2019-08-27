@@ -2,7 +2,10 @@
 title:  reject
 tags: array,beginner
 ---
+
 Filters the collection using the given callback.
+
+Use `array_values()`, `array_diff()` and `array_filter()` to filter `$items` based on `$func`.
 
 ```php
 function reject($items, $func)

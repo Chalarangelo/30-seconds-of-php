@@ -3,8 +3,10 @@ title:  isContains
 tags: string,beginner
 ---
 
-Check if a word / substring exist in a given string input.
-Using `strpos` to find the position of the first occurrence of a substring in a string. Returns either `true` or `false`
+Check if a word / substring exists in a given string input.
+
+Using `strpos()` to find the position of the first occurrence of a substring in a string. 
+
 ```php
 function isContains($string, $needle)
 {
@@ -14,8 +16,5 @@ function isContains($string, $needle)
 
 ```php
 isContains('This is an example string', 'example'); // true
-```
-```php
 isContains('This is an example string', 'hello'); // false
 ```
-</details>

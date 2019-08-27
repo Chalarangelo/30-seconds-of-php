@@ -5,6 +5,8 @@ tags: function,intermediate
 
 Call a function only once.
 
+Return a function, which only calls the provided function, `$function`, if `$called` is `false` and sets `$called` to `true`.
+
 ```php
 function once($function)
 {

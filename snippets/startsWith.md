@@ -5,6 +5,8 @@ tags: string,beginner
 
 Check if a string starts with a given substring.
 
+Use `strpos()` to find the position of `$needle` in `$haystack`.
+
 ```php
 function startsWith($haystack, $needle)
 {

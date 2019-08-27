@@ -2,7 +2,10 @@
 title:  flatten
 tags: array,intermediate
 ---
+
 Flattens an array up to the one level depth.
+
+Use `array_merge()` and `array_values()` to flatten the array.
 
 ```php
 function flatten($items)

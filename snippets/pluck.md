@@ -2,7 +2,10 @@
 title:  pluck
 tags: array,beginner
 ---
-Retrieves all of the values for a given key:
+
+Retrieves all of the values for a given key.
+
+Use `array_map()` to map each object in the `$items` array to the provided `$key`.
 
 ```php
 function pluck($items, $key)

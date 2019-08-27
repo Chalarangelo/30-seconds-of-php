@@ -2,7 +2,10 @@
 title:  tail
 tags: array,beginner
 ---
+
 Returns all elements in an array except for the first one.
+
+Use `array_slice()` and `count()` to return all the items in the array except for the first one.
 
 ```php
 function tail($items)

@@ -2,7 +2,10 @@
 title:  any
 tags: array,beginner
 ---
+
 Returns `true` if the provided function returns `true` for at least one element of an array, `false` otherwise.
+
+Use `array_filter()` and `count()` to check if `$func` returns `true` for any of the elements in `$items`.
 
 ```php
 function any($items, $func)

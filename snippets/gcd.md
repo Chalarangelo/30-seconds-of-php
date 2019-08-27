@@ -1,8 +1,14 @@
 ---
 title:  gcd
-tags: math,intermediate
+tags: math,recursion,intermediate
 ---
+
 Calculates the greatest common divisor between two or more numbers.
+
+Use recursion.
+Use `array_reduce()` with the `gcd` function to appy to all elements in the `$numbers` list.
+Base case is when `y` equals `0`. In this case, return `x`. 
+Otherwise, return the gcd of `y` and the remainder of the division `x/y`.
 
 ```php
 function gcd(...$numbers)

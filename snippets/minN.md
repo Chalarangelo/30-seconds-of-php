@@ -2,7 +2,10 @@
 title:  minN
 tags: math,array,intermediate
 ---
-Returns the n minimum elements from the provided array.
+
+Returns the minimum value from the provided array.
+
+Use `array_filter()` and `min()` to find the minimum value in an array.
 
 ```php
 function minN($numbers)

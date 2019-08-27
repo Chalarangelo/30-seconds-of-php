@@ -2,7 +2,10 @@
 title:  maxN
 tags: math,array,intermediate
 ---
-Returns the n maximum elements from the provided array.
+
+Returns the maximum value from the provided array.
+
+Use `array_filter()` and `max()` to find the maximum value in an array.
 
 ```php
 function maxN($numbers)
