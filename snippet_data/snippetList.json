@@ -1,0 +1,705 @@
+{
+  "data": [
+    {
+      "id": "all",
+      "type": "snippetListing",
+      "title": "all",
+      "attributes": {
+        "text": "Returns `true` if the provided function returns `true` for all elements of an array, `false` otherwise.\n\nUse `array_filter()` and `count()` to check if `$func` returns `true` for all the elements in `$items`.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "4202031319a553d411f006149a74874548986bda08a0dbc09d2c4a6bbe607b64"
+      }
+    },
+    {
+      "id": "any",
+      "type": "snippetListing",
+      "title": "any",
+      "attributes": {
+        "text": "Returns `true` if the provided function returns `true` for at least one element of an array, `false` otherwise.\n\nUse `array_filter()` and `count()` to check if `$func` returns `true` for any of the elements in `$items`.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "4a3cd389e13436a39049a27d00ff6bcb24f22559ab66123b0c193292a3c29b0e"
+      }
+    },
+    {
+      "id": "approximatelyEqual",
+      "type": "snippetListing",
+      "title": "approximatelyEqual",
+      "attributes": {
+        "text": "Checks if two numbers are approximately equal to each other.\n\nUse `abs()` to compare the absolute difference of the two values to `$epsilon`. \nOmit the third parameter, `$epsilon`, to use a default value of `0.001`.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "beb20da4ca2e1262f074a7d29203b44a1c5f4fc8e1d9564051fe23da5a071deb"
+      }
+    },
+    {
+      "id": "average",
+      "type": "snippetListing",
+      "title": "average",
+      "attributes": {
+        "text": "Returns the average of two or more numbers.\n\nUse `array_sum()` for all the values in `$items` and return the result divided by their `count()`.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "4dee37190389034fcf55dffc4d831abf4d2a0b33faeea02138c20c3225cc8e40"
+      }
+    },
+    {
+      "id": "clampNumber",
+      "type": "snippetListing",
+      "title": "clampNumber",
+      "attributes": {
+        "text": "Clamps `$num` within the inclusive range specified by the boundary values `$a` and `$b`.\n\nIf `$num` falls within the range, return `$num`. \nOtherwise, return the nearest number in the range, using `min()` and `max()`.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c79b2f345513f3c1b2e67e848e7e9c4efbd3498b551bad1ca365db6e8c920fee"
+      }
+    },
+    {
+      "id": "compose",
+      "type": "snippetListing",
+      "title": "compose",
+      "attributes": {
+        "text": "Return a new function that composes multiple functions into a single callable.\n\nUse `array_reduce()` to perform right-to-left function composition. \n\n",
+        "tags": [
+          "function",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "2824926304f4f01c381e6b02972f44d5615dc3eb17cf6c58c1d255ec0bd6d911"
+      }
+    },
+    {
+      "id": "countVowels",
+      "type": "snippetListing",
+      "title": "countVowels",
+      "attributes": {
+        "text": "Returns number of vowels in the provided string.\n\nUse a regular expression to count the number of vowels (`a`, `e`, `i`, `o` and `u`a) in a string.\n\n",
+        "tags": [
+          "string",
+          "regexp",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "f114da3bada9de55a831a1066992d128b8013da712207a49ed9746a6c05c1176"
+      }
+    },
+    {
+      "id": "curry",
+      "type": "snippetListing",
+      "title": "curry",
+      "attributes": {
+        "text": "Curries a function to take arguments in multiple calls.\n\nIf the number of provided arguments (`$args`) is sufficient, call the passed function, `$function`.\nOtherwise, return a curried function that expects the rest of the arguments.\n\n",
+        "tags": [
+          "function",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "f941f578b5f97a7090662b8275e1b53778bc83bacbeac4ad1512a79f91a3ca0a"
+      }
+    },
+    {
+      "id": "decapitalize",
+      "type": "snippetListing",
+      "title": "decapitalize",
+      "attributes": {
+        "text": "Decapitalizes the first letter of a string.\n\nDecapitalizes the first letter of the string and then adds it with rest of the string. \nOmit the `$upperRest` parameter to keep the rest of the string intact, or set it to `true` to convert to uppercase.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "abd2bc817a4a7fdd5bce6d50a8ed512000f8b9e15484f389c9deef68e3c7c713"
+      }
+    },
+    {
+      "id": "deepFlatten",
+      "type": "snippetListing",
+      "title": "deepFlatten",
+      "attributes": {
+        "text": "Deep flattens an array.\n\nUse recursion.\nUse `array_merge` with an empty array to flatten the array.\nRecursively flatten each element that is an array.\n\n",
+        "tags": [
+          "array",
+          "recursion",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "2c8b3599db859ba4f09768ff1f7fdf9c0418d84c317b87b62c6bd102ade64882"
+      }
+    },
+    {
+      "id": "drop",
+      "type": "snippetListing",
+      "title": "drop",
+      "attributes": {
+        "text": "Returns a new array with `$n` elements removed from the left.\n\nUse `array_slice()` to remove `$n` elements from the left.\nOmit the second argument, `$n`, to only remove one element.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "2863275bf847d38a103aa044bc3c347c780b3932f3a4294788e8819fcaa76bf7"
+      }
+    },
+    {
+      "id": "endsWith",
+      "type": "snippetListing",
+      "title": "endsWith",
+      "attributes": {
+        "text": "Checks if a string is ends with a given substring.\n\nUse `strrpos()` in combination with `strlen` to find the position of `$needle` in `$haystack`.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "b06056cffd6b4003e2152bcf7bde5b8489eee577b320b85d17eb4ced80290321"
+      }
+    },
+    {
+      "id": "factorial",
+      "type": "snippetListing",
+      "title": "factorial",
+      "attributes": {
+        "text": "Calculates the factorial of a number.\n\nUse recursion.\nIf `$n` is less then or equal to `1`, return `1`.\nOtherwise, return the product of `$n` and the factorial of `$n -1`.\nThrows an exception if `$n` is a negative number.\n\n",
+        "tags": [
+          "math",
+          "recursion",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "1146d4682bd750a0435fe9eb705256ccf8d9926f02e1bee6d4e39bca1d151a76"
+      }
+    },
+    {
+      "id": "fibonacci",
+      "type": "snippetListing",
+      "title": "fibonacci",
+      "attributes": {
+        "text": "Generates an array, containing the Fibonacci sequence, up until the nth term.\n\nCreate an empty array, initializing the first two values (`0` and `1`).\nLoop from 2 through `$n` and add values into the array, using the sum of the last two values.\n\n",
+        "tags": [
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "77cb219b3d731ca5f78b3640abb9eb3507dcb69028bd23b5e189f644f2707e1c"
+      }
+    },
+    {
+      "id": "findLast",
+      "type": "snippetListing",
+      "title": "findLast",
+      "attributes": {
+        "text": "Returns the last element for which the provided function returns a truthy value.\n\nUse `array_filter()` to remove elements for which `$func` returns falsy values, `array_pop()` to get the last one.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "7fad22f7a7ebdc07398ece0d31817c08cf9c9cff5cd336f738d4a03e510761e3"
+      }
+    },
+    {
+      "id": "findLastIndex",
+      "type": "snippetListing",
+      "title": "findLastIndex",
+      "attributes": {
+        "text": "Returns the index of the last element for which the provided function returns a truthy value.\n\nUse `array_keys()` and `array_filter()` to remove elements for which `$func` returns falsy values, `array_pop()` to get the last one.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "2186c9fb1aeef71fc40755786211262b0beb6224e09dd799c4d4a8a0e4b3d73e"
+      }
+    },
+    {
+      "id": "firstStringBetween",
+      "type": "snippetListing",
+      "title": "firstStringBetween",
+      "attributes": {
+        "text": "Returns the first string there is between the strings from the parameter `$start` and `$end`.\n\nUse `trim()` and `strstr()` to find the string contained between `$start` and `$end`.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "6287eb8678e82617357023b6ae3201189c7b0789d96aae46d956a27a3f930e7b"
+      }
+    },
+    {
+      "id": "flatten",
+      "type": "snippetListing",
+      "title": "flatten",
+      "attributes": {
+        "text": "Flattens an array up to the one level depth.\n\nUse `array_merge()` and `array_values()` to flatten the array.\n\n",
+        "tags": [
+          "array",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "c1462851ac76528c5206e023fb10c61f01a5735961972e34cb3305ad6814b868"
+      }
+    },
+    {
+      "id": "gcd",
+      "type": "snippetListing",
+      "title": "gcd",
+      "attributes": {
+        "text": "Calculates the greatest common divisor between two or more numbers.\n\nUse recursion.\nUse `array_reduce()` with the `gcd` function to appy to all elements in the `$numbers` list.\nBase case is when `y` equals `0`. In this case, return `x`. \nOtherwise, return the gcd of `y` and the remainder of the division `x/y`.\n\n",
+        "tags": [
+          "math",
+          "recursion",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "70de8a8548a4fa5b8774df34bfdc42e34b54622dad0454ceabfa2de52121f54a"
+      }
+    },
+    {
+      "id": "groupBy",
+      "type": "snippetListing",
+      "title": "groupBy",
+      "attributes": {
+        "text": "Groups the elements of an array based on the given function.\n\nUse `call_use_func()` with `$func` on `$items` to group them based on `$func`.\n\n",
+        "tags": [
+          "array",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "2d999b784355c1f395bcaad50c612cd075c15506d4260de1ff3f7255ab99b08a"
+      }
+    },
+    {
+      "id": "hasDuplicates",
+      "type": "snippetListing",
+      "title": "hasDuplicates",
+      "attributes": {
+        "text": "Checks a flat list for duplicate values, returning `true` if duplicate values exists and `false` if values are all unique.\n\nUse `count()` and `array_unique()` to check `$items` for duplicate values.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c2792089ce334a4d52a975ade08245f0afb165915ad7f2eba080f1626d0b6662"
+      }
+    },
+    {
+      "id": "head",
+      "type": "snippetListing",
+      "title": "head",
+      "attributes": {
+        "text": "Returns the head of a list.\n\nUse `reset()` to return the first item in the array.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "f93945b538cc5b96c484e15f419697496a7f04d0a3a8a88d40300006c2309401"
+      }
+    },
+    {
+      "id": "isAnagram",
+      "type": "snippetListing",
+      "title": "isAnagram",
+      "attributes": {
+        "text": "Compare two strings and returns `true` if both strings are anagram, `false` otherwise.\n\nUse `count_chars()` to compare `$string1` and `$string2`.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "5524a733e2bef0e8eafbd4f2efcea7774e74b9885ddfe58edeee7b27d5509454"
+      }
+    },
+    {
+      "id": "isContains",
+      "type": "snippetListing",
+      "title": "isContains",
+      "attributes": {
+        "text": "Check if a word / substring exists in a given string input.\n\nUsing `strpos()` to find the position of the first occurrence of a substring in a string. \n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "196e85e171ec10867fee58dc026936040b874c50763901aa37b6fe4ba31b729a"
+      }
+    },
+    {
+      "id": "isEven",
+      "type": "snippetListing",
+      "title": "isEven",
+      "attributes": {
+        "text": "Returns `true` if the given number is even, `false` otherwise.\n\nChecks whether a number is odd or even using the modulo (`%`) operator. \nReturns `true` if the number is even, `false` if the number is odd.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "3ccf54b09c30563310344b5ef792fa623da09141a5c540352eaf0edf28ef15de"
+      }
+    },
+    {
+      "id": "isLowerCase",
+      "type": "snippetListing",
+      "title": "isLowerCase",
+      "attributes": {
+        "text": "Returns `true` if the given string is lower case, `false` otherwise.\n\nConvert the given string to lower case, using `strtolower` and compare it to the original.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c8c3746f41f479cc49a8e76f89af46ea98a4525e2b230a3f093ad12d0852d1b2"
+      }
+    },
+    {
+      "id": "isPrime",
+      "type": "snippetListing",
+      "title": "isPrime",
+      "attributes": {
+        "text": "Checks if the provided integer is a prime number.\n\nCheck numbers from `2` to the square root of the given number. \nReturn `false` if any of them divides the given number, else return `true`, unless the number is less than `2`.\n\n",
+        "tags": [
+          "math",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "6ef682d9a8ef3844eec3e49a8233691aaeb5745755b822da4849123e7e9a6474"
+      }
+    },
+    {
+      "id": "isUpperCase",
+      "type": "snippetListing",
+      "title": "isUpperCase",
+      "attributes": {
+        "text": "Returns `true` if the given string is upper case, false otherwise.\n\nConvert the given string to upper case, using `strtoupper` and compare it to the original.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e64dc2bc688487fcc6ee6498c43c09710a29c711a59fc45a63ce716d96663c69"
+      }
+    },
+    {
+      "id": "last",
+      "type": "snippetListing",
+      "title": "last",
+      "attributes": {
+        "text": "Returns the last element in an array.\n\nUse `end()` to return the last item in the array.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "4be7ccbb0e45b0b6baaa0cae4e5c0403eba158e5fa6e8fde89e1a4e2a872299c"
+      }
+    },
+    {
+      "id": "lcm",
+      "type": "snippetListing",
+      "title": "lcm",
+      "attributes": {
+        "text": "Returns the least common multiple of two or more numbers.\n\nUse the greatest common divisor (GCD) formula and the fact that `lcm(x,y) = x * y / gcd(x,y)` to determine the least common multiple. \nThe GCD formula uses recursion.\n\n",
+        "tags": [
+          "math",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "2db4c8e9defd194bb21557ac0a96e0cc774f456f14d8c8dd1b5ba20ef9c369f6"
+      }
+    },
+    {
+      "id": "maxN",
+      "type": "snippetListing",
+      "title": "maxN",
+      "attributes": {
+        "text": "Returns the maximum value from the provided array.\n\nUse `array_filter()` and `max()` to find the maximum value in an array.\n\n",
+        "tags": [
+          "math",
+          "array",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "9d57179f2c2a209309ffc4c33ccb5c6b27d4c5dd49ba699c93a5ecafa90e72fc"
+      }
+    },
+    {
+      "id": "median",
+      "type": "snippetListing",
+      "title": "median",
+      "attributes": {
+        "text": "Returns the median of an array of numbers.\n\nFind the middle of the array, use `sort()` to sort the values. \nReturn the number at the midpoint if the array's length is odd, otherwise the average of the two middle numbers.\n\n",
+        "tags": [
+          "math",
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "d2027d7bb9d57b3e0fc66611120c78742606cb211fb88c27322048a0142eb992"
+      }
+    },
+    {
+      "id": "memoize",
+      "type": "snippetListing",
+      "title": "memoize",
+      "attributes": {
+        "text": "Returns the memoized (cached) function.\n\nCreate an empty cache by instantiating a new array. \nReturn a function which takes a single argument to be supplied to the memoized function by first checking if the function's output for that specific input value is already cached, or store and return it if not. \nAllow access to the cache by setting it as a property on the returned function.\n\n",
+        "tags": [
+          "function",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "2ff78c8377bbdcaed00a3de923970834636a63e1abf0c947ba5944d79d3fce00"
+      }
+    },
+    {
+      "id": "minN",
+      "type": "snippetListing",
+      "title": "minN",
+      "attributes": {
+        "text": "Returns the minimum value from the provided array.\n\nUse `array_filter()` and `min()` to find the minimum value in an array.\n\n",
+        "tags": [
+          "math",
+          "array",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "10516feb8cea605875aecc7e48eca24f60738fae2678e1e2c44f3499c65aca04"
+      }
+    },
+    {
+      "id": "once",
+      "type": "snippetListing",
+      "title": "once",
+      "attributes": {
+        "text": "Call a function only once.\n\nReturn a function, which only calls the provided function, `$function`, if `$called` is `false` and sets `$called` to `true`.\n\n",
+        "tags": [
+          "function",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "66ae53b4703457a6b18d2c0b1d4c6b7d1ceb63af4a8eda34df3f175448ba9977"
+      }
+    },
+    {
+      "id": "orderBy",
+      "type": "snippetListing",
+      "title": "orderBy",
+      "attributes": {
+        "text": "Sorts a collection of arrays or objects by key.\n\nUses `sort()` on the provided array to sort the array vased on `$order` and `$attr`.\n\n",
+        "tags": [
+          "array",
+          "advanced"
+        ]
+      },
+      "meta": {
+        "hash": "c0f1463505ce253c389fd92f9d1d8881a3a4509b6e1fda7f9834a2cc52db5d9b"
+      }
+    },
+    {
+      "id": "palindrome",
+      "type": "snippetListing",
+      "title": "palindrome",
+      "attributes": {
+        "text": "Returns `true` if the given string is a palindrome, `false` otherwise.\n\nCheck if the value of `strrev($string)` is equal to the passed `$string`.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "dee5210d7bdf9dba437b533d2ca8c451921c1ced571a4901f7d68f0eb2283a91"
+      }
+    },
+    {
+      "id": "pluck",
+      "type": "snippetListing",
+      "title": "pluck",
+      "attributes": {
+        "text": "Retrieves all of the values for a given key.\n\nUse `array_map()` to map each object in the `$items` array to the provided `$key`.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "055d64b094e81146b0a17dea02ac79cf5b0286e2f654fada63074fa52f6980e0"
+      }
+    },
+    {
+      "id": "pull",
+      "type": "snippetListing",
+      "title": "pull",
+      "attributes": {
+        "text": "Mutates the original array to filter out the values specified.\n\nUse `array_values()` and `array_diff()` to remove the specified values from `$items`.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "f21c93dfe9435e3080396601a12caf9fc052ba6c0db4e1babb1e717d97a49963"
+      }
+    },
+    {
+      "id": "reject",
+      "type": "snippetListing",
+      "title": "reject",
+      "attributes": {
+        "text": "Filters the collection using the given callback.\n\nUse `array_values()`, `array_diff()` and `array_filter()` to filter `$items` based on `$func`.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "56570799cb04b246c5fffe43990c0240991ef2365b28ceec8312d4273d9c0bb1"
+      }
+    },
+    {
+      "id": "remove",
+      "type": "snippetListing",
+      "title": "remove",
+      "attributes": {
+        "text": "Removes elements from an array for which the given function returns `false`.\n\nUse `array_filter()` to find array elements that return truthy values and `array_diff_keys()` to remove the elements not contained in `$filtered`.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "efc941186c41d22126bf652dacd4204ba8f0cd885cef55745206420df707ac41"
+      }
+    },
+    {
+      "id": "rotate",
+      "type": "snippetListing",
+      "title": "rotate",
+      "attributes": {
+        "text": "Rotates the array (in left direction) by the number of shifts.\n\nGiven the `$shift` index, merge the array values after `$shift` with the values before `$shift`.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "0c51d5da08fd37e77fb7d37259e6d970e1b99b4894874bccf5f2b33667e4b6b6"
+      }
+    },
+    {
+      "id": "startsWith",
+      "type": "snippetListing",
+      "title": "startsWith",
+      "attributes": {
+        "text": "Check if a string starts with a given substring.\n\nUse `strpos()` to find the position of `$needle` in `$haystack`.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "e29bf5889ddc1e24e2dd20cbc3f64340206680da8ac1ec61067213c95d71dd9a"
+      }
+    },
+    {
+      "id": "tail",
+      "type": "snippetListing",
+      "title": "tail",
+      "attributes": {
+        "text": "Returns all elements in an array except for the first one.\n\nUse `array_slice()` and `count()` to return all the items in the array except for the first one.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "733da9981ed9095ce97a1f00254b3f3a866f82a7340875631f276b0ccb0f900a"
+      }
+    },
+    {
+      "id": "take",
+      "type": "snippetListing",
+      "title": "take",
+      "attributes": {
+        "text": "Returns an array with `$n` elements removed from the beginning.\n\nUse `array_slice()` to remove `$n` items from the beginning of the array.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "c7892458be7b59af7ee479d2ccfa8f60c99d230f30e5e133409566ba76d3733d"
+      }
+    },
+    {
+      "id": "without",
+      "type": "snippetListing",
+      "title": "without",
+      "attributes": {
+        "text": "Filters out the elements of an array, that have one of the specified values.\n\nUse `array_values()` and `array_diff()` to remove any values in `$params` from `$items`.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "20c41ff272f364df2374ae47cdfd3bf46acf37232f02bc734143a5a423ce6aef"
+      }
+    }
+  ],
+  "meta": {
+    "specification": "http://jsonapi.org/format/",
+    "type": "snippetListingArray"
+  }
+}
