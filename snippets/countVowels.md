@@ -1,23 +1,21 @@
-### countVowels
+---
+title:  countVowels
+tags: string,regexp,beginner
+---
 
-Returns number of vowels in provided string.
+Returns number of vowels in the provided string.
 
-Use a regular expression to count the number of vowels (A, E, I, O, U) in a string.
+Use a regular expression to count the number of vowels (`a`, `e`, `i`, `o` and `u`a) in a string.
 
 ```php
 function countVowels($string)
 {
-    preg_match_all('/[aeiou]/i', $string, $matches);
+  preg_match_all('/[aeiou]/i', $string, $matches);
 
-    return count($matches[0]);
+  return count($matches[0]);
 }
 ```
-
-<details>
-<summary>Examples</summary>
 
 ```php
 countVowels('sampleInput'); // 4
 ```
-
-</details>

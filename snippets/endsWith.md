@@ -1,19 +1,19 @@
-### endsWith
+---
+title:  endsWith
+tags: string,beginner
+---
 
-Check if a string is ends with a given substring.
+Checks if a string is ends with a given substring.
+
+Use `strrpos()` in combination with `strlen` to find the position of `$needle` in `$haystack`.
 
 ```php
 function endsWith($haystack, $needle)
 {
-    return strrpos($haystack, $needle) === (strlen($haystack) - strlen($needle));
+  return strrpos($haystack, $needle) === (strlen($haystack) - strlen($needle));
 }
 ```
-
-<details>
-<summary>Examples</summary>
 
 ```php
 endsWith('Hi, this is me', 'me'); // true
 ```
-
-</details>
