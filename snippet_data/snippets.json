@@ -8,8 +8,8 @@
         "fileName": "all.md",
         "text": "Returns `true` if the provided function returns `true` for all elements of an array, `false` otherwise.\n\nUse `array_filter()` and `count()` to check if `$func` returns `true` for all the elements in `$items`.\n\n",
         "codeBlocks": {
-          "code": "function all($items, $func)\r\n{\r\n  return count(array_filter($items, $func)) === count($items);\r\n}",
-          "example": "all([2, 3, 4, 5], function ($item) {\r\n  return $item > 1;\r\n}); // true"
+          "code": "function all($items, $func)\n{\n  return count(array_filter($items, $func)) === count($items);\n}",
+          "example": "all([2, 3, 4, 5], function ($item) {\n  return $item > 1;\n}); // true"
         },
         "tags": [
           "array",
@@ -17,7 +17,7 @@
         ]
       },
       "meta": {
-        "hash": "4202031319a553d411f006149a74874548986bda08a0dbc09d2c4a6bbe607b64"
+        "hash": "1a97563ba9e7f44c543f05c5e9af188f51282469e1efde9a6a411ca4f747c155"
       }
     },
     {
@@ -28,8 +28,8 @@
         "fileName": "any.md",
         "text": "Returns `true` if the provided function returns `true` for at least one element of an array, `false` otherwise.\n\nUse `array_filter()` and `count()` to check if `$func` returns `true` for any of the elements in `$items`.\n\n",
         "codeBlocks": {
-          "code": "function any($items, $func)\r\n{\r\n  return count(array_filter($items, $func)) > 0;\r\n}",
-          "example": "any([1, 2, 3, 4], function ($item) {\r\n  return $item < 2;\r\n}); // true"
+          "code": "function any($items, $func)\n{\n  return count(array_filter($items, $func)) > 0;\n}",
+          "example": "any([1, 2, 3, 4], function ($item) {\n  return $item < 2;\n}); // true"
         },
         "tags": [
           "array",
@@ -37,7 +37,7 @@
         ]
       },
       "meta": {
-        "hash": "4a3cd389e13436a39049a27d00ff6bcb24f22559ab66123b0c193292a3c29b0e"
+        "hash": "cc6ab6b0ab785c3a75be71776e1e6649ef6ec584efef9c3aef13b402a1fbca46"
       }
     },
     {
@@ -48,8 +48,8 @@
         "fileName": "approximatelyEqual.md",
         "text": "Checks if two numbers are approximately equal to each other.\n\nUse `abs()` to compare the absolute difference of the two values to `$epsilon`. \nOmit the third parameter, `$epsilon`, to use a default value of `0.001`.\n\n",
         "codeBlocks": {
-          "code": "function approximatelyEqual($number1, $number2, $epsilon = 0.001)\r\n{\r\n  return abs($number1 - $number2) < $epsilon;\r\n}",
-          "example": "approximatelyEqual(10.0, 10.00001); // true\r\n\r\napproximatelyEqual(10.0, 10.01); // false"
+          "code": "function approximatelyEqual($number1, $number2, $epsilon = 0.001)\n{\n  return abs($number1 - $number2) < $epsilon;\n}",
+          "example": "approximatelyEqual(10.0, 10.00001); // true\n\napproximatelyEqual(10.0, 10.01); // false"
         },
         "tags": [
           "math",
@@ -57,7 +57,7 @@
         ]
       },
       "meta": {
-        "hash": "beb20da4ca2e1262f074a7d29203b44a1c5f4fc8e1d9564051fe23da5a071deb"
+        "hash": "be6cc3eb3bec3397c808170770c3b6c7c07f68601414d8b022d808d2ca430c9d"
       }
     },
     {
@@ -68,7 +68,7 @@
         "fileName": "average.md",
         "text": "Returns the average of two or more numbers.\n\nUse `array_sum()` for all the values in `$items` and return the result divided by their `count()`.\n\n",
         "codeBlocks": {
-          "code": "function average(...$items)\r\n{\r\n  $count = count($items);\r\n  \r\n  return $count === 0 ? 0 : array_sum($items) / $count;\r\n}",
+          "code": "function average(...$items)\n{\n  $count = count($items);\n  \n  return $count === 0 ? 0 : array_sum($items) / $count;\n}",
           "example": "average(1, 2, 3); // 2"
         },
         "tags": [
@@ -77,7 +77,7 @@
         ]
       },
       "meta": {
-        "hash": "4dee37190389034fcf55dffc4d831abf4d2a0b33faeea02138c20c3225cc8e40"
+        "hash": "da8c6067a30d6f1620a7ce96f8a3049ef48e0fd14ee74beb59ff0ee8e2f9b4c9"
       }
     },
     {
@@ -88,8 +88,8 @@
         "fileName": "clampNumber.md",
         "text": "Clamps `$num` within the inclusive range specified by the boundary values `$a` and `$b`.\n\nIf `$num` falls within the range, return `$num`. \nOtherwise, return the nearest number in the range, using `min()` and `max()`.\n\n",
         "codeBlocks": {
-          "code": "function clampNumber($num, $a, $b)\r\n{\r\n  return max(min($num, max($a, $b)), min($a, $b));\r\n}",
-          "example": "clampNumber(2, 3, 5); // 3\r\nclampNumber(1, -1, -5); // -1"
+          "code": "function clampNumber($num, $a, $b)\n{\n  return max(min($num, max($a, $b)), min($a, $b));\n}",
+          "example": "clampNumber(2, 3, 5); // 3\nclampNumber(1, -1, -5); // -1"
         },
         "tags": [
           "math",
@@ -97,7 +97,7 @@
         ]
       },
       "meta": {
-        "hash": "c79b2f345513f3c1b2e67e848e7e9c4efbd3498b551bad1ca365db6e8c920fee"
+        "hash": "0ff52edf1a1386ac6e38366957c8cd0fc3399eb68a9d3039792e9a0cac95cad0"
       }
     },
     {
@@ -108,8 +108,8 @@
         "fileName": "compose.md",
         "text": "Return a new function that composes multiple functions into a single callable.\n\nUse `array_reduce()` to perform right-to-left function composition. \n\n",
         "codeBlocks": {
-          "code": "function compose(...$functions)\r\n{\r\n  return array_reduce(\r\n    $functions,\r\n    function ($carry, $function) {\r\n      return function ($x) use ($carry, $function) {\r\n        return $function($carry($x));\r\n      };\r\n    },\r\n    function ($x) {\r\n      return $x;\r\n    }\r\n  );\r\n}",
-          "example": "$compose = compose(\r\n  // add 2\r\n  function ($x) {\r\n    return $x + 2;\r\n  },\r\n  // multiply 4\r\n  function ($x) {\r\n    return $x * 4;\r\n  }\r\n);\r\n$compose(3); // 20"
+          "code": "function compose(...$functions)\n{\n  return array_reduce(\n    $functions,\n    function ($carry, $function) {\n      return function ($x) use ($carry, $function) {\n        return $function($carry($x));\n      };\n    },\n    function ($x) {\n      return $x;\n    }\n  );\n}",
+          "example": "$compose = compose(\n  // add 2\n  function ($x) {\n    return $x + 2;\n  },\n  // multiply 4\n  function ($x) {\n    return $x * 4;\n  }\n);\n$compose(3); // 20"
         },
         "tags": [
           "function",
@@ -117,7 +117,7 @@
         ]
       },
       "meta": {
-        "hash": "2824926304f4f01c381e6b02972f44d5615dc3eb17cf6c58c1d255ec0bd6d911"
+        "hash": "a39956dac46987f3f10809f66641dd8d397168fbf69aaaa7e2ebf34885f01166"
       }
     },
     {
@@ -128,7 +128,7 @@
         "fileName": "countVowels.md",
         "text": "Returns number of vowels in the provided string.\n\nUse a regular expression to count the number of vowels (`a`, `e`, `i`, `o` and `u`a) in a string.\n\n",
         "codeBlocks": {
-          "code": "function countVowels($string)\r\n{\r\n  preg_match_all('/[aeiou]/i', $string, $matches);\r\n\r\n  return count($matches[0]);\r\n}",
+          "code": "function countVowels($string)\n{\n  preg_match_all('/[aeiou]/i', $string, $matches);\n\n  return count($matches[0]);\n}",
           "example": "countVowels('sampleInput'); // 4"
         },
         "tags": [
@@ -138,7 +138,7 @@
         ]
       },
       "meta": {
-        "hash": "f114da3bada9de55a831a1066992d128b8013da712207a49ed9746a6c05c1176"
+        "hash": "ee0c4eb973cb42088e5590ecb66ae995942481b6a989a458efaa4b3e107a408b"
       }
     },
     {
@@ -149,8 +149,8 @@
         "fileName": "curry.md",
         "text": "Curries a function to take arguments in multiple calls.\n\nIf the number of provided arguments (`$args`) is sufficient, call the passed function, `$function`.\nOtherwise, return a curried function that expects the rest of the arguments.\n\n",
         "codeBlocks": {
-          "code": "function curry($function)\r\n{\r\n  $accumulator = function ($arguments) use ($function, &$accumulator) {\r\n    return function (...$args) use ($function, $arguments, $accumulator) {\r\n      $arguments = array_merge($arguments, $args);\r\n      $reflection = new ReflectionFunction($function);\r\n      $totalArguments = $reflection->getNumberOfRequiredParameters();\r\n\r\n      if ($totalArguments <= count($arguments)) {\r\n        return $function(...$arguments);\r\n      }\r\n\r\n      return $accumulator($arguments);\r\n    };\r\n  };\r\n\r\n  return $accumulator([]);\r\n}",
-          "example": "$curriedAdd = curry(\r\n  function ($a, $b) {\r\n    return $a + $b;\r\n  }\r\n);\r\n\r\n$add10 = $curriedAdd(10);\r\nvar_dump($add10(15)); // 25"
+          "code": "function curry($function)\n{\n  $accumulator = function ($arguments) use ($function, &$accumulator) {\n    return function (...$args) use ($function, $arguments, $accumulator) {\n      $arguments = array_merge($arguments, $args);\n      $reflection = new ReflectionFunction($function);\n      $totalArguments = $reflection->getNumberOfRequiredParameters();\n\n      if ($totalArguments <= count($arguments)) {\n        return $function(...$arguments);\n      }\n\n      return $accumulator($arguments);\n    };\n  };\n\n  return $accumulator([]);\n}",
+          "example": "$curriedAdd = curry(\n  function ($a, $b) {\n    return $a + $b;\n  }\n);\n\n$add10 = $curriedAdd(10);\nvar_dump($add10(15)); // 25"
         },
         "tags": [
           "function",
@@ -158,7 +158,7 @@
         ]
       },
       "meta": {
-        "hash": "f941f578b5f97a7090662b8275e1b53778bc83bacbeac4ad1512a79f91a3ca0a"
+        "hash": "4a9cf6effee495116720b17b7b0a814e1592d124d8ed530e65b05ed589901768"
       }
     },
     {
@@ -169,7 +169,7 @@
         "fileName": "decapitalize.md",
         "text": "Decapitalizes the first letter of a string.\n\nDecapitalizes the first letter of the string and then adds it with rest of the string. \nOmit the `$upperRest` parameter to keep the rest of the string intact, or set it to `true` to convert to uppercase.\n\n",
         "codeBlocks": {
-          "code": "function decapitalize($string, $upperRest = false)\r\n{\r\n  return lcfirst($upperRest ? strtoupper($string) : $string);\r\n}",
+          "code": "function decapitalize($string, $upperRest = false)\n{\n  return lcfirst($upperRest ? strtoupper($string) : $string);\n}",
           "example": "decapitalize('FooBar'); // 'fooBar'"
         },
         "tags": [
@@ -178,7 +178,7 @@
         ]
       },
       "meta": {
-        "hash": "abd2bc817a4a7fdd5bce6d50a8ed512000f8b9e15484f389c9deef68e3c7c713"
+        "hash": "9309ce95a91dd1305da841b78f1cee6bb6ceeb06c6d3f001f719c123e44aa460"
       }
     },
     {
@@ -189,7 +189,7 @@
         "fileName": "deepFlatten.md",
         "text": "Deep flattens an array.\n\nUse recursion.\nUse `array_merge` with an empty array to flatten the array.\nRecursively flatten each element that is an array.\n\n",
         "codeBlocks": {
-          "code": "function deepFlatten($items)\r\n{\r\n  $result = [];\r\n  foreach ($items as $item) {\r\n    if (!is_array($item)) {\r\n      $result[] = $item;\r\n    } else {\r\n      $result = array_merge($result, deepFlatten($item));\r\n    }\r\n  }\r\n\r\n  return $result;\r\n}",
+          "code": "function deepFlatten($items)\n{\n  $result = [];\n  foreach ($items as $item) {\n    if (!is_array($item)) {\n      $result[] = $item;\n    } else {\n      $result = array_merge($result, deepFlatten($item));\n    }\n  }\n\n  return $result;\n}",
           "example": "deepFlatten([1, [2], [[3], 4], 5]); // [1, 2, 3, 4, 5]"
         },
         "tags": [
@@ -199,7 +199,7 @@
         ]
       },
       "meta": {
-        "hash": "2c8b3599db859ba4f09768ff1f7fdf9c0418d84c317b87b62c6bd102ade64882"
+        "hash": "208e292182d95f669e3ff2ffb3aff05df42e9db05bd303f04d89419879708260"
       }
     },
     {
@@ -210,8 +210,8 @@
         "fileName": "drop.md",
         "text": "Returns a new array with `$n` elements removed from the left.\n\nUse `array_slice()` to remove `$n` elements from the left.\nOmit the second argument, `$n`, to only remove one element.\n\n",
         "codeBlocks": {
-          "code": "function drop($items, $n = 1)\r\n{\r\n  return array_slice($items, $n);\r\n}",
-          "example": "drop([1, 2, 3]); // [2,3]\r\ndrop([1, 2, 3], 2); // [3]"
+          "code": "function drop($items, $n = 1)\n{\n  return array_slice($items, $n);\n}",
+          "example": "drop([1, 2, 3]); // [2,3]\ndrop([1, 2, 3], 2); // [3]"
         },
         "tags": [
           "array",
@@ -219,7 +219,7 @@
         ]
       },
       "meta": {
-        "hash": "2863275bf847d38a103aa044bc3c347c780b3932f3a4294788e8819fcaa76bf7"
+        "hash": "76997498a1ce0ac610e03abf16f73b8ea638b8204bc7354a1c3a7ceb50cfbf77"
       }
     },
     {
@@ -230,7 +230,7 @@
         "fileName": "endsWith.md",
         "text": "Checks if a string is ends with a given substring.\n\nUse `strrpos()` in combination with `strlen` to find the position of `$needle` in `$haystack`.\n\n",
         "codeBlocks": {
-          "code": "function endsWith($haystack, $needle)\r\n{\r\n  return strrpos($haystack, $needle) === (strlen($haystack) - strlen($needle));\r\n}",
+          "code": "function endsWith($haystack, $needle)\n{\n  return strrpos($haystack, $needle) === (strlen($haystack) - strlen($needle));\n}",
           "example": "endsWith('Hi, this is me', 'me'); // true"
         },
         "tags": [
@@ -239,7 +239,7 @@
         ]
       },
       "meta": {
-        "hash": "b06056cffd6b4003e2152bcf7bde5b8489eee577b320b85d17eb4ced80290321"
+        "hash": "6c30b79f9c910168064a2af23a20671cf7c430a1bebd2d51eacd1ceb2d98a06c"
       }
     },
     {
@@ -250,7 +250,7 @@
         "fileName": "factorial.md",
         "text": "Calculates the factorial of a number.\n\nUse recursion.\nIf `$n` is less then or equal to `1`, return `1`.\nOtherwise, return the product of `$n` and the factorial of `$n -1`.\nThrows an exception if `$n` is a negative number.\n\n",
         "codeBlocks": {
-          "code": "function factorial($n)\r\n{\r\n  if ($n <= 1) {\r\n    return 1;\r\n  }\r\n\r\n  return $n * factorial($n - 1);\r\n}",
+          "code": "function factorial($n)\n{\n  if ($n <= 1) {\n    return 1;\n  }\n\n  return $n * factorial($n - 1);\n}",
           "example": "factorial(6); // 720"
         },
         "tags": [
@@ -260,7 +260,7 @@
         ]
       },
       "meta": {
-        "hash": "1146d4682bd750a0435fe9eb705256ccf8d9926f02e1bee6d4e39bca1d151a76"
+        "hash": "2ec9deafceaea02bf1214912cf87bdfbd6b57030afdf91f531d19c58c5968dd2"
       }
     },
     {
@@ -271,7 +271,7 @@
         "fileName": "fibonacci.md",
         "text": "Generates an array, containing the Fibonacci sequence, up until the nth term.\n\nCreate an empty array, initializing the first two values (`0` and `1`).\nLoop from 2 through `$n` and add values into the array, using the sum of the last two values.\n\n",
         "codeBlocks": {
-          "code": "function fibonacci($n)\r\n{\r\n  $sequence = [0, 1];\r\n\r\n  for ($i = 2; $i < $n; $i++) {\r\n    $sequence[$i] = $sequence[$i-1] + $sequence[$i-2];\r\n  }\r\n\r\n  return $sequence;\r\n}",
+          "code": "function fibonacci($n)\n{\n  $sequence = [0, 1];\n\n  for ($i = 2; $i < $n; $i++) {\n    $sequence[$i] = $sequence[$i-1] + $sequence[$i-2];\n  }\n\n  return $sequence;\n}",
           "example": "fibonacci(6); // [0, 1, 1, 2, 3, 5]"
         },
         "tags": [
@@ -280,7 +280,7 @@
         ]
       },
       "meta": {
-        "hash": "77cb219b3d731ca5f78b3640abb9eb3507dcb69028bd23b5e189f644f2707e1c"
+        "hash": "3419eb8aecd5d1e105c1e4484590e51a412b1f8be105ff3cae4fc448c1debd36"
       }
     },
     {
@@ -291,8 +291,8 @@
         "fileName": "findLast.md",
         "text": "Returns the last element for which the provided function returns a truthy value.\n\nUse `array_filter()` to remove elements for which `$func` returns falsy values, `array_pop()` to get the last one.\n\n",
         "codeBlocks": {
-          "code": "function findLast($items, $func)\r\n{\r\n  $filteredItems = array_filter($items, $func);\r\n\r\n  return array_pop($filteredItems);\r\n}",
-          "example": "findLast([1, 2, 3, 4], function ($n) {\r\n  return ($n % 2) === 1;\r\n});\r\n// 3"
+          "code": "function findLast($items, $func)\n{\n  $filteredItems = array_filter($items, $func);\n\n  return array_pop($filteredItems);\n}",
+          "example": "findLast([1, 2, 3, 4], function ($n) {\n  return ($n % 2) === 1;\n});\n// 3"
         },
         "tags": [
           "array",
@@ -300,7 +300,7 @@
         ]
       },
       "meta": {
-        "hash": "7fad22f7a7ebdc07398ece0d31817c08cf9c9cff5cd336f738d4a03e510761e3"
+        "hash": "ad59651d2f14aa5d12eecfab0a37d7eb9bda9d0c1888c4f550d0e12f25689c3e"
       }
     },
     {
@@ -311,8 +311,8 @@
         "fileName": "findLastIndex.md",
         "text": "Returns the index of the last element for which the provided function returns a truthy value.\n\nUse `array_keys()` and `array_filter()` to remove elements for which `$func` returns falsy values, `array_pop()` to get the last one.\n\n",
         "codeBlocks": {
-          "code": "function findLastIndex($items, $func)\r\n{\r\n  $keys = array_keys(array_filter($items, $func));\r\n\r\n  return array_pop($keys);\r\n}",
-          "example": "findLastIndex([1, 2, 3, 4], function ($n) {\r\n  return ($n % 2) === 1;\r\n});\r\n// 2"
+          "code": "function findLastIndex($items, $func)\n{\n  $keys = array_keys(array_filter($items, $func));\n\n  return array_pop($keys);\n}",
+          "example": "findLastIndex([1, 2, 3, 4], function ($n) {\n  return ($n % 2) === 1;\n});\n// 2"
         },
         "tags": [
           "array",
@@ -320,7 +320,7 @@
         ]
       },
       "meta": {
-        "hash": "2186c9fb1aeef71fc40755786211262b0beb6224e09dd799c4d4a8a0e4b3d73e"
+        "hash": "77dad60be27a96bb8672491a3894462cc87533da10f489be0a89522cd04f31c8"
       }
     },
     {
@@ -331,7 +331,7 @@
         "fileName": "firstStringBetween.md",
         "text": "Returns the first string there is between the strings from the parameter `$start` and `$end`.\n\nUse `trim()` and `strstr()` to find the string contained between `$start` and `$end`.\n\n",
         "codeBlocks": {
-          "code": "function firstStringBetween($haystack, $start, $end)\r\n{\r\n  return trim(strstr(strstr($haystack, $start), $end, true), $start . $end);\r\n}",
+          "code": "function firstStringBetween($haystack, $start, $end)\n{\n  return trim(strstr(strstr($haystack, $start), $end, true), $start . $end);\n}",
           "example": "firstStringBetween('This is a [custom] string', '[', ']'); // custom"
         },
         "tags": [
@@ -340,7 +340,7 @@
         ]
       },
       "meta": {
-        "hash": "6287eb8678e82617357023b6ae3201189c7b0789d96aae46d956a27a3f930e7b"
+        "hash": "7c185bb52f0a7bc71fd4783acf15376f289cf564c987d54cd9442d6c41aa93ed"
       }
     },
     {
@@ -351,7 +351,7 @@
         "fileName": "flatten.md",
         "text": "Flattens an array up to the one level depth.\n\nUse `array_merge()` and `array_values()` to flatten the array.\n\n",
         "codeBlocks": {
-          "code": "function flatten($items)\r\n{\r\n  $result = [];\r\n  foreach ($items as $item) {\r\n    if (!is_array($item)) {\r\n      $result[] = $item;\r\n    } else {\r\n      $result = array_merge($result, array_values($item));\r\n    }\r\n  }\r\n\r\n  return $result;\r\n}",
+          "code": "function flatten($items)\n{\n  $result = [];\n  foreach ($items as $item) {\n    if (!is_array($item)) {\n      $result[] = $item;\n    } else {\n      $result = array_merge($result, array_values($item));\n    }\n  }\n\n  return $result;\n}",
           "example": "flatten([1, [2], 3, 4]); // [1, 2, 3, 4]"
         },
         "tags": [
@@ -360,7 +360,7 @@
         ]
       },
       "meta": {
-        "hash": "c1462851ac76528c5206e023fb10c61f01a5735961972e34cb3305ad6814b868"
+        "hash": "4f44cd8f7dedd3800d63eaa5dd87a3005be045ee0af6821a941b77ac08cb5270"
       }
     },
     {
@@ -371,8 +371,8 @@
         "fileName": "gcd.md",
         "text": "Calculates the greatest common divisor between two or more numbers.\n\nUse recursion.\nUse `array_reduce()` with the `gcd` function to appy to all elements in the `$numbers` list.\nBase case is when `y` equals `0`. In this case, return `x`. \nOtherwise, return the gcd of `y` and the remainder of the division `x/y`.\n\n",
         "codeBlocks": {
-          "code": "function gcd(...$numbers)\r\n{\r\n  if (count($numbers) > 2) {\r\n    return array_reduce($numbers, 'gcd');\r\n  }\r\n\r\n  $r = $numbers[0] % $numbers[1];\r\n  return $r === 0 ? abs($numbers[1]) : gcd($numbers[1], $r);\r\n}",
-          "example": "gcd(8, 36); // 4\r\ngcd(12, 8, 32); // 4"
+          "code": "function gcd(...$numbers)\n{\n  if (count($numbers) > 2) {\n    return array_reduce($numbers, 'gcd');\n  }\n\n  $r = $numbers[0] % $numbers[1];\n  return $r === 0 ? abs($numbers[1]) : gcd($numbers[1], $r);\n}",
+          "example": "gcd(8, 36); // 4\ngcd(12, 8, 32); // 4"
         },
         "tags": [
           "math",
@@ -381,7 +381,7 @@
         ]
       },
       "meta": {
-        "hash": "70de8a8548a4fa5b8774df34bfdc42e34b54622dad0454ceabfa2de52121f54a"
+        "hash": "2b33794c9232c11652098c9a98ade26200a1fe3a701eea9a8795eee3c98e0568"
       }
     },
     {
@@ -392,7 +392,7 @@
         "fileName": "groupBy.md",
         "text": "Groups the elements of an array based on the given function.\n\nUse `call_use_func()` with `$func` on `$items` to group them based on `$func`.\n\n",
         "codeBlocks": {
-          "code": "function groupBy($items, $func)\r\n{\r\n  $group = [];\r\n  foreach ($items as $item) {\r\n    if ((!is_string($func) && is_callable($func)) || function_exists($func)) {\r\n      $key = call_user_func($func, $item);\r\n      $group[$key][] = $item;\r\n    } elseif (is_object($item)) {\r\n      $group[$item->{$func}][] = $item;\r\n    } elseif (isset($item[$func])) {\r\n      $group[$item[$func]][] = $item;\r\n    }\r\n  }\r\n\r\n  return $group;\r\n}",
+          "code": "function groupBy($items, $func)\n{\n  $group = [];\n  foreach ($items as $item) {\n    if ((!is_string($func) && is_callable($func)) || function_exists($func)) {\n      $key = call_user_func($func, $item);\n      $group[$key][] = $item;\n    } elseif (is_object($item)) {\n      $group[$item->{$func}][] = $item;\n    } elseif (isset($item[$func])) {\n      $group[$item[$func]][] = $item;\n    }\n  }\n\n  return $group;\n}",
           "example": "groupBy(['one', 'two', 'three'], 'strlen'); // [3 => ['one', 'two'], 5 => ['three']]"
         },
         "tags": [
@@ -401,7 +401,7 @@
         ]
       },
       "meta": {
-        "hash": "2d999b784355c1f395bcaad50c612cd075c15506d4260de1ff3f7255ab99b08a"
+        "hash": "4b563b5e80f3b7d746116cc0bcba7d1cdab2713f38d3f56f2bfdd2e3847313fe"
       }
     },
     {
@@ -412,7 +412,7 @@
         "fileName": "hasDuplicates.md",
         "text": "Checks a flat list for duplicate values, returning `true` if duplicate values exists and `false` if values are all unique.\n\nUse `count()` and `array_unique()` to check `$items` for duplicate values.\n\n",
         "codeBlocks": {
-          "code": "function hasDuplicates($items)\r\n{\r\n  return count($items) > count(array_unique($items));\r\n}",
+          "code": "function hasDuplicates($items)\n{\n  return count($items) > count(array_unique($items));\n}",
           "example": "hasDuplicates([1, 2, 3, 4, 5, 5]); // true"
         },
         "tags": [
@@ -421,7 +421,7 @@
         ]
       },
       "meta": {
-        "hash": "c2792089ce334a4d52a975ade08245f0afb165915ad7f2eba080f1626d0b6662"
+        "hash": "c47487fe3d713aa0af3a69d07170a0d944aa5f30c1d5fc74eef2b46a675ae88f"
       }
     },
     {
@@ -432,7 +432,7 @@
         "fileName": "head.md",
         "text": "Returns the head of a list.\n\nUse `reset()` to return the first item in the array.\n\n",
         "codeBlocks": {
-          "code": "function head($items)\r\n{\r\n  return reset($items);\r\n}",
+          "code": "function head($items)\n{\n  return reset($items);\n}",
           "example": "head([1, 2, 3]); // 1"
         },
         "tags": [
@@ -441,7 +441,7 @@
         ]
       },
       "meta": {
-        "hash": "f93945b538cc5b96c484e15f419697496a7f04d0a3a8a88d40300006c2309401"
+        "hash": "920eb13fb1bc2d4eaf14c3bb1e42161505e9e910a3c673f5b76c4ee0b4f5dbf3"
       }
     },
     {
@@ -452,7 +452,7 @@
         "fileName": "isAnagram.md",
         "text": "Compare two strings and returns `true` if both strings are anagram, `false` otherwise.\n\nUse `count_chars()` to compare `$string1` and `$string2`.\n\n",
         "codeBlocks": {
-          "code": "function isAnagram($string1, $string2)\r\n{\r\n  return count_chars($string1, 1) === count_chars($string2, 1);\r\n}",
+          "code": "function isAnagram($string1, $string2)\n{\n  return count_chars($string1, 1) === count_chars($string2, 1);\n}",
           "example": "isAnagram('act', 'cat'); // true"
         },
         "tags": [
@@ -461,7 +461,7 @@
         ]
       },
       "meta": {
-        "hash": "5524a733e2bef0e8eafbd4f2efcea7774e74b9885ddfe58edeee7b27d5509454"
+        "hash": "963c410d784176bb1023d50324f54f7f3fe021e98eb070bac01c3421926bf01a"
       }
     },
     {
@@ -472,8 +472,8 @@
         "fileName": "isContains.md",
         "text": "Check if a word / substring exists in a given string input.\n\nUsing `strpos()` to find the position of the first occurrence of a substring in a string. \n\n",
         "codeBlocks": {
-          "code": "function isContains($string, $needle)\r\n{\r\n  return strpos($string, $needle) === false ? false : true;\r\n}",
-          "example": "isContains('This is an example string', 'example'); // true\r\nisContains('This is an example string', 'hello'); // false"
+          "code": "function isContains($string, $needle)\n{\n  return strpos($string, $needle) === false ? false : true;\n}",
+          "example": "isContains('This is an example string', 'example'); // true\nisContains('This is an example string', 'hello'); // false"
         },
         "tags": [
           "string",
@@ -481,7 +481,7 @@
         ]
       },
       "meta": {
-        "hash": "196e85e171ec10867fee58dc026936040b874c50763901aa37b6fe4ba31b729a"
+        "hash": "f6daf711f5799e052be4fd30064758bafdc1692e597995e0590f22624e4cd199"
       }
     },
     {
@@ -492,7 +492,7 @@
         "fileName": "isEven.md",
         "text": "Returns `true` if the given number is even, `false` otherwise.\n\nChecks whether a number is odd or even using the modulo (`%`) operator. \nReturns `true` if the number is even, `false` if the number is odd.\n\n",
         "codeBlocks": {
-          "code": "function isEven($number)\r\n{\r\n  return ($number % 2) === 0;\r\n}",
+          "code": "function isEven($number)\n{\n  return ($number % 2) === 0;\n}",
           "example": "isEven(4); // true"
         },
         "tags": [
@@ -501,7 +501,7 @@
         ]
       },
       "meta": {
-        "hash": "3ccf54b09c30563310344b5ef792fa623da09141a5c540352eaf0edf28ef15de"
+        "hash": "e609fdea4cb38ab2fe04f99fe58f6926bfa2ba81c2fee807fbfc7282a99fe0d2"
       }
     },
     {
@@ -512,8 +512,8 @@
         "fileName": "isLowerCase.md",
         "text": "Returns `true` if the given string is lower case, `false` otherwise.\n\nConvert the given string to lower case, using `strtolower` and compare it to the original.\n\n",
         "codeBlocks": {
-          "code": "function isLowerCase($string)\r\n{\r\n  return $string === strtolower($string);\r\n}",
-          "example": "isLowerCase('Morning shows the day!'); // false\r\nisLowerCase('hello'); // true"
+          "code": "function isLowerCase($string)\n{\n  return $string === strtolower($string);\n}",
+          "example": "isLowerCase('Morning shows the day!'); // false\nisLowerCase('hello'); // true"
         },
         "tags": [
           "string",
@@ -521,7 +521,7 @@
         ]
       },
       "meta": {
-        "hash": "c8c3746f41f479cc49a8e76f89af46ea98a4525e2b230a3f093ad12d0852d1b2"
+        "hash": "a41bfd743e17ee1fe4aa793ff715e27cafca3385e70d1dbc133486e0d1766c45"
       }
     },
     {
@@ -532,7 +532,7 @@
         "fileName": "isPrime.md",
         "text": "Checks if the provided integer is a prime number.\n\nCheck numbers from `2` to the square root of the given number. \nReturn `false` if any of them divides the given number, else return `true`, unless the number is less than `2`.\n\n",
         "codeBlocks": {
-          "code": "function isPrime($number)\r\n{\r\n  $boundary = floor(sqrt($number));\r\n  for ($i = 2; $i <= $boundary; $i++) {\r\n    if ($number % $i === 0) {\r\n      return false;\r\n    }\r\n  }\r\n\r\n  return $number >= 2;\r\n}",
+          "code": "function isPrime($number)\n{\n  $boundary = floor(sqrt($number));\n  for ($i = 2; $i <= $boundary; $i++) {\n    if ($number % $i === 0) {\n      return false;\n    }\n  }\n\n  return $number >= 2;\n}",
           "example": "isPrime(3); // true"
         },
         "tags": [
@@ -541,7 +541,7 @@
         ]
       },
       "meta": {
-        "hash": "6ef682d9a8ef3844eec3e49a8233691aaeb5745755b822da4849123e7e9a6474"
+        "hash": "33daa1e0925696b0f79dfa36acbaed65328a7a13c563c2b5e5236aad60245b8a"
       }
     },
     {
@@ -552,8 +552,8 @@
         "fileName": "isUpperCase.md",
         "text": "Returns `true` if the given string is upper case, false otherwise.\n\nConvert the given string to upper case, using `strtoupper` and compare it to the original.\n\n",
         "codeBlocks": {
-          "code": "function isUpperCase($string)\r\n{\r\n  return $string === strtoupper($string);\r\n}",
-          "example": "isUpperCase('MORNING SHOWS THE DAY!'); // true\r\nisUpperCase('qUick Fox'); // false"
+          "code": "function isUpperCase($string)\n{\n  return $string === strtoupper($string);\n}",
+          "example": "isUpperCase('MORNING SHOWS THE DAY!'); // true\nisUpperCase('qUick Fox'); // false"
         },
         "tags": [
           "string",
@@ -561,7 +561,7 @@
         ]
       },
       "meta": {
-        "hash": "e64dc2bc688487fcc6ee6498c43c09710a29c711a59fc45a63ce716d96663c69"
+        "hash": "7bae93b4d5071eec5417c20d6f05693df9cb0c2f970c156620133b241e795876"
       }
     },
     {
@@ -572,7 +572,7 @@
         "fileName": "last.md",
         "text": "Returns the last element in an array.\n\nUse `end()` to return the last item in the array.\n\n",
         "codeBlocks": {
-          "code": "function last($items)\r\n{\r\n  return end($items);\r\n}",
+          "code": "function last($items)\n{\n  return end($items);\n}",
           "example": "last([1, 2, 3]); // 3"
         },
         "tags": [
@@ -581,7 +581,7 @@
         ]
       },
       "meta": {
-        "hash": "4be7ccbb0e45b0b6baaa0cae4e5c0403eba158e5fa6e8fde89e1a4e2a872299c"
+        "hash": "6be9d9bc3d5b13a4e5320213ed4b77d9ee06cb74012a9cdce7bb25247dd386f3"
       }
     },
     {
@@ -592,8 +592,8 @@
         "fileName": "lcm.md",
         "text": "Returns the least common multiple of two or more numbers.\n\nUse the greatest common divisor (GCD) formula and the fact that `lcm(x,y) = x * y / gcd(x,y)` to determine the least common multiple. \nThe GCD formula uses recursion.\n\n",
         "codeBlocks": {
-          "code": "function lcm(...$numbers)\r\n{\r\n  $ans = $numbers[0];\r\n  for ($i = 1, $max = count($numbers); $i < $max; $i++) {\r\n    $ans = (($numbers[$i] * $ans) / gcd($numbers[$i], $ans));\r\n  }\r\n\r\n  return $ans;\r\n}",
-          "example": "lcm(12, 7); // 84\r\nlcm(1, 3, 4, 5); // 60"
+          "code": "function lcm(...$numbers)\n{\n  $ans = $numbers[0];\n  for ($i = 1, $max = count($numbers); $i < $max; $i++) {\n    $ans = (($numbers[$i] * $ans) / gcd($numbers[$i], $ans));\n  }\n\n  return $ans;\n}",
+          "example": "lcm(12, 7); // 84\nlcm(1, 3, 4, 5); // 60"
         },
         "tags": [
           "math",
@@ -601,7 +601,7 @@
         ]
       },
       "meta": {
-        "hash": "2db4c8e9defd194bb21557ac0a96e0cc774f456f14d8c8dd1b5ba20ef9c369f6"
+        "hash": "4fe2729cf94354ffa7479902762cb7b92c80c29c5888dcd1eea4182a04cda5af"
       }
     },
     {
@@ -612,8 +612,8 @@
         "fileName": "maxN.md",
         "text": "Returns the maximum value from the provided array.\n\nUse `array_filter()` and `max()` to find the maximum value in an array.\n\n",
         "codeBlocks": {
-          "code": "function maxN($numbers)\r\n{\r\n  $maxValue = max($numbers);\r\n  $maxValueArray = array_filter($numbers, function ($value) use ($maxValue) {\r\n    return $maxValue === $value;\r\n  });\r\n\r\n  return count($maxValueArray);\r\n}",
-          "example": "maxN([1, 2, 3, 4, 5, 5]); // 2\r\nmaxN([1, 2, 3, 4, 5]); // 1"
+          "code": "function maxN($numbers)\n{\n  $maxValue = max($numbers);\n  $maxValueArray = array_filter($numbers, function ($value) use ($maxValue) {\n    return $maxValue === $value;\n  });\n\n  return count($maxValueArray);\n}",
+          "example": "maxN([1, 2, 3, 4, 5, 5]); // 2\nmaxN([1, 2, 3, 4, 5]); // 1"
         },
         "tags": [
           "math",
@@ -622,7 +622,7 @@
         ]
       },
       "meta": {
-        "hash": "9d57179f2c2a209309ffc4c33ccb5c6b27d4c5dd49ba699c93a5ecafa90e72fc"
+        "hash": "472f6ad20bd68c91be6e72c51079ad6a24cdb09d6a7f737f3042b8f38cfe1005"
       }
     },
     {
@@ -633,8 +633,8 @@
         "fileName": "median.md",
         "text": "Returns the median of an array of numbers.\n\nFind the middle of the array, use `sort()` to sort the values. \nReturn the number at the midpoint if the array's length is odd, otherwise the average of the two middle numbers.\n\n",
         "codeBlocks": {
-          "code": "function median($numbers)\r\n{\r\n  sort($numbers);\r\n  $totalNumbers = count($numbers);\r\n  $mid = floor($totalNumbers / 2);\r\n\r\n  return ($totalNumbers % 2) === 0 ? ($numbers[$mid - 1] + $numbers[$mid]) / 2 : $numbers[$mid];\r\n}",
-          "example": "median([1, 3, 3, 6, 7, 8, 9]); // 6\r\nmedian([1, 2, 3, 6, 7, 9]); // 4.5"
+          "code": "function median($numbers)\n{\n  sort($numbers);\n  $totalNumbers = count($numbers);\n  $mid = floor($totalNumbers / 2);\n\n  return ($totalNumbers % 2) === 0 ? ($numbers[$mid - 1] + $numbers[$mid]) / 2 : $numbers[$mid];\n}",
+          "example": "median([1, 3, 3, 6, 7, 8, 9]); // 6\nmedian([1, 2, 3, 6, 7, 9]); // 4.5"
         },
         "tags": [
           "math",
@@ -643,7 +643,7 @@
         ]
       },
       "meta": {
-        "hash": "d2027d7bb9d57b3e0fc66611120c78742606cb211fb88c27322048a0142eb992"
+        "hash": "7c0ea6d2c30cdc475d298d04e64f3256150f85fdcb121537028eed897456ad2e"
       }
     },
     {
@@ -654,8 +654,8 @@
         "fileName": "memoize.md",
         "text": "Returns the memoized (cached) function.\n\nCreate an empty cache by instantiating a new array. \nReturn a function which takes a single argument to be supplied to the memoized function by first checking if the function's output for that specific input value is already cached, or store and return it if not. \nAllow access to the cache by setting it as a property on the returned function.\n\n",
         "codeBlocks": {
-          "code": "function memoize($func)\r\n{\r\n  return function () use ($func) {\r\n    static $cache = [];\r\n\r\n    $args = func_get_args();\r\n    $key = serialize($args);\r\n    $cached = true;\r\n\r\n    if (!isset($cache[$key])) {\r\n      $cache[$key] = $func(...$args);\r\n      $cached = false;\r\n    }\r\n\r\n    return ['result' => $cache[$key], 'cached' => $cached];\r\n  };\r\n}",
-          "example": "$memoizedAdd = memoize(\r\n  function ($num) {\r\n    return $num + 10;\r\n  }\r\n);\r\n\r\nvar_dump($memoizedAdd(5)); // ['result' => 15, 'cached' => false]\r\nvar_dump($memoizedAdd(6)); // ['result' => 16, 'cached' => false]\r\nvar_dump($memoizedAdd(5)); // ['result' => 15, 'cached' => true]"
+          "code": "function memoize($func)\n{\n  return function () use ($func) {\n    static $cache = [];\n\n    $args = func_get_args();\n    $key = serialize($args);\n    $cached = true;\n\n    if (!isset($cache[$key])) {\n      $cache[$key] = $func(...$args);\n      $cached = false;\n    }\n\n    return ['result' => $cache[$key], 'cached' => $cached];\n  };\n}",
+          "example": "$memoizedAdd = memoize(\n  function ($num) {\n    return $num + 10;\n  }\n);\n\nvar_dump($memoizedAdd(5)); // ['result' => 15, 'cached' => false]\nvar_dump($memoizedAdd(6)); // ['result' => 16, 'cached' => false]\nvar_dump($memoizedAdd(5)); // ['result' => 15, 'cached' => true]"
         },
         "tags": [
           "function",
@@ -663,7 +663,7 @@
         ]
       },
       "meta": {
-        "hash": "2ff78c8377bbdcaed00a3de923970834636a63e1abf0c947ba5944d79d3fce00"
+        "hash": "ab44340a55aeae3e7ab1f98eef78e293cb3029dc48cb7b8c2e670d4ed972d936"
       }
     },
     {
@@ -674,8 +674,8 @@
         "fileName": "minN.md",
         "text": "Returns the minimum value from the provided array.\n\nUse `array_filter()` and `min()` to find the minimum value in an array.\n\n",
         "codeBlocks": {
-          "code": "function minN($numbers)\r\n{\r\n  $minValue = min($numbers);\r\n  $minValueArray = array_filter($numbers, function ($value) use ($minValue) {\r\n    return $minValue === $value;\r\n  });\r\n\r\n  return count($minValueArray);\r\n}",
-          "example": "minN([1, 1, 2, 3, 4, 5, 5]); // 2\r\nminN([1, 2, 3, 4, 5]); // 1"
+          "code": "function minN($numbers)\n{\n  $minValue = min($numbers);\n  $minValueArray = array_filter($numbers, function ($value) use ($minValue) {\n    return $minValue === $value;\n  });\n\n  return count($minValueArray);\n}",
+          "example": "minN([1, 1, 2, 3, 4, 5, 5]); // 2\nminN([1, 2, 3, 4, 5]); // 1"
         },
         "tags": [
           "math",
@@ -684,7 +684,7 @@
         ]
       },
       "meta": {
-        "hash": "10516feb8cea605875aecc7e48eca24f60738fae2678e1e2c44f3499c65aca04"
+        "hash": "c19c1fb33e2a63f61d5dd525b638d13f93ee9380396259956ae19f62b287982b"
       }
     },
     {
@@ -695,8 +695,8 @@
         "fileName": "once.md",
         "text": "Call a function only once.\n\nReturn a function, which only calls the provided function, `$function`, if `$called` is `false` and sets `$called` to `true`.\n\n",
         "codeBlocks": {
-          "code": "function once($function)\r\n{\r\n  return function (...$args) use ($function) {\r\n    static $called = false;\r\n    if ($called) {\r\n      return;\r\n    }\r\n    $called = true;\r\n    return $function(...$args);\r\n  };\r\n}",
-          "example": "$add = function ($a, $b) {\r\n  return $a + $b;\r\n};\r\n\r\n$once = once($add);\r\n\r\nvar_dump($once(10, 5)); // 15\r\nvar_dump($once(20, 10)); // null"
+          "code": "function once($function)\n{\n  return function (...$args) use ($function) {\n    static $called = false;\n    if ($called) {\n      return;\n    }\n    $called = true;\n    return $function(...$args);\n  };\n}",
+          "example": "$add = function ($a, $b) {\n  return $a + $b;\n};\n\n$once = once($add);\n\nvar_dump($once(10, 5)); // 15\nvar_dump($once(20, 10)); // null"
         },
         "tags": [
           "function",
@@ -704,7 +704,7 @@
         ]
       },
       "meta": {
-        "hash": "66ae53b4703457a6b18d2c0b1d4c6b7d1ceb63af4a8eda34df3f175448ba9977"
+        "hash": "175f4d0ac83cb4d40f1d9a1e6529d5d522f6dd13639852dc3578ddb4dba99c7a"
       }
     },
     {
@@ -715,8 +715,8 @@
         "fileName": "orderBy.md",
         "text": "Sorts a collection of arrays or objects by key.\n\nUses `sort()` on the provided array to sort the array vased on `$order` and `$attr`.\n\n",
         "codeBlocks": {
-          "code": "function orderBy($items, $attr, $order)\r\n{\r\n  $sortedItems = [];\r\n  foreach ($items as $item) {\r\n    $key = is_object($item) ? $item->{$attr} : $item[$attr];\r\n    $sortedItems[$key] = $item;\r\n  }\r\n  if ($order === 'desc') {\r\n    krsort($sortedItems);\r\n  } else {\r\n    ksort($sortedItems);\r\n  }\r\n\r\n  return array_values($sortedItems);\r\n}",
-          "example": "orderBy(\r\n  [\r\n    ['id' => 2, 'name' => 'Joy'],\r\n    ['id' => 3, 'name' => 'Khaja'],\r\n    ['id' => 1, 'name' => 'Raja']\r\n  ],\r\n  'id',\r\n  'desc'\r\n); // [['id' => 3, 'name' => 'Khaja'], ['id' => 2, 'name' => 'Joy'], ['id' => 1, 'name' => 'Raja']]"
+          "code": "function orderBy($items, $attr, $order)\n{\n  $sortedItems = [];\n  foreach ($items as $item) {\n    $key = is_object($item) ? $item->{$attr} : $item[$attr];\n    $sortedItems[$key] = $item;\n  }\n  if ($order === 'desc') {\n    krsort($sortedItems);\n  } else {\n    ksort($sortedItems);\n  }\n\n  return array_values($sortedItems);\n}",
+          "example": "orderBy(\n  [\n    ['id' => 2, 'name' => 'Joy'],\n    ['id' => 3, 'name' => 'Khaja'],\n    ['id' => 1, 'name' => 'Raja']\n  ],\n  'id',\n  'desc'\n); // [['id' => 3, 'name' => 'Khaja'], ['id' => 2, 'name' => 'Joy'], ['id' => 1, 'name' => 'Raja']]"
         },
         "tags": [
           "array",
@@ -724,7 +724,7 @@
         ]
       },
       "meta": {
-        "hash": "c0f1463505ce253c389fd92f9d1d8881a3a4509b6e1fda7f9834a2cc52db5d9b"
+        "hash": "b45b1816f8aec3c1c13e158b2ec0fab1060c581ae1080a6ccdd170f2b5bc8cd8"
       }
     },
     {
@@ -735,8 +735,8 @@
         "fileName": "palindrome.md",
         "text": "Returns `true` if the given string is a palindrome, `false` otherwise.\n\nCheck if the value of `strrev($string)` is equal to the passed `$string`.\n\n",
         "codeBlocks": {
-          "code": "function palindrome($string)\r\n{\r\n  return strrev($string) === (string) $string;\r\n}",
-          "example": "palindrome('racecar'); // true\r\npalindrome(2221222); // true"
+          "code": "function palindrome($string)\n{\n  return strrev($string) === (string) $string;\n}",
+          "example": "palindrome('racecar'); // true\npalindrome(2221222); // true"
         },
         "tags": [
           "string",
@@ -744,7 +744,7 @@
         ]
       },
       "meta": {
-        "hash": "dee5210d7bdf9dba437b533d2ca8c451921c1ced571a4901f7d68f0eb2283a91"
+        "hash": "53e9798b0db88b28d13d5e21347f8465b0b71b936dadfb60c3b3fd89a3cf2324"
       }
     },
     {
@@ -755,8 +755,8 @@
         "fileName": "pluck.md",
         "text": "Retrieves all of the values for a given key.\n\nUse `array_map()` to map each object in the `$items` array to the provided `$key`.\n\n",
         "codeBlocks": {
-          "code": "function pluck($items, $key)\r\n{\r\n  return array_map( function($item) use ($key) {\r\n    return is_object($item) ? $item->$key : $item[$key];\r\n  }, $items);\r\n}",
-          "example": "pluck([\r\n  ['product_id' => 'prod-100', 'name' => 'Desk'],\r\n  ['product_id' => 'prod-200', 'name' => 'Chair'],\r\n], 'name');\r\n// ['Desk', 'Chair']"
+          "code": "function pluck($items, $key)\n{\n  return array_map( function($item) use ($key) {\n    return is_object($item) ? $item->$key : $item[$key];\n  }, $items);\n}",
+          "example": "pluck([\n  ['product_id' => 'prod-100', 'name' => 'Desk'],\n  ['product_id' => 'prod-200', 'name' => 'Chair'],\n], 'name');\n// ['Desk', 'Chair']"
         },
         "tags": [
           "array",
@@ -764,7 +764,7 @@
         ]
       },
       "meta": {
-        "hash": "055d64b094e81146b0a17dea02ac79cf5b0286e2f654fada63074fa52f6980e0"
+        "hash": "272b80fce936fc695e2b5ec36b8399f1e7f2a85ca1511ee14db01a44f8808a8a"
       }
     },
     {
@@ -775,8 +775,8 @@
         "fileName": "pull.md",
         "text": "Mutates the original array to filter out the values specified.\n\nUse `array_values()` and `array_diff()` to remove the specified values from `$items`.\n\n",
         "codeBlocks": {
-          "code": "function pull(&$items, ...$params)\r\n{\r\n  $items = array_values(array_diff($items, $params));\r\n  return $items;\r\n}",
-          "example": "$items = ['a', 'b', 'c', 'a', 'b', 'c'];\r\npull($items, 'a', 'c'); // $items will be ['b', 'b']"
+          "code": "function pull(&$items, ...$params)\n{\n  $items = array_values(array_diff($items, $params));\n  return $items;\n}",
+          "example": "$items = ['a', 'b', 'c', 'a', 'b', 'c'];\npull($items, 'a', 'c'); // $items will be ['b', 'b']"
         },
         "tags": [
           "array",
@@ -784,7 +784,7 @@
         ]
       },
       "meta": {
-        "hash": "f21c93dfe9435e3080396601a12caf9fc052ba6c0db4e1babb1e717d97a49963"
+        "hash": "39177996d7fd9377c92fba9497b6158e8b5411aa341963a101c15c4fbc64f0d0"
       }
     },
     {
@@ -795,8 +795,8 @@
         "fileName": "reject.md",
         "text": "Filters the collection using the given callback.\n\nUse `array_values()`, `array_diff()` and `array_filter()` to filter `$items` based on `$func`.\n\n",
         "codeBlocks": {
-          "code": "function reject($items, $func)\r\n{\r\n  return array_values(array_diff($items, array_filter($items, $func)));\r\n}",
-          "example": "reject(['Apple', 'Pear', 'Kiwi', 'Banana'], function ($item) {\r\n  return strlen($item) > 4;\r\n}); // ['Pear', 'Kiwi']"
+          "code": "function reject($items, $func)\n{\n  return array_values(array_diff($items, array_filter($items, $func)));\n}",
+          "example": "reject(['Apple', 'Pear', 'Kiwi', 'Banana'], function ($item) {\n  return strlen($item) > 4;\n}); // ['Pear', 'Kiwi']"
         },
         "tags": [
           "array",
@@ -804,7 +804,7 @@
         ]
       },
       "meta": {
-        "hash": "56570799cb04b246c5fffe43990c0240991ef2365b28ceec8312d4273d9c0bb1"
+        "hash": "57858bb39b52858a3e3f712e29cf8e917230d06b72450aa4cf3fd5c1c70f335c"
       }
     },
     {
@@ -815,8 +815,8 @@
         "fileName": "remove.md",
         "text": "Removes elements from an array for which the given function returns `false`.\n\nUse `array_filter()` to find array elements that return truthy values and `array_diff_keys()` to remove the elements not contained in `$filtered`.\n\n",
         "codeBlocks": {
-          "code": "function remove($items, $func)\r\n{\r\n  $filtered = array_filter($items, $func);\r\n\r\n  return array_diff_key($items, $filtered);\r\n}",
-          "example": "remove([1, 2, 3, 4], function ($n) {\r\n  return ($n % 2) === 0;\r\n});\r\n// [0 => 1, 2 => 3]"
+          "code": "function remove($items, $func)\n{\n  $filtered = array_filter($items, $func);\n\n  return array_diff_key($items, $filtered);\n}",
+          "example": "remove([1, 2, 3, 4], function ($n) {\n  return ($n % 2) === 0;\n});\n// [0 => 1, 2 => 3]"
         },
         "tags": [
           "array",
@@ -824,7 +824,7 @@
         ]
       },
       "meta": {
-        "hash": "efc941186c41d22126bf652dacd4204ba8f0cd885cef55745206420df707ac41"
+        "hash": "961201fd35743ff1b955baf4a5005c5a938bc4801f056b2e9006d34a6d4a28bd"
       }
     },
     {
@@ -835,8 +835,8 @@
         "fileName": "rotate.md",
         "text": "Rotates the array (in left direction) by the number of shifts.\n\nGiven the `$shift` index, merge the array values after `$shift` with the values before `$shift`.\n\n",
         "codeBlocks": {
-          "code": "function rotate($array, $shift = 1)\r\n{\r\n  for ($i = 0; $i < $shift; $i++) {\r\n    array_push($array, array_shift($array));\r\n  }\r\n\r\n  return $array;\r\n}",
-          "example": "rotate([1, 3, 5, 2, 4]); // [3, 5, 2, 4, 1]\r\nrotate([1, 3, 5, 2, 4], 2); // [5, 2, 4, 1, 3]"
+          "code": "function rotate($array, $shift = 1)\n{\n  for ($i = 0; $i < $shift; $i++) {\n    array_push($array, array_shift($array));\n  }\n\n  return $array;\n}",
+          "example": "rotate([1, 3, 5, 2, 4]); // [3, 5, 2, 4, 1]\nrotate([1, 3, 5, 2, 4], 2); // [5, 2, 4, 1, 3]"
         },
         "tags": [
           "array",
@@ -844,7 +844,7 @@
         ]
       },
       "meta": {
-        "hash": "0c51d5da08fd37e77fb7d37259e6d970e1b99b4894874bccf5f2b33667e4b6b6"
+        "hash": "dc41e4190b20148cad30d2f2163d11f73748da934c330699d68f2b17242824de"
       }
     },
     {
@@ -855,7 +855,7 @@
         "fileName": "startsWith.md",
         "text": "Check if a string starts with a given substring.\n\nUse `strpos()` to find the position of `$needle` in `$haystack`.\n\n",
         "codeBlocks": {
-          "code": "function startsWith($haystack, $needle)\r\n{\r\n  return strpos($haystack, $needle) === 0;\r\n}",
+          "code": "function startsWith($haystack, $needle)\n{\n  return strpos($haystack, $needle) === 0;\n}",
           "example": "startsWith('Hi, this is me', 'Hi'); // true"
         },
         "tags": [
@@ -864,7 +864,7 @@
         ]
       },
       "meta": {
-        "hash": "e29bf5889ddc1e24e2dd20cbc3f64340206680da8ac1ec61067213c95d71dd9a"
+        "hash": "94063583744d4e81133997184d1a11dd5ed2c5a6d0ae1a8761b7715bbec04089"
       }
     },
     {
@@ -875,7 +875,7 @@
         "fileName": "tail.md",
         "text": "Returns all elements in an array except for the first one.\n\nUse `array_slice()` and `count()` to return all the items in the array except for the first one.\n\n",
         "codeBlocks": {
-          "code": "function tail($items)\r\n{\r\n  return count($items) > 1 ? array_slice($items, 1) : $items;\r\n}",
+          "code": "function tail($items)\n{\n  return count($items) > 1 ? array_slice($items, 1) : $items;\n}",
           "example": "tail([1, 2, 3]); // [2, 3]"
         },
         "tags": [
@@ -884,7 +884,7 @@
         ]
       },
       "meta": {
-        "hash": "733da9981ed9095ce97a1f00254b3f3a866f82a7340875631f276b0ccb0f900a"
+        "hash": "fddf5ea8625d66a38f3dff79a207ce4ae60fcdddca956a2ae1d35436db892e4a"
       }
     },
     {
@@ -895,8 +895,8 @@
         "fileName": "take.md",
         "text": "Returns an array with `$n` elements removed from the beginning.\n\nUse `array_slice()` to remove `$n` items from the beginning of the array.\n\n",
         "codeBlocks": {
-          "code": "function take($items, $n = 1)\r\n{\r\n  return array_slice($items, 0, $n);\r\n}",
-          "example": "take([1, 2, 3], 5); // [1, 2, 3]\r\ntake([1, 2, 3, 4, 5], 2); // [1, 2]"
+          "code": "function take($items, $n = 1)\n{\n  return array_slice($items, 0, $n);\n}",
+          "example": "take([1, 2, 3], 5); // [1, 2, 3]\ntake([1, 2, 3, 4, 5], 2); // [1, 2]"
         },
         "tags": [
           "array",
@@ -904,7 +904,7 @@
         ]
       },
       "meta": {
-        "hash": "c7892458be7b59af7ee479d2ccfa8f60c99d230f30e5e133409566ba76d3733d"
+        "hash": "0a97480e2a7cf6bfd0847190ff0149ffe6339e4751c3eb5f44a8ba60f43d991d"
       }
     },
     {
@@ -915,7 +915,7 @@
         "fileName": "without.md",
         "text": "Filters out the elements of an array, that have one of the specified values.\n\nUse `array_values()` and `array_diff()` to remove any values in `$params` from `$items`.\n\n",
         "codeBlocks": {
-          "code": "function without($items, ...$params)\r\n{\r\n  return array_values(array_diff($items, $params));\r\n}",
+          "code": "function without($items, ...$params)\n{\n  return array_values(array_diff($items, $params));\n}",
           "example": "without([2, 1, 2, 3], 1, 2); // [3]"
         },
         "tags": [
@@ -924,7 +924,7 @@
         ]
       },
       "meta": {
-        "hash": "20c41ff272f364df2374ae47cdfd3bf46acf37232f02bc734143a5a423ce6aef"
+        "hash": "07a0a7f9443e1c4b67379aa27dce4a7081393833a84ebbdb7df3e271623c4058"
       }
     }
   ],
