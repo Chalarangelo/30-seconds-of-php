@@ -1,9 +1,9 @@
-import { pushNewPage, pushNewQuery } from '../state/app';
 import { graphql, Link } from 'gatsby';
 import { connect } from 'react-redux';
 import React from 'react';
 
 import { getRawCodeBlocks as getCodeBlocks } from '../util';
+import { pushNewPage, pushNewQuery } from '../state/app';
 import SnippetCard from '../components/SnippetCard';
 import SimpleCard from '../components/SimpleCard';
 import Search from '../components/Search';
