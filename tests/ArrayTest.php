@@ -22,14 +22,6 @@ class ArrayTest extends TestCase
         );
     }
 
-    public function testChunk()
-    {
-        $this->assertEquals(
-            [[1, 2], [3, 4], [5]],
-            chunk([1, 2, 3, 4, 5], 2)
-        );
-    }
-
     public function testFlatten()
     {
         $this->assertEquals(
@@ -251,4 +243,33 @@ class ArrayTest extends TestCase
             )
         );
     }
+
+    public function testBubblesSort()
+    {
+        $this->assertEquals(
+            [5,7,11,12,20,35,44,90],
+            bubbleSort([44, 11, 7, 20, 12, 90, 35, 5])
+        );
+    }
+
+    public function rotateDataProvider()
+    {
+        return [
+            [
+                [1, 3, 5, 2, 4], [3, 5, 2, 4, 1], 1
+            ],
+            [
+                [1, 3, 5, 2, 4], [5, 2, 4, 1, 3], 2
+            ],
+        ];
+    }
+
+    /**
+     * @dataProvider rotateDataProvider
+     */
+    public function testRotate($array, $expected, $shift)
+    {
+        $this->assertEquals(rotate($array, $shift), $expected);
+    }
 }
+
