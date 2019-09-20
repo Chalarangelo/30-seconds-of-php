@@ -638,6 +638,21 @@
       }
     },
     {
+      "id": "shorten",
+      "type": "snippetListing",
+      "title": "shorten",
+      "attributes": {
+        "text": "Returns a shortened string.\n\nUse `mb_strlen()`, `mb_substr()` and `rtrim()` to shorten a string to a give number of characters.\n\n",
+        "tags": [
+          "string",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "dd2b9ab03c23f6266e40f9f337445b0afb1e7929ae7711d19b352945189ed598"
+      }
+    },
+    {
       "id": "startsWith",
       "type": "snippetListing",
       "title": "startsWith",
