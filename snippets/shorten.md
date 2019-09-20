@@ -1,5 +1,5 @@
 ---
-title:  shorten
+title: shorten
 tags: string,beginner
 ---
 
