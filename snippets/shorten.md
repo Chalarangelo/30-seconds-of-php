@@ -3,7 +3,7 @@ title: shorten
 tags: string,beginner
 ---
 
-Returns a shortened string
+Returns a shortened string.
 
 Use `mb_strlen()`, `mb_substr()` and `rtrim()` to shorten a string to a give number of characters.
 
