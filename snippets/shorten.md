@@ -11,7 +11,7 @@ Use `mb_strlen()`, `mb_substr()` and `rtrim()` to shorten a string to a give num
 function shorten($input, $length = 100, $end = '...')
 {
   if (mb_strlen($input) <= $length) {
-     return $input;
+    return $input;
 	}
 
   return rtrim(mb_substr($input, 0, $length, 'UTF-8')) . $end;
