@@ -402,3 +402,12 @@ function rotate($array, $shift = 1)
 
     return $array;
 }
+
+function shorten($input, $length = 100, $end = '...')
+{
+    if (mb_strlen($input) <= $length) {
+        return $input;
+    }
+
+    return rtrim(mb_substr($input, 0, $length, 'UTF-8')) . $end;
+}

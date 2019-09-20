@@ -84,4 +84,9 @@ class StringTest extends TestCase
 
         $this->assertSame('fOOBAR', decapitalize('FooBar', true));
     }
+
+    public function testShorten()
+    {
+        $this->assertSame('The quick brown...', shorten('The quick brown fox jumped over the lazy dog', 15));
+    }
 }
