@@ -17,7 +17,7 @@ function flatten($items)
         if (!is_array($item)) {
             $result[] = $item;
         } else {
-            $result = array_merge($result, array_values($item));
+            array_push($result, ...array_values($item));
         }
     }
 
@@ -31,7 +31,7 @@ function deepFlatten($items)
         if (!is_array($item)) {
             $result[] = $item;
         } else {
-            $result = array_merge($result, deepFlatten($item));
+            array_push($result, ...deepFlatten($item));
         }
     }
 

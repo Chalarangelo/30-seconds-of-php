@@ -6,7 +6,7 @@ tags: array,recursion,intermediate
 Deep flattens an array.
 
 Use recursion.
-Use `array_merge` with an empty array to flatten the array.
+Use `array_push`, splat operator and an empty array to flatten the array.
 Recursively flatten each element that is an array.
 
 ```php
@@ -17,7 +17,7 @@ function deepFlatten($items)
     if (!is_array($item)) {
       $result[] = $item;
     } else {
-      $result = array_merge($result, deepFlatten($item));
+      array_push($result, ...deepFlatten($item));
     }
   }
 
