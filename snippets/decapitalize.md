@@ -17,4 +17,5 @@ function decapitalize($string, $upperRest = false)
 
 ```php
 decapitalize('FooBar'); // 'fooBar'
+decapitalize('FooBar', true); // 'fOOBAR'
 ```
