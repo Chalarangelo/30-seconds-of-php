@@ -410,7 +410,7 @@ last([1, 2, 3]); // 3
 
 Sorts a collection of arrays or objects by key.
 
-Uses `sort()` on the provided array to sort the array vased on `$order` and `$attr`.
+Uses `sort()` on the provided array to sort the array based on `$order` and `$attr`.
 
 ```php
 function orderBy($items, $attr, $order)

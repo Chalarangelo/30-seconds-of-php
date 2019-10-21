@@ -537,7 +537,7 @@
       "type": "snippetListing",
       "title": "orderBy",
       "attributes": {
-        "text": "Sorts a collection of arrays or objects by key.\n\nUses `sort()` on the provided array to sort the array vased on `$order` and `$attr`.\n\n",
+        "text": "Sorts a collection of arrays or objects by key.\n\nUses `sort()` on the provided array to sort the array based on `$order` and `$attr`.\n\n",
         "tags": [
           "array",
           "advanced"
