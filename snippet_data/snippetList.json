@@ -76,6 +76,21 @@
       }
     },
     {
+      "id": "collapse",
+      "type": "snippetListing",
+      "title": "collapse",
+      "attributes": {
+        "text": "Collapse a list of arrays into a single.\n\nUse `array_reduce()` to reduce each item into a single array, if the item\nis a array, merge the array with final item, if not, adds the item in a array and merge too.\n\n",
+        "tags": [
+          "array",
+          "beginner"
+        ]
+      },
+      "meta": {
+        "hash": "4768e8a4f6b025006d5f84796a86c6f86ba9c090b9244158f3aacf31f31e5339"
+      }
+    },
+    {
       "id": "compose",
       "type": "snippetListing",
       "title": "compose",
