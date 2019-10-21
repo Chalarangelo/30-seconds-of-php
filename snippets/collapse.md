@@ -3,10 +3,9 @@ title:  collapse
 tags: array,beginner
 ---
 
-Collapse a list of arrays into a single.
+Collapse a list of arrays into a single one.
 
-Use `array_reduce()` to reduce each item into a single array, if the item
-is a array, merge the array with final item, if not, adds the item in a array and merge too.
+Use `array_reduce()` to reduce each item into a single array, if the item is an array and merge with the result., otherwise, add the item in the result array.
 
 ```php
 function collapse($array)
