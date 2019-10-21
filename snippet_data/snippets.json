@@ -108,7 +108,7 @@
         "fileName": "collapse.md",
         "text": "Collapse a list of arrays into a single.\n\nUse `array_reduce()` to reduce each item into a single array, if the item\nis a array, merge the array with final item, if not, adds the item in a array and merge too.\n\n",
         "codeBlocks": {
-          "code": "function collapse($array) \n{\n\treturn array_reduce($array, function ($carry, $item) {\n\t\t$itemToAdd = is_array($item) ? $item : [$item];\n\n\t\treturn array_merge($carry, $itemToAdd);\n\t}, []);\n}",
+          "code": "function collapse($array)\n{\n  return array_reduce($array, function ($carry, $item) {\n    $itemToAdd = is_array($item) ? $item : [$item];\n    \n    return array_merge($carry, $itemToAdd);\n  }, []);\n}",
           "example": "collapse([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);\n// [1, 2, 3, 4, 5, 6, 7, 8, 9]"
         },
         "tags": [
@@ -117,7 +117,7 @@
         ]
       },
       "meta": {
-        "hash": "4768e8a4f6b025006d5f84796a86c6f86ba9c090b9244158f3aacf31f31e5339"
+        "hash": "1e9951b29726351f771a69d073432a073337deff7bcf86c47e362bded44c37d6"
       }
     },
     {
