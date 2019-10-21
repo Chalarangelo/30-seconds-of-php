@@ -141,7 +141,7 @@
       "type": "snippetListing",
       "title": "deepFlatten",
       "attributes": {
-        "text": "Deep flattens an array.\n\nUse recursion.\nUse `array_merge` with an empty array to flatten the array.\nRecursively flatten each element that is an array.\n\n",
+        "text": "Deep flattens an array.\n\nUse recursion.\nUse `array_push`, splat operator and an empty array to flatten the array.\nRecursively flatten each element that is an array.\n\n",
         "tags": [
           "array",
           "recursion",
@@ -263,7 +263,7 @@
       "type": "snippetListing",
       "title": "flatten",
       "attributes": {
-        "text": "Flattens an array up to the one level depth.\n\nUse `array_merge()` and `array_values()` to flatten the array.\n\n",
+        "text": "Flattens an array up to the one level depth.\n\nUse `array_push()`, splat operator and `array_values()` to flatten the array.\n\n",
         "tags": [
           "array",
           "intermediate"

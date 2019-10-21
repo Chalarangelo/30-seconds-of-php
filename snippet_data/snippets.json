@@ -187,9 +187,9 @@
       "type": "snippet",
       "attributes": {
         "fileName": "deepFlatten.md",
-        "text": "Deep flattens an array.\n\nUse recursion.\nUse `array_merge` with an empty array to flatten the array.\nRecursively flatten each element that is an array.\n\n",
+        "text": "Deep flattens an array.\n\nUse recursion.\nUse `array_push`, splat operator and an empty array to flatten the array.\nRecursively flatten each element that is an array.\n\n",
         "codeBlocks": {
-          "code": "function deepFlatten($items)\n{\n  $result = [];\n  foreach ($items as $item) {\n    if (!is_array($item)) {\n      $result[] = $item;\n    } else {\n      $result = array_merge($result, deepFlatten($item));\n    }\n  }\n\n  return $result;\n}",
+          "code": "function deepFlatten($items)\n{\n  $result = [];\n  foreach ($items as $item) {\n    if (!is_array($item)) {\n      $result[] = $item;\n    } else {\n      array_push($result, ...deepFlatten($item));\n    }\n  }\n\n  return $result;\n}",
           "example": "deepFlatten([1, [2], [[3], 4], 5]); // [1, 2, 3, 4, 5]"
         },
         "tags": [
@@ -349,9 +349,9 @@
       "type": "snippet",
       "attributes": {
         "fileName": "flatten.md",
-        "text": "Flattens an array up to the one level depth.\n\nUse `array_merge()` and `array_values()` to flatten the array.\n\n",
+        "text": "Flattens an array up to the one level depth.\n\nUse `array_push()`, splat operator and `array_values()` to flatten the array.\n\n",
         "codeBlocks": {
-          "code": "function flatten($items)\n{\n  $result = [];\n  foreach ($items as $item) {\n    if (!is_array($item)) {\n      $result[] = $item;\n    } else {\n      $result = array_merge($result, array_values($item));\n    }\n  }\n\n  return $result;\n}",
+          "code": "function flatten($items)\n{\n  $result = [];\n  foreach ($items as $item) {\n    if (!is_array($item)) {\n      $result[] = $item;\n    } else {\n      array_push($result, ...array_values($item));\n    }\n  }\n\n  return $result;\n}",
           "example": "flatten([1, [2], 3, 4]); // [1, 2, 3, 4]"
         },
         "tags": [

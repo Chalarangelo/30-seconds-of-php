@@ -160,7 +160,7 @@ any([1, 2, 3, 4], function ($item) {
 Deep flattens an array.
 
 Use recursion.
-Use `array_merge` with an empty array to flatten the array.
+Use `array_push`, splat operator and an empty array to flatten the array.
 Recursively flatten each element that is an array.
 
 ```php
@@ -171,7 +171,7 @@ function deepFlatten($items)
     if (!is_array($item)) {
       $result[] = $item;
     } else {
-      $result = array_merge($result, deepFlatten($item));
+      array_push($result, ...deepFlatten($item));
     }
   }
 
@@ -274,7 +274,7 @@ findLastIndex([1, 2, 3, 4], function ($n) {
 
 Flattens an array up to the one level depth.
 
-Use `array_merge()` and `array_values()` to flatten the array.
+Use `array_push()`, splat operator and `array_values()` to flatten the array.
 
 ```php
 function flatten($items)
@@ -284,7 +284,7 @@ function flatten($items)
     if (!is_array($item)) {
       $result[] = $item;
     } else {
-      $result = array_merge($result, array_values($item));
+      array_push($result, ...array_values($item));
     }
   }
 
