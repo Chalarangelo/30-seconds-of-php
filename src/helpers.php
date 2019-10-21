@@ -10,6 +10,15 @@ function any($items, $func)
     return count(array_filter($items, $func)) > 0;
 }
 
+function collapse($array)
+{
+    return array_reduce($array, function ($carry, $item) {
+        $itemToAdd = is_array($item) ? $item : [$item];
+
+        return array_merge($carry, $itemToAdd);
+    }, []);
+}
+
 function flatten($items)
 {
     $result = [];

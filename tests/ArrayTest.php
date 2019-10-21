@@ -22,6 +22,14 @@ class ArrayTest extends TestCase
         );
     }
 
+    public function testCollapse()
+    {
+        $this->assertEquals(
+            [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            collapse([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+        );
+    }
+
     public function testFlatten()
     {
         $this->assertEquals(
