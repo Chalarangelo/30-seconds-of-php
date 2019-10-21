@@ -109,7 +109,7 @@
         "text": "Collapse a list of arrays into a single one.\n\nUse `array_reduce()` to reduce each item into a single array, if the item is an array and merge with the result., otherwise, add the item in the result array.\n\n",
         "codeBlocks": {
           "code": "function collapse($array)\n{\n  return array_reduce($array, function ($carry, $item) {\n    $itemToAdd = is_array($item) ? $item : [$item];\n    \n    return array_merge($carry, $itemToAdd);\n  }, []);\n}",
-          "example": "collapse([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);\n// [1, 2, 3, 4, 5, 6, 7, 8, 9]"
+          "example": "collapse([[1, 2, 3], [4, 5, 6], [7, 8, 9]]); // [1, 2, 3, 4, 5, 6, 7, 8, 9]"
         },
         "tags": [
           "array",
@@ -117,7 +117,7 @@
         ]
       },
       "meta": {
-        "hash": "9cc5ca33cc3baa8b26258d19daea84fbd442e4736e4859f2d2e67a35ae057dcc"
+        "hash": "cf2e8a9f2ca4732f5919a985d85045db531e459b496f3dbcb720fb0c7d4940ea"
       }
     },
     {
