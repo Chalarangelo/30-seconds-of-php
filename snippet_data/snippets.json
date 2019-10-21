@@ -713,7 +713,7 @@
       "type": "snippet",
       "attributes": {
         "fileName": "orderBy.md",
-        "text": "Sorts a collection of arrays or objects by key.\n\nUses `sort()` on the provided array to sort the array vased on `$order` and `$attr`.\n\n",
+        "text": "Sorts a collection of arrays or objects by key.\n\nUses `sort()` on the provided array to sort the array based on `$order` and `$attr`.\n\n",
         "codeBlocks": {
           "code": "function orderBy($items, $attr, $order)\n{\n  $sortedItems = [];\n  foreach ($items as $item) {\n    $key = is_object($item) ? $item->{$attr} : $item[$attr];\n    $sortedItems[$key] = $item;\n  }\n  if ($order === 'desc') {\n    krsort($sortedItems);\n  } else {\n    ksort($sortedItems);\n  }\n\n  return array_values($sortedItems);\n}",
           "example": "orderBy(\n  [\n    ['id' => 2, 'name' => 'Joy'],\n    ['id' => 3, 'name' => 'Khaja'],\n    ['id' => 1, 'name' => 'Raja']\n  ],\n  'id',\n  'desc'\n); // [['id' => 3, 'name' => 'Khaja'], ['id' => 2, 'name' => 'Joy'], ['id' => 1, 'name' => 'Raja']]"
