@@ -26,7 +26,7 @@ Here's what you can do to help:
   - All snippet titles must be prefixed with `title:` and be at the very first line of your snippet's frontmatter.
   - Snippet titles must be unique (although if you cannot find a better title, just add some placeholder at the end of the filename and title and we will figure it out).
   - Follow snippet titles with an empty line.
-- **Snippet descriptions** must be short and to the point. Try to explain *what* the snippet does and *how* the snippet works and what Javascript features are used. Remember to include what functions you are using and why.
+- **Snippet descriptions** must be short and to the point. Try to explain *what* the snippet does and *how* the snippet works and what PHP features are used. Remember to include what functions you are using and why.
   - Follow snippet descriptions with an empty line.
 - **Snippet code** must be enclosed inside ` ```php ` and ` ``` `.
   - Remember to start your snippet's code on a new line below the opening backticks.
