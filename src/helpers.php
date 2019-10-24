@@ -411,3 +411,30 @@ function shorten($input, $length = 100, $end = '...')
 
     return rtrim(mb_substr($input, 0, $length, 'UTF-8')) . $end;
 }
+
+function slugify($text)
+{
+    // replace non alpha-numeric chars by dash
+    $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+
+    // transliterate
+    $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+
+    // remove unwanted characters
+    $text = preg_replace('~[^-\w]+~', '', $text);
+
+    // remove duplicate dash
+    $text = preg_replace('~-+~', '-', $text);
+
+    // lowercase
+    $text = strtolower($text);
+
+    // cleanup
+    $text = trim($text, " \t\n\r\0\x0B-");
+
+    if (empty($text)) {
+        return 'n-a';
+    }
+
+    return $text;
+}

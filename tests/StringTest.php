@@ -89,4 +89,13 @@ class StringTest extends TestCase
     {
         $this->assertSame('The quick brown...', shorten('The quick brown fox jumped over the lazy dog', 15));
     }
+
+    public function testSlugify()
+    {
+        $this->assertSame('hello-world', slugify('Hello World'));
+        $this->assertSame('hello-world', slugify('"Hello World"'));
+        $this->assertSame('hello-world-92', slugify('Hello World 92'));
+        $this->assertSame('hello-world-92', slugify('Hello_World/~92'));
+        $this->assertSame('das-madchen-dunn-schon', slugify('das Mädchen dünn schön')); // non-ascii
+    }
 }
