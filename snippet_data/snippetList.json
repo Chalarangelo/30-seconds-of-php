@@ -653,6 +653,21 @@
       }
     },
     {
+      "id": "slugify",
+      "type": "snippetListing",
+      "title": "slugify",
+      "attributes": {
+        "text": "Converts a string to a URL-friendly slug.\n\nUses `preg_replace()` to replace invalid chars with dashes, `iconv()` to convert the text to ASCII, `strtolower()` and `trim()` to convert to lowercase and remove extra whitespace.\n\n",
+        "tags": [
+          "string",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "6a0547bd5cedb12aed2d95d2c6a0610e2e5e512c7c782af0bae36d3e96d652dc"
+      }
+    },
+    {
       "id": "startsWith",
       "type": "snippetListing",
       "title": "startsWith",

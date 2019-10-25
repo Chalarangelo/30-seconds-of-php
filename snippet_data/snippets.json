@@ -868,6 +868,26 @@
       }
     },
     {
+      "id": "slugify",
+      "title": "slugify",
+      "type": "snippet",
+      "attributes": {
+        "fileName": "slugify.md",
+        "text": "Converts a string to a URL-friendly slug.\n\nUses `preg_replace()` to replace invalid chars with dashes, `iconv()` to convert the text to ASCII, `strtolower()` and `trim()` to convert to lowercase and remove extra whitespace.\n\n",
+        "codeBlocks": {
+          "code": "function slugify($text) {\n  $text = preg_replace('~[^\\pL\\d]+~u', '-', $text);\n  $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);\n  $text = preg_replace('~[^-\\w]+~', '', $text);\n  $text = preg_replace('~-+~', '-', $text);\n  $text = strtolower($text);\n  $text = trim($text, \" \\t\\n\\r\\0\\x0B-\");\n  if (empty($text)) {\n    return 'n-a';\n  }\n  return $text;\n}",
+          "example": "slugify('Hello World'); // 'hello-world'"
+        },
+        "tags": [
+          "string",
+          "intermediate"
+        ]
+      },
+      "meta": {
+        "hash": "6a0547bd5cedb12aed2d95d2c6a0610e2e5e512c7c782af0bae36d3e96d652dc"
+      }
+    },
+    {
       "id": "startsWith",
       "title": "startsWith",
       "type": "snippet",
