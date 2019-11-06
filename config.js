@@ -12,5 +12,8 @@ module.exports = {
   pagePath: `src/docs/pages`,
   staticPartsPath: `src/static-parts`,
   // General information
-  language: `php`,
+  language: {
+    short: `php`,
+    long: `PHP`
+  },
 };

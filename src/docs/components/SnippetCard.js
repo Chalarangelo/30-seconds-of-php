@@ -85,7 +85,7 @@ const FullCard = ({ snippetData, difficulty, isDarkMode }) => {
           <ShareIcon />
         </button> */}
         <pre
-          className={`card-code language-${config.language}`}
+          className={`card-code language-${config.language.short}`}
           dangerouslySetInnerHTML={{ __html: cardCodeHtml }}
         />
         <button
@@ -96,7 +96,7 @@ const FullCard = ({ snippetData, difficulty, isDarkMode }) => {
         </button>
         {examplesOpen && (
           <pre
-            className={`section card-examples language-${config.language}`}
+            className={`section card-examples language-${config.language.short}`}
             dangerouslySetInnerHTML={{ __html: cardExamplesHtml }}
           />
         )}
@@ -154,7 +154,7 @@ const ShortCard = ({
             />
           </CopyToClipboard>
           <pre
-            className={`card-code language-${config.language}`}
+            className={`card-code language-${config.language.short}`}
             dangerouslySetInnerHTML={{ __html: cardCodeHtml }}
           />
         </div> : '' }
