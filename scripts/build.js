@@ -117,11 +117,11 @@ try {
 
       output += snippet.attributes.text;
 
-      output += `\`\`\`${config.language}\n${snippet.attributes.codeBlocks.code}\n\`\`\``;
+      output += `\`\`\`${config.language.short}\n${snippet.attributes.codeBlocks.code}\n\`\`\``;
 
       output += misc.collapsible(
         'Examples',
-        `\`\`\`${config.language}\n${snippet.attributes.codeBlocks.example}\n\`\`\``,
+        `\`\`\`${config.language.short}\n${snippet.attributes.codeBlocks.example}\n\`\`\``,
       );
 
       output +=
