@@ -730,6 +730,10 @@
   ],
   "meta": {
     "specification": "http://jsonapi.org/format/",
-    "type": "snippetListingArray"
+    "type": "snippetListingArray",
+    "language": {
+      "short": "php",
+      "long": "PHP"
+    }
   }
 }
