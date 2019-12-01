@@ -271,5 +271,13 @@ class ArrayTest extends TestCase
     {
         $this->assertEquals(rotate($array, $shift), $expected);
     }
+
+    public function testSortMultiArrayByColumn()
+    {
+        $this->assertEquals(
+            [["name" => "Datevial", "age" => 10], ["name" => "Kenval", "age" => 2]],
+            sortMultiArrayByColumn([["name" => "Kenval", "age" => 2], ["name" => "Datevial", "age" => 10]], "age", SORT_DESC)
+        );
+    }
 }
 

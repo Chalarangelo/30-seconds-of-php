@@ -438,3 +438,17 @@ function slugify($text)
 
     return $text;
 }
+
+
+function sortMultiArrayByColumn(array $data, $fieldName, $sortString = SORT_DESC)
+{
+    if (!$data) {
+        return $data;
+    }
+    $fieldRs = array();
+    foreach ($data as $key => $value) {
+        $fieldRs[$key] = $value[$fieldName];
+    }
+    array_multisort($fieldRs, $sortString, $data);
+    return $data;
+}
