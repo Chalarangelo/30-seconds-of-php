@@ -3,7 +3,9 @@ title: sortMultiArrayByColumn
 tags: array,intermediate
 ---
 
-Sort Multi Array By Column
+Return sorted multiple array
+
+Use `array_multisort` to sort multiple array by column.
 
 ```php
 function sortMultiArrayByColumn(array $data, $fieldName, $sortString = SORT_DESC)
