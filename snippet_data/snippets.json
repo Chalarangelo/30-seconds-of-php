@@ -296,7 +296,7 @@
       "type": "snippet",
       "attributes": {
         "fileName": "factorial.md",
-        "text": "Calculates the factorial of a number.\n\nUse recursion.\nIf `$n` is less then or equal to `1`, return `1`.\nOtherwise, return the product of `$n` and the factorial of `$n -1`.\nThrows an exception if `$n` is a negative number.\n\n",
+        "text": "Calculates the factorial of a number.\n\nUse recursion.\nIf `$n` is less then or equal to `1`, return `1`.\nOtherwise, return the product of `$n` and the factorial of `$n -1`.\n\n",
         "codeBlocks": {
           "code": "function factorial($n)\n{\n  if ($n <= 1) {\n    return 1;\n  }\n\n  return $n * factorial($n - 1);\n}",
           "example": "factorial(6); // 720"
@@ -308,11 +308,11 @@
         ]
       },
       "meta": {
-        "hash": "2ec9deafceaea02bf1214912cf87bdfbd6b57030afdf91f531d19c58c5968dd2",
+        "hash": "93bd475e05df8e2f98a5f30f395c5a16d90208ce45fb0e4657be74667a7fd784",
         "firstSeen": "1528126596",
-        "lastUpdated": "1566909185",
-        "updateCount": 6,
-        "authorCount": 3
+        "lastUpdated": "1585554073",
+        "updateCount": 7,
+        "authorCount": 4
       }
     },
     {

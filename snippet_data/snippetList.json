@@ -187,7 +187,7 @@
       "type": "snippetListing",
       "title": "factorial",
       "attributes": {
-        "text": "Calculates the factorial of a number.\n\nUse recursion.\nIf `$n` is less then or equal to `1`, return `1`.\nOtherwise, return the product of `$n` and the factorial of `$n -1`.\nThrows an exception if `$n` is a negative number.\n\n",
+        "text": "Calculates the factorial of a number.\n\nUse recursion.\nIf `$n` is less then or equal to `1`, return `1`.\nOtherwise, return the product of `$n` and the factorial of `$n -1`.\n\n",
         "tags": [
           "math",
           "recursion",
@@ -195,7 +195,7 @@
         ]
       },
       "meta": {
-        "hash": "2ec9deafceaea02bf1214912cf87bdfbd6b57030afdf91f531d19c58c5968dd2"
+        "hash": "93bd475e05df8e2f98a5f30f395c5a16d90208ce45fb0e4657be74667a7fd784"
       }
     },
     {
