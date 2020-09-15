@@ -5,7 +5,7 @@ tags: array,beginner
 
 Returns the head of a list.
 
-Use `reset()` to return the first item in the array.
+- Use `reset()` to return the first item in the array.
 
 ```php
 function head($items)

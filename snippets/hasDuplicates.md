@@ -5,7 +5,7 @@ tags: array,beginner
 
 Checks a flat list for duplicate values, returning `true` if duplicate values exists and `false` if values are all unique.
 
-Use `count()` and `array_unique()` to check `$items` for duplicate values.
+- Use `count()` and `array_unique()` to check `$items` for duplicate values.
 
 ```php
 function hasDuplicates($items)

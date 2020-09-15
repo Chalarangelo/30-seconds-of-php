@@ -5,7 +5,7 @@ tags: array,beginner
 
 Returns the last element for which the provided function returns a truthy value.
 
-Use `array_filter()` to remove elements for which `$func` returns falsy values, `array_pop()` to get the last one.
+- Use `array_filter()` to remove elements for which `$func` returns falsy values, `array_pop()` to get the last one.
 
 ```php
 function findLast($items, $func)

@@ -5,8 +5,8 @@ tags: function,advanced
 
 Curries a function to take arguments in multiple calls.
 
-If the number of provided arguments (`$args`) is sufficient, call the passed function, `$function`.
-Otherwise, return a curried function that expects the rest of the arguments.
+- If the number of provided arguments (`$args`) is sufficient, call the passed function, `$function`.
+- Otherwise, return a curried function that expects the rest of the arguments.
 
 ```php
 function curry($function)

@@ -5,7 +5,7 @@ tags: string,intermediate
 
 Converts a string to a URL-friendly slug.
 
-Uses `preg_replace()` to replace invalid chars with dashes, `iconv()` to convert the text to ASCII, `strtolower()` and `trim()` to convert to lowercase and remove extra whitespace.
+- Uses `preg_replace()` to replace invalid chars with dashes, `iconv()` to convert the text to ASCII, `strtolower()` and `trim()` to convert to lowercase and remove extra whitespace.
 
 ```php
 function slugify($text) {

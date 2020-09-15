@@ -5,7 +5,7 @@ tags: array,beginner
 
 Rotates the array (in left direction) by the number of shifts.
 
-Given the `$shift` index, merge the array values after `$shift` with the values before `$shift`.
+- Given the `$shift` index, merge the array values after `$shift` with the values before `$shift`.
 
 ```php
 function rotate($array, $shift = 1)

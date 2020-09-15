@@ -5,7 +5,7 @@ tags: function,intermediate
 
 Return a new function that composes multiple functions into a single callable.
 
-Use `array_reduce()` to perform right-to-left function composition. 
+- Use `array_reduce()` to perform right-to-left function composition.
 
 ```php
 function compose(...$functions)

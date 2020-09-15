@@ -5,8 +5,8 @@ tags: math,beginner
 
 Checks if two numbers are approximately equal to each other.
 
-Use `abs()` to compare the absolute difference of the two values to `$epsilon`. 
-Omit the third parameter, `$epsilon`, to use a default value of `0.001`.
+- Use `abs()` to compare the absolute difference of the two values to `$epsilon`.
+- Omit the third parameter, `$epsilon`, to use a default value of `0.001`.
 
 ```php
 function approximatelyEqual($number1, $number2, $epsilon = 0.001)

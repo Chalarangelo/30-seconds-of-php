@@ -5,8 +5,8 @@ tags: math,intermediate
 
 Generates an array, containing the Fibonacci sequence, up until the nth term.
 
-Create an empty array, initializing the first two values (`0` and `1`).
-Loop from 2 through `$n` and add values into the array, using the sum of the last two values.
+- Create an empty array, initializing the first two values (`0` and `1`).
+- Loop from 2 through `$n` and add values into the array, using the sum of the last two values.
 
 ```php
 function fibonacci($n)

@@ -5,9 +5,9 @@ tags: function,advanced
 
 Returns the memoized (cached) function.
 
-Create an empty cache by instantiating a new array. 
-Return a function which takes a single argument to be supplied to the memoized function by first checking if the function's output for that specific input value is already cached, or store and return it if not. 
-Allow access to the cache by setting it as a property on the returned function.
+- Create an empty cache by instantiating a new array.
+- Return a function which takes a single argument to be supplied to the memoized function by first checking if the function's output for that specific input value is already cached, or store and return it if not.
+- Allow access to the cache by setting it as a property on the returned function.
 
 ```php
 function memoize($func)

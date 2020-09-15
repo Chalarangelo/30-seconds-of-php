@@ -5,7 +5,7 @@ tags: array,beginner
 
 Removes elements from an array for which the given function returns `false`.
 
-Use `array_filter()` to find array elements that return truthy values and `array_diff_keys()` to remove the elements not contained in `$filtered`.
+- Use `array_filter()` to find array elements that return truthy values and `array_diff_keys()` to remove the elements not contained in `$filtered`.
 
 ```php
 function remove($items, $func)

@@ -5,7 +5,7 @@ tags: array,beginner
 
 Returns an array with `$n` elements removed from the beginning.
 
-Use `array_slice()` to remove `$n` items from the beginning of the array.
+- Use `array_slice()` to remove `$n` items from the beginning of the array.
 
 ```php
 function take($items, $n = 1)
