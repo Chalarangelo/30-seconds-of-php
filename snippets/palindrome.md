@@ -5,7 +5,7 @@ tags: string,beginner
 
 Returns `true` if the given string is a palindrome, `false` otherwise.
 
-Check if the value of `strrev($string)` is equal to the passed `$string`.
+- Check if the value of `strrev($string)` is equal to the passed `$string`.
 
 ```php
 function palindrome($string)

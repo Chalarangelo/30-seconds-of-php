@@ -5,7 +5,7 @@ tags: math,array,intermediate
 
 Returns the maximum value from the provided array.
 
-Use `array_filter()` and `max()` to find the maximum value in an array.
+- Use `array_filter()` and `max()` to find the maximum value in an array.
 
 ```php
 function maxN($numbers)

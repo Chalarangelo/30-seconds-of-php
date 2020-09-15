@@ -5,7 +5,7 @@ tags: array,intermediate
 
 Groups the elements of an array based on the given function.
 
-Use `call_use_func()` with `$func` on `$items` to group them based on `$func`.
+- Use `call_use_func()` with `$func` on `$items` to group them based on `$func`.
 
 ```php
 function groupBy($items, $func)

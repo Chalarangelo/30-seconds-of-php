@@ -5,7 +5,7 @@ tags: string,beginner
 
 Checks if a string is ends with a given substring.
 
-Use `strrpos()` in combination with `strlen` to find the position of `$needle` in `$haystack`.
+- Use `strrpos()` in combination with `strlen` to find the position of `$needle` in `$haystack`.
 
 ```php
 function endsWith($haystack, $needle)

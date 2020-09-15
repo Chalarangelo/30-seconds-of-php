@@ -5,7 +5,7 @@ tags: string,beginner
 
 Compare two strings and returns `true` if both strings are anagram, `false` otherwise.
 
-Use `count_chars()` to compare `$string1` and `$string2`.
+- Use `count_chars()` to compare `$string1` and `$string2`.
 
 ```php
 function isAnagram($string1, $string2)

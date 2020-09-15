@@ -5,7 +5,7 @@ tags: string,beginner
 
 Returns `true` if the given string is lower case, `false` otherwise.
 
-Convert the given string to lower case, using `strtolower` and compare it to the original.
+- Convert the given string to lower case, using `strtolower` and compare it to the original.
 
 ```php
 function isLowerCase($string)

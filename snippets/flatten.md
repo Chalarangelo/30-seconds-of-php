@@ -5,7 +5,7 @@ tags: array,intermediate
 
 Flattens an array up to the one level depth.
 
-Use `array_push()`, splat operator and `array_values()` to flatten the array.
+- Use `array_push()`, splat operator and `array_values()` to flatten the array.
 
 ```php
 function flatten($items)

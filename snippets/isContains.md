@@ -5,7 +5,7 @@ tags: string,beginner
 
 Check if a word / substring exists in a given string input.
 
-Using `strpos()` to find the position of the first occurrence of a substring in a string. 
+- Using `strpos()` to find the position of the first occurrence of a substring in a string.
 
 ```php
 function isContains($string, $needle)
