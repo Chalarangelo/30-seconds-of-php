@@ -1,5 +1,5 @@
 ---
-title:  preg_match
+title:  isStrongPassword
 tags: string,beginner
 ---
 
